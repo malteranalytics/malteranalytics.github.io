@@ -23,7 +23,7 @@ authors:
   danny:
     name: Danny Malter
     display_name: Danny
-    gravatar: "https://secure.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f"
+    gravatar: d8f2524cf47fb8fa03ba52ad8579238f
     #email: email@malteranalytics.com
     web: http://www.malteranalytics.github.io
     twitter: https://twitter.com/danmalter
@@ -31,7 +31,7 @@ authors:
   drew:
     name: Andrew Malter
     display_name: Drew
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    gravatar: d8f2524cf47fb8fa03ba52ad8579238f
     #email: email@malteranalytics.com
     web: http://www.malteranalytics.github.io
     twitter: https://twitter.com/danmalter
