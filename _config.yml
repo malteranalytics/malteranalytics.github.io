@@ -1,16 +1,16 @@
 # Site
-name: "Patrick Lamber"
-title: "Random thoughts about productivity software."
-description: "IT Geek focusing on Microsoft 365 productivity solutions."
-logo: 'assets/images/logo.svg'
+name: "Malter Analytics"
+title: "Analytics and Data Science Blog"
+description: "This is a blog for all things data related."
+logo: 'assets/images/Malter-Analytics-Logo.png'
 baseurl: 
 google_analytics: 'UA-85617783-1'
 disqus: 'nubo'
-follow-twitter: 'http://www.twitter.com/patricklamber'
-follow-instagram: 'http://www.instagram.com/lambersports'
-follow-facebook: 'https://www.facebook.com/patrick.lamber'
-follow-linkedin: 'https://www.linkedin.com/in/plamber/'
-follow-github: 'https://github.com/plamber'
+follow-twitter: 'http://www.twitter.com/danmalter'
+follow-instagram: 'http://www.instagram.com/malteranalytics'
+follow-facebook: 'https://www.facebook.com/malteranalytics'
+#follow-linkedin: 'https://www.linkedin.com/in/malteranalytics/'
+follow-github: 'https://github.com/malteranalytics'
 mailchimp-list: 
 #'https://nubo.us3.list-manage.com/subscribe?u=6c85dfdd00be275ce46cdfa5c&id=b2f4f20705'
 include: ["_pages"]
@@ -19,14 +19,22 @@ show_drafts: false
 
 # Authors
 authors:
-  plamber:
-    name: Patrick Lamber
-    display_name: Patrick Lamber
+  danny:
+    name: Danny Malter
+    display_name: Danny
     gravatar: a2c337b39c3335cb89037db1e61ab262
     email: patrick@nubo.eu
     web: http://www.nubo.eu
-    twitter: https://twitter.com/patricklamber
-    description: "IT Geek focusing on Microsoft collaboration software."
+    twitter: https://twitter.com/danmalter
+    description: "Data Scientist"
+  drew:
+    name: Andrew Malter
+    display_name: Drew
+    gravatar: a2c337b39c3335cb89037db1e61ab262
+    email: patrick@nubo.eu
+    web: http://www.nubo.eu
+    twitter: https://twitter.com/danmalter
+    description: "Data Scientist"
 
 # Plugins
 plugins:
