@@ -6,9 +6,6 @@ categories: [ R ]
 tags: [NHL, Sports]
 featured: false
 ---
-  
-{% raw %}
-
 <b>Analyzing NHL Gameplay Data</b>
 
 This analysis will explore how to use and analyze NHL gameplay data.  All data is provided from statsapi.web.nhl.com/ for the 2019-20 NHL season through the date of this posting. All code is provided on my personal [GitHub site](https://github.com/danmalter/nhl_shot_charts).
@@ -35,20 +32,6 @@ For all of Kane’s goals, Jonathan Toews has the most involvement.  It’s impo
 Finally, we have a heat map for every single shot taken to date in the 2019-20 NHL season.  The bright yellow area shows the highest density of where shots occur from, which to no surprise is right in front of the net.  However, it’s interesting to see that as players take shots further from the net, it’s either directly in front of the net or at about a 45-degree angle.
 
 ![plot of chunk unnamed-chunk-5](/figure/2020-03-02-nhl-analysis/image5.png)
-
-
-{% endraw %}
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-57468410-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 
 
