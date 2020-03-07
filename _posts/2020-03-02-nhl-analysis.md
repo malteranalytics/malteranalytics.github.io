@@ -3,7 +3,7 @@ layout: post
 title:  "Analyzing NHL Gameplay Data"
 author: danny
 categories: [ R ]
-image: ![plot](/assets/images/2020-03-02-nhl-analysis/image1.png)
+image: /assets/images/2020-03-02-nhl-analysis/image1.png
 tags: [NHL, Sports]
 featured: true
 ---
