@@ -899,3 +899,39 @@ iframe {
     opacity: 0;
     transition: opacity .25s;
 }
+
+.seriesBox {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: .25rem;
+  }
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+
+.alert a {
+    color: white;
+    text-decoration: underline;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+.alert.info {
+    background-color: #2196F3;
+}
+
+.alert.warning {
+    background-color: #ff9800;
+}
+
+
+

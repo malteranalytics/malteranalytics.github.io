@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.svg">
 
 <title>{{ page.title }} | {{site.name}}</title>
 
@@ -75,22 +75,6 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                 </li>
 
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
-                </li>
-
                 {% include search-lunr.html %}
 
             </ul>
@@ -123,21 +107,46 @@ ga('send', 'pageview');
     {{ content }}
 </div>
 
-{% if site.mailchimp-list %}
 <!-- Bottom Alert Bar
 ================================================== -->
 <div class="alertbar">
 	<div class="container text-center">
-		<span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
+		<span>Follow me on your preferred social network.</span>&nbsp;&nbsp;
+        {% if site.follow-instagram %}
+        <a target="_blank" href="{{site.follow-instagram}}">
+            <i class="fab fa-instagram"></i>
+        </a>&nbsp;&nbsp;
+        {% endif %}
+        {% if site.follow-twitter %}
+        <a target="_blank" href="{{site.follow-twitter}}">
+            <i class="fab fa-twitter"></i>
+        </a>&nbsp;&nbsp;
+        {% endif %}
+        {% if site.follow-facebook %}
+        <a target="_blank" href="{{site.follow-facebook}}">
+            <i class="fab fa-facebook-f"></i>
+        </a>&nbsp;&nbsp;
+        {% endif %}
+        {% if site.follow-linkedin %}
+        <a target="_blank" href="{{site.follow-linkedin}}">
+            <i class="fab fa-linkedin-in"></i>
+        </a>&nbsp;&nbsp;
+        {% endif %}
+        {% if site.follow-github %}
+        <a target="_blank" href="{{site.follow-github}}">
+            <i class="fab fa-github"></i>
+        </a>
+        {% endif %}
+        {% if site.mailchimp-list %}
         <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
             <div class="mc-field-group">
             <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
             <input type="submit" value="Subscribe" name="subscribe" class="heart">
             </div>
         </form>
+        {% endif %}
 	</div>
 </div>
-{% endif %}
     
 </div>
 
@@ -172,10 +181,9 @@ ga('send', 'pageview');
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} - <a href="{{ site.baseurl }}/imprint">Imprint</a> - <a href="{{ site.baseurl }}/privacy">Privacy policy</a>
             </div>
             <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
             </div>
         </div>
     </div>
