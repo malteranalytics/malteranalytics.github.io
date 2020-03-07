@@ -1,12 +1,11 @@
 ---
 layout: post
 title:  "Analyzing NHL Gameplay Data"
-author: Danny
+author: Danny Malter
 categories: [ R ]
 tags: [NHL, Sports]
 featured: false
 ---
-<b>Analyzing NHL Gameplay Data</b>
 
 This analysis will explore how to use and analyze NHL gameplay data.  All data is provided from statsapi.web.nhl.com/ for the 2019-20 NHL season through the date of this posting. All code is provided on my personal [GitHub site](https://github.com/danmalter/nhl_shot_charts).
 
