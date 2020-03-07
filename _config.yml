@@ -4,7 +4,7 @@ title: "Analytics and Data Science Blog"
 description: "This is a blog for all things data related."
 logo: 'assets/images/Malter-Analytics-Logo.png'
 baseurl: 
-google_analytics: 'UA-85617783-1'
+google_analytics: 'UA-137918066-1'
 disqus: 'nubo'
 follow-twitter: 'http://www.twitter.com/danmalter'
 follow-instagram: 'http://www.instagram.com/malteranalytics'
@@ -22,17 +22,18 @@ authors:
   danny:
     name: Danny Malter
     display_name: Danny
-    gravatar: a2c337b39c3335cb89037db1e61ab262
-    email: patrick@nubo.eu
-    web: http://www.nubo.eu
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    #email: email@malteranalytics.com
+    web: http://www.malteranalytics.github.io
     twitter: https://twitter.com/danmalter
     description: "Data Scientist"
   drew:
     name: Andrew Malter
     display_name: Drew
-    gravatar: a2c337b39c3335cb89037db1e61ab262
-    email: patrick@nubo.eu
-    web: http://www.nubo.eu
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    #email: email@malteranalytics.com
+    web: http://www.malteranalytics.github.io
+    twitter: https://twitter.com/danmalter
     twitter: https://twitter.com/danmalter
     description: "Data Scientist"
 
