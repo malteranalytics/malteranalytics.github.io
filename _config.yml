@@ -1,32 +1,35 @@
 # Site
-name: "Patrick Lamber"
-title: "Random thoughts about productivity software."
-description: "IT Geek focusing on Microsoft 365 productivity solutions."
-logo: 'assets/images/logo.svg'
-baseurl: 
-google_analytics: 'UA-85617783-1'
-disqus: 'nubo'
-follow-twitter: 'http://www.twitter.com/patricklamber'
-follow-instagram: 'http://www.instagram.com/lambersports'
-follow-facebook: 'https://www.facebook.com/patrick.lamber'
-follow-linkedin: 'https://www.linkedin.com/in/plamber/'
-follow-github: 'https://github.com/plamber'
-mailchimp-list: 
-#'https://nubo.us3.list-manage.com/subscribe?u=6c85dfdd00be275ce46cdfa5c&id=b2f4f20705'
+name: "Mediumish"
+title: "Mediumish"
+description: "Jekyll template, Medium styled, free for bloggers."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: /mediumish-theme-jekyll
+google_analytics: 'UA-46278016-1'
+disqus: 'demowebsite'
+mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
-show_drafts: false
 
 # Authors
 authors:
-  plamber:
-    name: Patrick Lamber
-    display_name: Patrick Lamber
-    gravatar: a2c337b39c3335cb89037db1e61ab262
-    email: patrick@nubo.eu
-    web: http://www.nubo.eu
-    twitter: https://twitter.com/patricklamber
-    description: "IT Geek focusing on Microsoft collaboration software."
+  sal:
+    name: Sal
+    display_name: Sal
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: wowthemesnet@gmail.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/wowthemesnet
+    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+  john:
+    name: John
+    display_name: John    
+    avatar: 'assets/images/avatar.png'
+    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: wowthemesnet@gmail.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/wowthemesnet
+    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
 
 # Plugins
 plugins:
@@ -35,7 +38,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-target-blank
     
 # Archives
 jekyll-archives:
@@ -46,7 +48,7 @@ jekyll-archives:
     category: '/category/:name/'
     
 # Pagination 
-paginate: 12
+paginate: 6
 paginate_path: /page:num/
     
 # Other
@@ -58,6 +60,11 @@ kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
