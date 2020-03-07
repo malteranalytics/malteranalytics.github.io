@@ -3,7 +3,7 @@ name: "Malter Analytics"
 title: "Analytics and Data Science Blog"
 description: "This is a blog for all things data related."
 logo: 'assets/images/Malter-Analytics-Logo.png'
-favicon: 'assets/images/favicon.png'
+favicon: 'assets/images/Malter-Analytics-Logo.png'
 baseurl: 
 google_analytics: 'UA-137918066-1'
 disqus: 'nubo'
