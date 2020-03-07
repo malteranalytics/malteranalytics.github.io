@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Analyzing NHL Gameplay Data"
-author: danny
+author: Danny
 categories: [ R ]
 tags: [NHL, Sports]
 featured: false
