@@ -35,7 +35,14 @@ authors:
     #email: email@malteranalytics.com
     web: 
     twitter: https://twitter.com/danmalter
-    twitter: https://twitter.com/danmalter
+    description: "Data Scientist"
+  danny_drew:
+    name: Danny Malter & Drew Malter
+    display_name: Danny & Drew
+    gravatar: d8f2524cf47fb8fa03ba52ad8579238f
+    #email: email@malteranalytics.com
+    web: 
+    #twitter: https://twitter.com/danmalter
     description: "Data Scientist"
 
 # Plugins
