@@ -1,5 +1,5 @@
 ---
-  layout: post
+layout: post
 title:  "Analysis of the Allies' WWII Strategy"
 author: drew
 categories: [ ww2, Allies, D-Day ]
@@ -80,6 +80,7 @@ As it goes to show, many of key events in World War II can be better understood 
 
 
 Sources: 
+
 Japan Wages War on the U.S.:
 1.	https://www.history.com/news/why-did-japan-attack-pearl-harbor
 Eastern European Front/Stalingrad: 
@@ -102,6 +103,7 @@ Books:
 .	The Nightingale - Kristen Hannah
 .	The Tattooist of Auschwitz - Heather Morris
 .	Operation Garbo: The Personal Story of the Most Successful Spy of World War II - Juan Pujol Garcia
+
 Movies/Documentaries:
 .	Band of Brothers
 .	Saving Private Ryan
