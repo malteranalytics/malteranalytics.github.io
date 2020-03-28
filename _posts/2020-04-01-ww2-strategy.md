@@ -3,7 +3,7 @@ layout: post
 title:  "Analysis of the Allies' WWII Strategy"
 author: drew
 categories: [ ww2, Allies, D-Day ]
-image: "https://malteranalytics.github.io/assets/images/2020-04-01-ww2-strategy/image1.png"
+image: "https://malteranalytics.github.io/assets/images/2020-04-01-ww2-strategy/image1.PNG"
 tags: [ww2, Allies, D-Day]
 featured: true
 ---
@@ -12,7 +12,7 @@ featured: true
 Next month (May 8) will mark the 75th anniversary of Victory in Europe (VE) Day, the formal acceptance by the Allies of Nazi Germany's unconditional surrender from World War II, officially bringing an end to the Holocaust and to the war in Europe.  Defeating Fascism required a well-planned, well-executed war strategy along with the sacrifices of millions of people who contributed to the Allies' efforts.  To better understand their strategy, I've created a visual analysis from over 175 thousand records of documented Allied aerial missions by the United States, Great Britain, Australia, and New Zealand, across all theatres of operation from the 6-year war.   
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/2020-04-01-ww2-strategy/image1.png)  
+![plot of chunk unnamed-chunk-1](/assets/images/2020-04-01-ww2-strategy/image1.PNG)  
 
 
 The map above is outlined by modern-day Europe with pre-World War 2 labels. Each point represents the target location of a unique aircraft carrier mission, whether it be a bomber, fighter, glider, or other type of aircraft.  The data mostly comes from the United States Air Force and the Royal Air Force of Great Britain with minimal records from the Royal Australian Air Force and the Royal New Zealand Air Force, however data is missing from both nations' campaigns in Europe.  Additionally, there was no data provided for several other key Allied powers such as Canada, the Soviet Union, and Poland.  Also, given that the data was collected from 1939-1945, there are surely cases of inaccuracies and missing records, notably from the Great Britain (Battle of Britain), Australia, and New Zealand data.  
@@ -20,15 +20,15 @@ Among the astounding number of European, North African, and Mediterranean countr
 Meanwhile in the Pacific Theatre, we can similarly see that the devastation of war was unavoidable across the map as Japan's Emperor Hirohito sought to expand Japanese influence across the resource rich Pacific Islands; many of which were colonized by Western Powers.  The Imperial Japanese Empire capitalized on the vulnerability of Nazi-occupied France and Netherlands and the tied-up British by invading their respective colonies and ruthlessly killing civilians and prisoners of war that stood in their way.  The Philippines (at the time an American territory) and Pearl Harbor were key military targets for Japan who took a gamble that a crippled U.S. Navy would buy the Japanese enough time to pursue expansion without a full-strength resistance.  The U.S. suffered overwhelming losses in the Japanese surprise invasions of both islands, the Philippines just 10 hours after Pearl Harbor. (1)
 
 
-![plot of chunk unnamed-chunk-2](/assets/images/2020-04-01-ww2-strategy/image2-pto_map.png)
+![plot of chunk unnamed-chunk-2](/assets/images/2020-04-01-ww2-strategy/image2-pto_map.PNG)
 
 
 It took 6 years for the Allies to declare victory in WW2 from the moment it began with the Nazi's Blitzkrieg (Lightning War) invasion of Poland.  The first major turning point in favor of the Allies in Europe (where the graph begins to slope upwards) wasn't until 1943 when the Soviet Union's Red Army prevailed in what became the deadliest battle in war history, the battle of Stalingrad.(2)  Following the Red Army's victory in defending their iconic city named for their dictator, they launched a counter offensive to the west with newfound confidence(3) while the other Allied Powers were advancing up the boot of Italy and preparing for a large-scale invasion of France.  A year later when the Americans, British, and Canadians did just that, stormed the beaches of Normandy on D-Day, combat in Europe spiked for 11 months as the Allies pushed the Nazis towards their inevitable surrender.  The map below represents the locations of Allied aerial attacks over the course of the war, implying the path the Allies took (light to dark) through France and Southern Italy as they closed in on the heart of Nazi territory. 
 
 
-![plot of chunk unnamed-chunk-3](/assets/images/2020-04-01-ww2-strategy/image3-timeline.png)
+![plot of chunk unnamed-chunk-3](/assets/images/2020-04-01-ww2-strategy/image3-timeline.PNG)
 
-![plot of chunk unnamed-chunk-4](/assets/images/2020-04-01-ww2-strategy/image4-timeline_map.png)
+![plot of chunk unnamed-chunk-4](/assets/images/2020-04-01-ww2-strategy/image4-timeline_map.PNG)
 
 
 Having seen where and when the aerial missions took place, we'll next look at which types of aircraft carriers were leading these missions.  Among the U.S. Air Force, the B-24 Liberator Bomber was the most used aircraft carrier throughout the war.  The bomber generally carried 8-10 men, including two pilots, several gunners, and an imperative and highly skilled bombardier responsible for hitting the precise target while accounting for aircraft speed, altitude, wind speed, air density, weather conditions, and bomb ballistics.(4)  At roughly 200 mph and up to 25,000 feet in the air, often only the lead aircraft in a group required a bombardier while the others would follow suit.(5)
