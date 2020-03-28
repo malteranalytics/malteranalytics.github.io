@@ -3,7 +3,7 @@ layout: post
 title:  "Analysis of the Allies' WWII Strategy"
 author: drew
 categories: [ ww2, Allies, D-Day ]
-image: "https://malteranalytics.github.io/assets/images/2020-04-01-ww2-strategy/image1.PNG"
+image: "https://malteranalytics.github.io/assets/images/2020-04-01-ww2-strategy/image1-eto_map.PNG"
 tags: [ww2, Allies, D-Day]
 featured: true
 ---
@@ -12,7 +12,7 @@ featured: true
 Next month (May 8) will mark the 75th anniversary of Victory in Europe (VE) Day, the formal acceptance by the Allies of Nazi Germany's unconditional surrender from World War II, officially bringing an end to the Holocaust and to the war in Europe.  Defeating Fascism required a well-planned, well-executed war strategy along with the sacrifices of millions of people who contributed to the Allies' efforts.  To better understand their strategy, I've created a visual analysis from over 175 thousand records of documented Allied aerial missions by the United States, Great Britain, Australia, and New Zealand, across all theatres of operation from the 6-year war.   
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/2020-04-01-ww2-strategy/image1.PNG)  
+![plot of chunk unnamed-chunk-1](/assets/images/2020-04-01-ww2-strategy/image1-eto_map.PNG)  
 
 
 The map above is outlined by modern-day Europe with pre-World War 2 labels. Each point represents the target location of a unique aircraft carrier mission, whether it be a bomber, fighter, glider, or other type of aircraft.  The data mostly comes from the United States Air Force and the Royal Air Force of Great Britain with minimal records from the Royal Australian Air Force and the Royal New Zealand Air Force, however data is missing from both nations' campaigns in Europe.  Additionally, there was no data provided for several other key Allied powers such as Canada, the Soviet Union, and Poland.  Also, given that the data was collected from 1939-1945, there are surely cases of inaccuracies and missing records, notably from the Great Britain (Battle of Britain), Australia, and New Zealand data.  
