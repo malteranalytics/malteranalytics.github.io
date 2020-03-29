@@ -3,7 +3,7 @@ layout: post
 title:  "Using K-Means Clustering to Optimize NBA Lineups"
 author: drew
 categories: [ NBA, Clustering, Analytics, R ]
-image: "https://malteranalytics.github.io/assets/images/2019-02-27-nba-clusters/image3.PNG"
+image: "https://malteranalytics.github.io/assets/images/2019-02-27-nba-clusters/image3.png"
 tags: [NBA]
 featured: false
 ---
