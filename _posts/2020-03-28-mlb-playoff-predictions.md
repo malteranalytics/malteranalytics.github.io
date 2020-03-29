@@ -103,4 +103,5 @@ It's technically improper that we assumed that the distributions are independent
 Now that we understand how to derive P(A>B), the final step was to write some Python code to make all these calculations for me and output the results.  Below is a sample of my code for the AL East. 
 
 
+![plot of chunk unnamed-chunk-6](/assets/images/2019-03-28-mlb-playoff-predictions/image6.PNG)  
 
