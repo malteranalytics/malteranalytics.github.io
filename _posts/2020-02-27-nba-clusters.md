@@ -83,10 +83,10 @@ Now that we have clearly defined clusters, the next step I have taken is to anal
 **NETRTG:** Measures a team's point differential per 100 possessions while the player is in the game
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/2019-02-27-nba-clusters/image1.PNG)  
+![plot of chunk unnamed-chunk-1](/assets/images/2019-02-27-nba-clusters/image1.png)  
 
 
-![plot of chunk unnamed-chunk-2](/assets/images/2019-02-27-nba-clusters/image2.PNG)  
+![plot of chunk unnamed-chunk-2](/assets/images/2019-02-27-nba-clusters/image2.png)  
 
 
 
@@ -97,7 +97,7 @@ It's interesting to see how NETRTG values change from cluster to cluster, howeve
 It was compelling to zoom into single clusters to see how they pair with others, however the heat map below provides us a holistic view of cluster combo success.  The axis numbers correspond to the clusters defined above and the data values represent the mean NETRTG for each combination of cluster. 
 
 
-![plot of chunk unnamed-chunk-3](/assets/images/2019-02-27-nba-clusters/image3.PNG)  
+![plot of chunk unnamed-chunk-3](/assets/images/2019-02-27-nba-clusters/image3.png)  
 
 
 
