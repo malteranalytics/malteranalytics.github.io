@@ -3,7 +3,7 @@ layout: post
 title:  "Using Calculus to Derive MLB Division Probabilities"
 author: drew
 categories: [ MLB, Baseball, Moneyball, R ]
-image: "https://malteranalytics.github.io/assets/images/2019-03-28-mlb-playoff-probabilities/image1.png"
+image: "https://malteranalytics.github.io/assets/images/2019-03-28-mlb-playoff-predictions/image1.PNG"
 tags: [mlb, moneyball]
 featured: false
 ---
@@ -13,7 +13,7 @@ Happy MLB Opening Day!  You may be wondering what your team's chances are of mak
 
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/2019-03-28-mlb-playoff-probabilities/image1.png)  
+![plot of chunk unnamed-chunk-1](/assets/images/2019-03-28-mlb-playoff-predictions/image1.PNG)  
 
 
 
@@ -53,11 +53,11 @@ In probability theory, a [probability density function](https://en.wikipedia.org
 The Yankees are projected to win 97 games with a standard deviation of 6.26 games.  We've previously concluded that the prediction distribution for their win total is very close to normally distributed, so we can draw the distribution in the bell curved fashion:
 
 
-![plot of chunk unnamed-chunk-2](/assets/images/2019-03-28-mlb-playoff-probabilities/image2.png)  
+![plot of chunk unnamed-chunk-2](/assets/images/2019-03-28-mlb-playoff-predictions/image2.png)  
 
 where:
 
-![plot of chunk unnamed-chunk-3](/assets/images/2019-03-28-mlb-playoff-probabilities/image3.png)  
+![plot of chunk unnamed-chunk-3](/assets/images/2019-03-28-mlb-playoff-predictions/image3.png)  
 
 
 The important takeaway from the above curve is that the values on the x axis are more likely under tall points in the curve and less likely under short parts of the curve.   A nice feature of PDF's is that by using standard probability theorems we can easily calculate the probability of the Yankees winning at least X games in 2019 or derive a prediction interval for the range of win totals that they are likely to finish between. 
@@ -86,7 +86,7 @@ To visualize this, let's go back into context and use the Yankees and Rays as an
 Their overlapping PDF's would look like the graph below with the Rays in green and the Yankees in blue. 
 
 
-![plot of chunk unnamed-chunk-4](/assets/images/2019-03-28-mlb-playoff-probabilities/image4.png)  
+![plot of chunk unnamed-chunk-4](/assets/images/2019-03-28-mlb-playoff-predictions/image4.png)  
 
 
 
@@ -94,7 +94,7 @@ Their overlapping PDF's would look like the graph below with the Rays in green a
 The probability that the Yankees finish with a greater win total than the Rays is equivalent to the probability that a random point chosen under the blue curve is greater than a random point chosen under the green curve.  In order to do so, we will derive the below formula:
 
 
-![plot of chunk unnamed-chunk-5](/assets/images/2019-03-28-mlb-playoff-probabilities/image5.png)  
+![plot of chunk unnamed-chunk-5](/assets/images/2019-03-28-mlb-playoff-predictions/image5.png)  
 
 
 
