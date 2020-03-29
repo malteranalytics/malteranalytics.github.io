@@ -46,7 +46,7 @@ The second most common type of aircraft was the fighter jet and among those, the
 
 
 
-For the Americans and their Allies, the war could not have been won without the continuous improvement of science and technology.  In the case of aerial bombing, the force of explosive bombs that were being rained on Europe and the Pacific was rapidly increasing until the war began to die down late in 1944.  By the peak of the war, a typical bomb had a force akin to 20 tons of TNT, more than 5 times the force of what was being dropped by US bombers at the beginning of the war.   By comparison, the atomic bombs, named Little Boy and Fat Man, that USA dropped over the Japanese cities of Hiroshima and Nagasaki respectively, had TNT equivalents of 15 thousand and 20 thousand tons. 
+For the Americans and their Allies, the war could not have been won without the continuous improvement of science and technology.  In the case of aerial bombing, the force of explosive bombs that were being rained on Europe and the Pacific was rapidly increasing until the war began to die down late in 1944.  By the peak of the war, a typical bomb had a force akin to 20 tons of TNT, more than 5 times the force of what was being dropped by US bombers at the beginning of the war.   By comparison, the atomic bombs, named Little Boy and Fat Man, that USA dropped over the Japanese cities of Hiroshima and Nagasaki respectively, had TNT equivalents of 15 *thousand* and 20 *thousand* tons. 
 
 
 ![plot of chunk unnamed-chunk-8](/assets/images/2020-04-01-ww2-strategy/image8_explosives_barchart.png)
@@ -54,7 +54,7 @@ For the Americans and their Allies, the war could not have been won without the 
 
 
 
-There were four main categories of explosives used by the Americans, most commonly a General Purpose Bomb.  The chart below is a sample of several hundred bombs that the U.S. Air Force dropped, mapping the bombs to the target that they hit.  
+There were four main categories of explosives used by the Americans, most commonly a *General Purpose Bomb*.  The chart below is a sample of several hundred bombs that the U.S. Air Force dropped, mapping the bombs to the target that they hit.  
 
 
 ![plot of chunk unnamed-chunk-9](/assets/images/2020-04-01-ww2-strategy/image9_explosive_targets.png)
@@ -79,19 +79,19 @@ As it goes to show, many of key events in World War II can be better understood 
 
 
 
-*Sources:*
+**Sources:**
 
-Japan Wages War on the U.S.:
+*Japan Wages War on the U.S.:*
 
 1. https://www.history.com/news/why-did-japan-attack-pearl-harbor
 
-Eastern European Front/Stalingrad: 
+*Eastern European Front/Stalingrad:* 
 
 2. https://www.history.com/topics/world-war-ii/battle-of-stalingrad
 
 3. https://www.nationalww2museum.org/war/articles/eastern-front
 
-Aircraft Carriers: 
+*Aircraft Carriers:*
 
 4. http://freepages.rootsweb.com/~webermd1/family/Liberator-Info.html
 
@@ -99,15 +99,15 @@ Aircraft Carriers:
 
 6. https://www.airforcemag.com/article/1008daylight/
 
-D-Day:
+*D-Day:*
 
 7. https://www.history.com/news/fooling-hitler-the-elaborate-ruse-behind-d-day
 
-Italian war with Germany
+*Italian war with Germany*
 
 8.	https://www.history.com/this-day-in-history/italy-declares-war-on-germany
 
-*Books:*
+**Books:**
 
 *	Beneath a Scarlett Sky - Mark Sullivan
 
@@ -124,7 +124,7 @@ Italian war with Germany
 *	Operation Garbo: The Personal Story of the Most Successful Spy of World War II - Juan Pujol Garcia
 
 
-*Movies/Documentaries:*
+**Movies/Documentaries:**
 
 * Band of Brothers
 
