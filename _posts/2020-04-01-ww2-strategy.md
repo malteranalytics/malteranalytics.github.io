@@ -18,7 +18,7 @@ Next month (May 8) will mark the 75th anniversary of Victory in Europe (VE) Day,
 
 
 
-The map above is outlined by modern-day Europe with pre-World War 2 labels. Each point represents the target location of a unique aircraft carrier mission, whether it be a bomber, fighter, glider, or other type of aircraft.  The data mostly comes from the United States Air Force and the Royal Air Force of Great Britain with minimal records from the Royal Australian Air Force and the Royal New Zealand Air Force, however data is missing from both nations' campaigns in Europe.  Additionally, there was no data provided for several other key Allied powers such as Canada, the Soviet Union, and Poland.  Also, given that the data was collected from 1939-1945, there are surely cases of inaccuracies and missing records, notably from the Great Britain (Battle of Britain), Australia, and New Zealand data. 
+The map above is outlined by modern-day Europe with pre-World War 2 labels. Each point represents the target location of a unique aircraft carrier mission, whether it be a bomber, fighter, glider, or other type of aircraft.  [The data] (https://www.kaggle.com/usaf/world-war-ii) mostly comes from the United States Air Force and the Royal Air Force of Great Britain with minimal records from the Royal Australian Air Force and the Royal New Zealand Air Force, however data is missing from both nations' campaigns in Europe.  Additionally, there was no data provided for several other key Allied powers such as Canada, the Soviet Union, and Poland.  Also, given that the data was collected from 1939-1945, there are surely cases of inaccuracies and missing records, notably from the Great Britain (Battle of Britain), Australia, and New Zealand data. 
 
 
 Among the astounding number of European, North African, and Mediterranean countries impacted by battle, the locations of highly concentrated aerial action can be associated with territories of strongest Nazi control.  Vichy (Southern) France and neutral Switzerland, Spain, and Portugal were the only countries in Western Europe that avoided complete bombardment.  Had USSR data been available, Poland and many other Eastern European nations would closer resemble Western Europe's destruction. 
@@ -115,29 +115,29 @@ As it goes to show, many of key events in World War II can be better understood 
 
 *Japan Wages War on the U.S.:*
 
-1. https://www.history.com/news/why-did-japan-attack-pearl-harbor
+1. (https://www.history.com/news/why-did-japan-attack-pearl-harbor)
 
 *Eastern European Front/Stalingrad:* 
 
-2. https://www.history.com/topics/world-war-ii/battle-of-stalingrad
+2. (https://www.history.com/topics/world-war-ii/battle-of-stalingrad)
 
-3. https://www.nationalww2museum.org/war/articles/eastern-front
+3. (https://www.nationalww2museum.org/war/articles/eastern-front)
 
 *Aircraft Carriers:*
 
-4. http://freepages.rootsweb.com/~webermd1/family/Liberator-Info.html
+4. (http://freepages.rootsweb.com/~webermd1/family/Liberator-Info.html)
 
-5. https://www.militaryfactory.com/aircraft/detail.asp?aircraft_id=80
+5. (https://www.militaryfactory.com/aircraft/detail.asp?aircraft_id=80)
 
-6. https://www.airforcemag.com/article/1008daylight/
+6. (https://www.airforcemag.com/article/1008daylight/)
 
 *D-Day:*
 
-7. https://www.history.com/news/fooling-hitler-the-elaborate-ruse-behind-d-day
+7. (https://www.history.com/news/fooling-hitler-the-elaborate-ruse-behind-d-day)
 
 *Italian war with Germany*
 
-8.	https://www.history.com/this-day-in-history/italy-declares-war-on-germany
+8.	(https://www.history.com/this-day-in-history/italy-declares-war-on-germany)
 
 **Books:**
 
