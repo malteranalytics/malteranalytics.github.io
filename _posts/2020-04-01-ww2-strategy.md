@@ -114,7 +114,7 @@ As it goes to show, many of key events in World War II can be better understood 
 **Sources:**
 
 
-1. [Why Did Japan Attack Pearl Harbor?](https://www.history.com/news/why-did-japan-attack-pearl-harbor)
+1. [Why Did Japan Attack Pearl Harbor?](https://www.history.com/news/why-did-japan-attack-pearl-harbor){:target="_blank"}
 
 2. [Battle of Stalingrad](https://www.history.com/topics/world-war-ii/battle-of-stalingrad)
 
