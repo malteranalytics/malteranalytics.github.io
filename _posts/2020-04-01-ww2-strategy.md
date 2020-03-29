@@ -79,38 +79,67 @@ As it goes to show, many of key events in World War II can be better understood 
 
 
 
-Sources: 
+</b>Sources:</b>
 
 Japan Wages War on the U.S.:
+
 1.	https://www.history.com/news/why-did-japan-attack-pearl-harbor
+
 Eastern European Front/Stalingrad: 
+
 2.	https://www.history.com/topics/world-war-ii/battle-of-stalingrad
+
 3.	https://www.nationalww2museum.org/war/articles/eastern-front
+
 Aircraft Carriers: 
+
 4.	http://freepages.rootsweb.com/~webermd1/family/Liberator-Info.html
+
 5.	https://www.militaryfactory.com/aircraft/detail.asp?aircraft_id=80
+
 6.	https://www.airforcemag.com/article/1008daylight/
+
 D-Day:
+
 7.	https://www.history.com/news/fooling-hitler-the-elaborate-ruse-behind-d-day
+
 Italian war with Germany
+
 8.	https://www.history.com/this-day-in-history/italy-declares-war-on-germany
 
-Books:
+</b>Books:</b>
+
 .	Beneath a Scarlett Sky - Mark Sullivan
+
 .	Unbroken - Laura Hillenbrand
+
 .	We Were the Lucky Ones - Georgia Hunter
+
 .	City of Thieves - David Benioff
+
 .	The Nightingale - Kristen Hannah
+
 .	The Tattooist of Auschwitz - Heather Morris
+
 .	Operation Garbo: The Personal Story of the Most Successful Spy of World War II - Juan Pujol Garcia
 
-Movies/Documentaries:
+
+</b>Movies/Documentaries:</b>
+
 .	Band of Brothers
+
 .	Saving Private Ryan
+
 .	Inglorious Bastards
+
 .	Unbroken
+
 .	World War II in Colour - Netflix
+
 .	Schindler's List
+
 .	Dunkirk
+
 .	Patton
+
 .	The Pianist 
