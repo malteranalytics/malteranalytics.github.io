@@ -1,7 +1,7 @@
 # Site
 name: "Malter Analytics"
 title: "Analytics and Data Science Blog"
-description: "This is a blog for all things data related."
+description: ""
 logo: 'assets/images/Malter-Analytics-Logo.png'
 baseurl: 
 google_analytics: 'UA-137918066-1'
@@ -30,7 +30,7 @@ authors:
   drew:
     name: Andrew Malter
     display_name: Drew
-    gravatar: d8f2524cf47fb8fa03ba52ad8579238f
+    gravatar: /assets/images/profiles/drew.png
     #email: email@malteranalytics.com
     web: 
     twitter: https://twitter.com/danmalter
