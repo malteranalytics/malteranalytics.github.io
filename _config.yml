@@ -30,7 +30,7 @@ authors:
   drew:
     name: Andrew Malter
     display_name: Drew
-    avatar: /assets/images/profiles/drew.png
+    image: /assets/images/profiles/profile_drew.png
     #email: email@malteranalytics.com
     web: 
     twitter: https://twitter.com/danmalter
