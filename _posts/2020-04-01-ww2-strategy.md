@@ -111,7 +111,7 @@ As this analysis goes to show, many key events in World War II can be better und
 
 
 
-**Sources:**
+**Web Sources:**
 
 
 1. [Why Did Japan Attack Pearl Harbor?](https://www.history.com/news/why-did-japan-attack-pearl-harbor){:target="_blank"}
