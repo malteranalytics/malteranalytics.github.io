@@ -25,17 +25,10 @@ Among the astounding number of European, North African, and Mediterranean countr
 
 
 
-In the Pacific Theatre, we can similarly see that the devastation of war was unavoidable across the map as Japan's Emperor Hirohito sought to expand Japanese influence across the resource rich Pacific Islands; many of which were colonized by Western Powers.  The Imperial Japanese Empire capitalized on the vulnerability of Nazi-occupied France and Netherlands, and the tied-up British, by invading their respective colonies and ruthlessly killing civilians and prisoners of war that stood in their way.  The Philippines (at the time an American territory) and Pearl Harbor were key military targets for Japan, who took a gamble that a crippled U.S. Navy would buy the Japanese enough time to pursue expansion without a full-strength opposition.  The U.S. suffered overwhelming losses in the surprise invasions of both islands with the attack of the Philippines occurring just 10 hours after the attack on Pearl Harbor.<sup>(1)</sup> The Japanese proceeded to imprison and murder thousands of American and Filipino soldiers, however three years later the island was ultimately freed after American General Douglas MacArthur commanded the victorious Battle of Leyte, leading to eventual Philippines independence.<sup>(2)</sup>
-
-
-
-
 ![plot of chunk unnamed-chunk-2](/assets/images/2020-04-01-ww2-strategy/image2-pto_map.PNG)
 
 
-
-
-It took 6 years for the Allies to declare victory in WWII from the moment the war began with the Nazi's Blitzkrieg (Lightning War) invasion of Poland.  The first major turning point in favor of the Allies in Europe (where the graph begins to slope upwards) wasn't until 1943 when the Soviet Union's Red Army prevailed in what became the deadliest battle in war history, the battle of Stalingrad.<sup>(3)</sup>  Following the Red Army's victory in defending their iconic city, named after their dictator, they launched a counter offensive to the west with newfound confidence.<sup>(4)</sup> Meanwhile, the other Allied Powers were advancing up the boot of Italy and preparing for a large-scale invasion of France.  A year later the Americans, British, and Canadians did just that when they stormed the beaches of Normandy on D-Day, completely changing the tide of war, and combat in Europe spiked for 11 months as the Allies pushed the Nazis towards their inevitable surrender.  The map below represents the locations of Allied aerial attacks over the course of the war, implying the path the Allies took (light to dark) through France and Southern Italy as they closed in on the heart of Nazi territory. 
+In the Pacific Theatre, we can similarly see that the devastation of war was unavoidable across the map as Japan's Emperor Hirohito sought to expand Japanese influence across the resource rich Pacific Islands; many of which were colonized by Western Powers.  The Imperial Japanese Empire capitalized on the vulnerability of Nazi-occupied France and Netherlands, and the tied-up British, by invading their respective colonies and ruthlessly killing civilians and prisoners of war that stood in their way.  The Philippines (at the time an American territory) and Pearl Harbor were key military targets for Japan, who took a gamble that a crippled U.S. Navy would buy the Japanese enough time to pursue expansion without a full-strength opposition.  The U.S. suffered overwhelming losses in the surprise invasions of both islands with the attack of the Philippines occurring just 10 hours after the attack on Pearl Harbor.<sup>(1)</sup> The Japanese proceeded to imprison and murder thousands of American and Filipino soldiers, however three years later the island was ultimately freed after American General Douglas MacArthur commanded the victorious Battle of Leyte, leading to eventual Philippines independence.<sup>(2)</sup>
 
 
 
@@ -48,7 +41,15 @@ It took 6 years for the Allies to declare victory in WWII from the moment the wa
 
 
 
-Having seen where and when the aerial missions took place, we'll next look at which types of aircraft were leading these missions.  Among the U.S. Air Force, the B-24 Liberator Bomber was the most used aircraft throughout the war.  The bomber generally carried 8-10 men, including two pilots, several gunners, and an imperative, highly skilled bombardier responsible for hitting the precise target while accounting for aircraft speed, altitude, wind speed, air density, weather conditions, and bomb ballistics.<sup>(5)</sup>  At roughly 200 mph and up to 25,000 feet in the air, often only the lead aircraft in a group required a bombardier while the others would follow suit.<sup>(6)</sup>
+It took 6 years for the Allies to declare victory in WWII from the moment the war began with the Nazi's Blitzkrieg (Lightning War) invasion of Poland.  The first major turning point in favor of the Allies in Europe (where the graph begins to slope upwards) wasn't until 1943 when the Soviet Union's Red Army prevailed in what became the deadliest battle in war history, the battle of Stalingrad.<sup>(3)</sup>  Following the Red Army's victory in defending their iconic city, named after their dictator, they launched a counter offensive to the west with newfound confidence.<sup>(4)</sup> Meanwhile, the other Allied Powers were advancing up the boot of Italy and preparing for a large-scale invasion of France.  A year later the Americans, British, and Canadians did just that when they stormed the beaches of Normandy on D-Day, completely changing the tide of war, and combat in Europe spiked for 11 months as the Allies pushed the Nazis towards their inevitable surrender.  The map below the timeline represents the locations of Allied aerial attacks over the course of the war, implying the path the Allies took (light to dark) through France and Southern Italy as they closed in on the heart of Nazi territory. 
+
+
+
+
+
+
+
+Having seen where and when the aerial missions took place, we'll next look at which types of aircrafts were leading these missions.  Among the U.S. Air Force, the B-24 Liberator Bomber was the most used aircraft throughout the war.  The bomber generally carried 8-10 men, including two pilots, several gunners, and an imperative, highly skilled bombardier responsible for hitting the precise target while accounting for aircraft speed, altitude, wind speed, air density, weather conditions, and bomb ballistics.<sup>(5)</sup>  At roughly 200 mph and up to 25,000 feet in the air, often only the lead aircraft in a group required a bombardier while the others would follow suit.<sup>(6)</sup>
 
 
 
