@@ -3,7 +3,7 @@ layout: post
 title:  "Analysis of the Allies' WWII Strategy"
 author: drew
 categories: [ ww2, Allies, D-Day ]
-image: "https://malteranalytics.github.io/assets/images/2020-04-01-ww2-strategy/image1-eto_map.PNG"
+image: "https://malteranalytics.github.io/assets/images/2020-04-13-ww2-strategy/image1-eto_map.PNG"
 tags: [ww2, Allies, D-Day]
 featured: true
 ---
@@ -13,7 +13,7 @@ Next month, May 8<sup>th</sup>, will mark the 75th anniversary of Victory in Eur
 
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/2020-04-01-ww2-strategy/image1-eto_map.PNG)  
+![plot of chunk unnamed-chunk-1](/assets/images/2020-04-13-ww2-strategy/image1-eto_map.PNG)  
 
 
 
@@ -25,7 +25,7 @@ Among the astounding number of European, North African, and Mediterranean countr
 
 
 
-![plot of chunk unnamed-chunk-2](/assets/images/2020-04-01-ww2-strategy/image2-pto_map.PNG)
+![plot of chunk unnamed-chunk-2](/assets/images/2020-04-13-ww2-strategy/image2-pto_map.PNG)
 
 
 In the Pacific Theatre, we can similarly see that the devastation of war was unavoidable across the map as Japan's Emperor Hirohito sought to expand Japanese influence across the resource rich Pacific Islands; many of which were colonized by Western Powers.  The Imperial Japanese Empire capitalized on the vulnerability of Nazi-occupied France and Netherlands, and the tied-up British, by invading their respective colonies and ruthlessly killing civilians and prisoners of war that stood in their way.  The Philippines (at the time an American territory) and Pearl Harbor were key military targets for Japan, who took a gamble that a crippled U.S. Navy would buy the Japanese enough time to pursue expansion without a full-strength opposition.  The U.S. suffered overwhelming losses in the surprise invasions of both islands with the attack of the Philippines occurring just 10 hours after the attack on Pearl Harbor.<sup>(1)</sup> The Japanese proceeded to imprison and murder thousands of American and Filipino soldiers, however three years later the island was ultimately freed after American General Douglas MacArthur commanded the victorious Battle of Leyte, leading to eventual Philippines independence.<sup>(2)</sup>
@@ -34,9 +34,9 @@ In the Pacific Theatre, we can similarly see that the devastation of war was una
 
 
 
-![plot of chunk unnamed-chunk-3](/assets/images/2020-04-01-ww2-strategy/image3-timeline.PNG)
+![plot of chunk unnamed-chunk-3](/assets/images/2020-04-13-ww2-strategy/image3-timeline.PNG)
 
-![plot of chunk unnamed-chunk-4](/assets/images/2020-04-01-ww2-strategy/image4-timeline_map.PNG)
+![plot of chunk unnamed-chunk-4](/assets/images/2020-04-13-ww2-strategy/image4-timeline_map.PNG)
 
 
 
@@ -53,7 +53,7 @@ Having seen where and when the aerial missions took place, we'll next look at wh
 
 
 
-![plot of chunk unnamed-chunk-5](/assets/images/2020-04-01-ww2-strategy/image5-aircrafts.png)
+![plot of chunk unnamed-chunk-5](/assets/images/2020-04-13-ww2-strategy/image5-aircrafts.png)
 
 
 The second most common type of aircraft was the fighter jet, and among those the A-20 Havoc led the most missions.  A much smaller, faster, and more agile plane than the bomber, the fighter jets were used for aerial combat, often shooting down the enemy and protecting their own bombers.<sup>(7)</sup>
@@ -65,10 +65,10 @@ The second most common type of aircraft was the fighter jet, and among those the
 
 
 
-![plot of chunk unnamed-chunk-6](/assets/images/2020-04-01-ww2-strategy/image6-aircraft_barchart.png)
+![plot of chunk unnamed-chunk-6](/assets/images/2020-04-13-ww2-strategy/image6-aircraft_barchart.png)
 
 
-![plot of chunk unnamed-chunk-7](/assets/images/2020-04-01-ww2-strategy/image7_aircraft_timeline.png)
+![plot of chunk unnamed-chunk-7](/assets/images/2020-04-13-ww2-strategy/image7_aircraft_timeline.png)
 
 
 
@@ -78,7 +78,7 @@ The second most common type of aircraft was the fighter jet, and among those the
 For the Americans and their Allies, the war could not have been won without the continuous improvement of science and technology.  In the case of aerial bombing, the force of explosive bombs that were being rained on Europe and the Pacific was rapidly increasing until the war began to die down late in 1944.  By the peak of the war, a typical bomb had a force akin to 20 tons of TNT, more than 5 times the force of what was being dropped by US bombers at the beginning of the war.   By comparison, the atomic bombs, named Little Boy and Fat Man, that USA dropped over the Japanese cities of Hiroshima and Nagasaki respectively, had TNT equivalents of 15 *thousand* and 20 *thousand* tons. 
 
 
-![plot of chunk unnamed-chunk-8](/assets/images/2020-04-01-ww2-strategy/image8_explosives_barchart.png)
+![plot of chunk unnamed-chunk-8](/assets/images/2020-04-13-ww2-strategy/image8_explosives_barchart.png)
 
 
 
@@ -89,7 +89,7 @@ There were four main categories of explosives used by the Americans, most common
 
 
 
-![plot of chunk unnamed-chunk-9](/assets/images/2020-04-01-ww2-strategy/image9_explosive_targets.png)
+![plot of chunk unnamed-chunk-9](/assets/images/2020-04-13-ww2-strategy/image9_explosive_targets.png)
 
 
 
@@ -101,7 +101,7 @@ We can further understand the Allies' brilliant chess-like strategy by plotting 
 
 
 
-![plot of chunk unnamed-chunk-10](/assets/images/2020-04-01-ww2-strategy/image10_target_map.png)
+![plot of chunk unnamed-chunk-10](/assets/images/2020-04-13-ww2-strategy/image10_target_map.png)
 
 
 
