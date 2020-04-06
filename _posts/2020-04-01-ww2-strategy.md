@@ -107,7 +107,7 @@ In the south of Europe, Italy endured as severe an aerial assault as any other c
 
 
 
-As this analysis goes to show, many key events in World War II can be better understood by supplementing what historians already know with data.  Although this data has flaws and is specific to aerial missions, it's a reflection of the combat that unfolded from all branches of all armed forces that fought in the war.  If you're as interested in World War II as I am and would like to learn more, I've included below several related articles, books, and movies that I found enjoyable.  If you would like to share your thoughts or suggestions, reach out to me at <abmalter12@gmail.com>.
+As this analysis goes to show, many key events in World War II can be better understood by supplementing the accounts of surviviors and historians with data.  Although this data has flaws and is specific to aerial missions, it's a reflection of the combat that unfolded from all branches of all armed forces that fought in the war.  If you're as interested in World War II as I am and would like to learn more, I've included below several related articles, books, and movies that I found enjoyable.  If you would like to share your thoughts or suggestions, reach out to me at <abmalter12@gmail.com>.
 
 
 
