@@ -53,6 +53,9 @@ Having seen where and when the aerial missions took place, we'll next look at wh
 
 
 
+![plot of chunk unnamed-chunk-5](/assets/images/2020-04-01-ww2-strategy/image5-aircrafts.png)
+
+
 The second most common type of aircraft was the fighter jet, and among those the A-20 Havoc led the most missions.  A much smaller, faster, and more agile plane than the bomber, the fighter jets were used for aerial combat, often shooting down the enemy and protecting their own bombers.<sup>(7)</sup>
 
 
@@ -60,7 +63,6 @@ The second most common type of aircraft was the fighter jet, and among those the
 
 
 
-![plot of chunk unnamed-chunk-5](/assets/images/2020-04-01-ww2-strategy/image5-aircrafts.png)
 
 
 ![plot of chunk unnamed-chunk-6](/assets/images/2020-04-01-ww2-strategy/image6-aircraft_barchart.png)
