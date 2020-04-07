@@ -35,10 +35,9 @@ Email: danmalter@gmail.com</p>
 <b>Drew </b> </p>
 
 <p>
-Email: <a href="mailto:abmalter12@gmail.com"></a>.<br>
+Email: <a href="mailto:abmalter12@gmail.com">abmalter12@gmail.com</a>.<br>
 
 <p>
-<a href="https://www.linkedin.com/in/drew-malter-43a5a4b7/" target = "_blank">LinkedIn</a> </p>
 
 
 
