@@ -23,7 +23,7 @@ Danny
 <p>
 Email: danmalter@gmail.com</p>
 <p>
-LinkedIn: https://www.linkedin.com/in/danmalter/ </p>
+LinkedIn: <a href="https://www.linkedin.com/in/danmalter/">LinkedIn</a> </p>
 
 
 <p>
@@ -37,7 +37,7 @@ Drew </p>
 <p>
 Email: abmalter12@gmail.com</p>
 <p>
-LinkedIn: https://www.linkedin.com/in/drew-malter-43a5a4b7/ </p>
+LinkedIn: <a href="https://www.linkedin.com/in/drew-malter-43a5a4b7/">LinkedIn</a> </p>
 
 
 
