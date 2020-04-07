@@ -16,14 +16,14 @@ Contact Info: </p>
 
 <p>
 
-Danny
+<b>Danny </b>
 
 </p>
 
 <p>
-Email: danmalter@gmail.com</p>
+Email: <a href="mailto:danmalter@gmail.com">danmalter@gmail.com</a> <br>
 <p>
-Phone: (847)-769-1526</p>
+<a href="https://www.linkedin.com/in/danmalter/" target = "_blank">LinkedIn</a> </p>
 
 
 <p>
@@ -32,12 +32,12 @@ Phone: (847)-769-1526</p>
 
 </p>
 
-Drew </p>
+<b>Drew </b> </p>
 
 <p>
-Email: abmalter12@gmail.com</p>
+Email: <a href="mailto:abmalter12@gmail.com">abmalter12@gmail.com</a> <br>
 <p>
-Phone: (847)-708-7335</p>
+<a href="https://www.linkedin.com/in/drew-malter-43a5a4b7/" target = "_blank">LinkedIn</a> </p>
 
 
 
