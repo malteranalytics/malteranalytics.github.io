@@ -51,7 +51,7 @@ Phone: (847)-708-7335</p>
 <p>
 
 
-![plot of chunk unnamed-chunk-10](/assets/images/2020-04-13-ww2-strategy/image10_target_map.png)
+![plot of chunk unnamed-chunk-1](/assets/images/profiles/profile-drew.png)
 
 
 </p>
