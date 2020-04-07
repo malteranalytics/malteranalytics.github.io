@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me
+title: About Us
 permalink: /about
 comments: false
 ---
