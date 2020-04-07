@@ -16,7 +16,7 @@ Contact Info: </p>
 
 <p>
 
-**Danny** 
+Danny
 
 </p>
 
@@ -32,7 +32,7 @@ Phone: (847)-769-1526</p>
 
 </p>
 
-**Drew** </p>
+Drew </p>
 
 <p>
 Email: abmalter12@gmail.com</p>
