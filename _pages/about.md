@@ -16,14 +16,14 @@ Contact Info: </p>
 
 <p>
 
-Danny
+<b>Danny </b>
 
 </p>
 
 <p>
 Email: danmalter@gmail.com</p>
 <p>
-LinkedIn: <a href="https://www.linkedin.com/in/danmalter/">LinkedIn</a> </p>
+<a href="https://www.linkedin.com/in/danmalter/" target = _blank">LinkedIn</a> </p>
 
 
 <p>
@@ -32,12 +32,12 @@ LinkedIn: <a href="https://www.linkedin.com/in/danmalter/">LinkedIn</a> </p>
 
 </p>
 
-Drew </p>
+<b>Drew </b> </p>
 
 <p>
 Email: abmalter12@gmail.com</p>
 <p>
-LinkedIn: <a href="https://www.linkedin.com/in/drew-malter-43a5a4b7/">LinkedIn</a> </p>
+<a href="https://www.linkedin.com/in/drew-malter-43a5a4b7/" target = "_blank">LinkedIn</a> </p>
 
 
 
