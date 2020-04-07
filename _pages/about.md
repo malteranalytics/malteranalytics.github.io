@@ -49,7 +49,12 @@ Phone: (847)-708-7335</p>
 <div class="sticky-top sticky-top-80">
 <h5></h5>
 <p>
-![plot of chunk unnamed-chunk-10](/assets/images/2020-04-13-ww2-strategy/image10_target_map.png)</p>
+
+
+![plot of chunk unnamed-chunk-10](/assets/images/2020-04-13-ww2-strategy/image10_target_map.png)
+
+
+</p>
 
 
 </div>
