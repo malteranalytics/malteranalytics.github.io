@@ -23,7 +23,7 @@ Danny
 <p>
 Email: danmalter@gmail.com</p>
 <p>
-Phone: (847)-769-1526</p>
+LinkedIn: https://www.linkedin.com/in/danmalter/ </p>
 
 
 <p>
@@ -37,7 +37,7 @@ Drew </p>
 <p>
 Email: abmalter12@gmail.com</p>
 <p>
-Phone: (847)-708-7335</p>
+LinkedIn: https://www.linkedin.com/in/drew-malter-43a5a4b7/ </p>
 
 
 
