@@ -21,7 +21,7 @@ Contact Info: </p>
 </p>
 
 <p>
-Email: <a href="mailto:danmalter@gmail.com">danmalter@gmail.com</a> <br>
+Email: <a href="mailto:danmalter@gmail.com">danmalter@gmail.com</a> <br> </p>
 <p>
 <a href="https://www.linkedin.com/in/danmalter/" target = "_blank">LinkedIn</a> </p>
 
@@ -35,7 +35,7 @@ Email: <a href="mailto:danmalter@gmail.com">danmalter@gmail.com</a> <br>
 <b>Drew </b> </p>
 
 <p>
-Email: <a href="mailto:abmalter12@gmail.com">abmalter12@gmail.com</a> <br>
+Email: <a href="mailto:abmalter12@gmail.com">abmalter12@gmail.com</a> <br> </p>
 <p>
 <a href="https://www.linkedin.com/in/drew-malter-43a5a4b7/" target = "_blank">LinkedIn</a> </p>
 
