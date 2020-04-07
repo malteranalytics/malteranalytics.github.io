@@ -51,7 +51,7 @@ Phone: (847)-708-7335</p>
 <p>
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/profiles/profile-drew.png)
+![plot of chunk unnamed-chunk-1](/assets/images/about/danny-drew.png)
 
 
 </p>
