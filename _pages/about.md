@@ -15,7 +15,10 @@ Danny and Drew are brothers who are both data scientists in Chicago.  Drew works
 Contact Info: </p>
 
 <p>
-**Danny** </p>
+
+**Danny** 
+
+</p>
 
 <p>
 Email: danmalter@gmail.com</p>
@@ -26,6 +29,9 @@ Phone: (847)-769-1526</p>
 <p>
 
 <p>
+
+</p>
+
 **Drew** </p>
 
 <p>
