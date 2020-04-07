@@ -23,7 +23,7 @@ Contact Info: </p>
 <p>
 Email: danmalter@gmail.com</p>
 <p>
-<a href="https://www.linkedin.com/in/danmalter/" target = _blank">LinkedIn</a> </p>
+<a href="https://www.linkedin.com/in/danmalter/" target = "_blank">LinkedIn</a> </p>
 
 
 <p>
