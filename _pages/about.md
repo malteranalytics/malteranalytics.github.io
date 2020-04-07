@@ -13,7 +13,3 @@ comments: false
 Danny and Drew are brothers who are both data scientists in Chicago.  Drew works for Slalom and Danny has worked for Cengage Learning, Hyatt, and Molson Coors.  </p>
 
 
-
-</div>
-</div>
-</div>
