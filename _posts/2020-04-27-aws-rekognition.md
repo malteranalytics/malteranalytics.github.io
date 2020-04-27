@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Face and Emotion Recogntion using R"
+title:  "Face and Emotion Recognition using R"
 author: danny
 categories: [ R, AWS ]
 image: "https://github.com/malteranalytics/malteranalytics.github.io/blob/master/assets/images/2020-04-27-aws-rekognition/face_recognition_thumbnail.png?raw=true"
