@@ -3,7 +3,7 @@ layout: post
 title:  "Face and Emotion Recogntion using R"
 author: danny
 categories: [ R, AWS ]
-image: "/assets/images/2020-04-27-aws-rekognition/face_recognition_thumbnail.png"
+image: /assets/images/2020-04-27-aws-rekognition/face_recognition_thumbnail.png
 tags: [R, AWS]
 featured: true
 ---
