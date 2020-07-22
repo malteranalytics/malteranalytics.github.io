@@ -49,7 +49,7 @@ At the team level, statistics will converge to their true average far before the
 
 
 
-From the above charts, it might be a reasonable inference that team standings were also mostly solidified after around 30 to 40 games, however that was not the case.  The following 6 charts show the cumulative team wins over the course of the 2019 season.  At the 60-game mark, the Braves and Cardinals, who eventually went on to win their divisions, were nowhere near first place.  Even among the teams that finished both the 60 and 162 game markers in first place, there were swaps in the standings along the way. 
+From the above charts, it might be a reasonable inference that team standings were also mostly solidified after around 30 to 40 games, however that was not the case.  The following 6 charts show the cumulative team wins over the course of the 2019 season.  The Braves and Cardinals, who eventually went on to win their divisions, would have come up short in a 60 game season.   Even among the teams that finished both the 60 and 162 game markers in first place, there were swaps in the standings along the way. 
 
 
 
