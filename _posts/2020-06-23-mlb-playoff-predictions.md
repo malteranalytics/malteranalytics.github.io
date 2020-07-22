@@ -3,17 +3,26 @@
 title:  "Are 60 Games Enough for Averages to 'Regress to the Mean?'"
 author: drew
 categories: [ mlb, dataviz ]
-image: "https://malteranalytics.github.io/assets/images/2020-07-23-mlb-playoff-predictions/image11.PNG"
+image: "https://malteranalytics.github.io/assets/images/2020-07-23-mlb-playoff-predictions/image11.png"
 tags: [mlb, dataviz, analytics, moneyball, rstats]
 featured: true
 ---
   
   
-Next month, May 8<sup>th</sup>, will mark the 75th anniversary of Victory in Europe (VE) Day, when Winston Churchill announced Nazi Germany's unconditional surrender from World War II, officially bringing an end to the Holocaust and to the war in Europe.  Defeating Fascism required a well-planned, well-executed war strategy along with the sacrifices of millions of people who contributed to the Allies' efforts.  To better understand their strategy, I've created a visual analysis from over 175 thousand records of documented Allied aerial missions by the United States, Great Britain, Australia, and New Zealand, across all theaters of operation from the 6-year war.   
+Every year after MLB's first month, there seems to be one or two players who are on pace to break Barry Bonds' homerun record, or a team that is on pace to have the best record of all time.  Of course, we all know that these are unlikely outcomes because of the statistics phenomenon of 'Regression Towards the Mean'.   The law of Regression Towards the Mean asserts that as a sample size gets larger (number of games), variables (player and team statistics) will move closer towards their true average.  
 
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/2020-04-13-ww2-strategy/image1-eto_map.PNG)  
+This MLB season, which will compose of just 60 games (seasons are typically 162 games) will be especially exciting because we're not sure if 60 games is a large enough sample size for all statistics to regress towards the mean.  Hence, we may see a much greater variation of team records and individual player statistics than we normally observe in a full season.  In this article, we'll analyze the regression of 2019 player and team stats to better predict what we might see in the 2020 season, followed by the results of my 2020 division win probability model. 
+
+
+
+
+Batting Average and Home Runs are a baseball fan's two favorite stats to track at the individual player level.   The below charts take the 2019 season leaders for each respective category and plot their cumulative stats over the course of the season.  Against the player's regressing lines are the all-time leaders for those categories.  (Rogers Hornsby is the all time Batting Average leader of the last 100 years).   Tim Anderson of the White Sox, who finished the season with the best batting average, jumped off to an incredible start, but only maintained a higher average than Hornsby for about 3 weeks, and by 60 games was well under.  It took around 40 games for each of these players to reach within a very close margin of their final season batting average. 
+
+
+
+![plot of chunk unnamed-chunk-1](/assets/images/2020-07-23-mlb-playoff-predictions/image1.PNG)  
 
 
 
@@ -25,7 +34,7 @@ Among the astounding number of European, North African, and Mediterranean countr
 
 
 
-![plot of chunk unnamed-chunk-2](/assets/images/2020-04-13-ww2-strategy/image2-pto_map.PNG)
+![plot of chunk unnamed-chunk-2](/assets/images/2020-07-23-mlb-playoff-predictions/image2-pto_map.PNG)
 
 
 In the Pacific Theater, we can similarly see that the devastation of war was unavoidable across the map as Japan's Emperor Hirohito sought to expand Japanese influence across the resource rich Pacific Islands; many of which were colonized by Western Powers.  The Imperial Japanese Empire capitalized on the vulnerability of Nazi-occupied France and Netherlands, and the tied-up British, by invading their respective colonies and ruthlessly killing civilians and prisoners of war that stood in their way.  The Philippines (at the time an American territory) and Pearl Harbor were key military targets for Japan, who took a gamble that a crippled U.S. Navy would buy the Japanese enough time to pursue expansion without a full-strength opposition.  The U.S. suffered overwhelming losses in the surprise invasions of both islands with the attack of the Philippines occurring just 10 hours after the attack on Pearl Harbor.<sup>(1)</sup> The Japanese proceeded to imprison and murder thousands of American and Filipino soldiers, however three years later the island was ultimately freed after American General Douglas MacArthur commanded the victorious Battle of Leyte, leading to eventual Philippines independence.<sup>(2)</sup>
@@ -34,9 +43,9 @@ In the Pacific Theater, we can similarly see that the devastation of war was una
 
 
 
-![plot of chunk unnamed-chunk-3](/assets/images/2020-04-13-ww2-strategy/image3-timeline.PNG)
+![plot of chunk unnamed-chunk-3](/assets/images/2020-07-23-mlb-playoff-predictions/image3-timeline.PNG)
 
-![plot of chunk unnamed-chunk-4](/assets/images/2020-04-13-ww2-strategy/image4-timeline_map.PNG)
+![plot of chunk unnamed-chunk-4](/assets/images/2020-07-23-mlb-playoff-predictions/image4-timeline_map.PNG)
 
 
 
@@ -53,7 +62,7 @@ Having seen where and when the aerial missions took place, we'll next look at wh
   
   
   
-  ![plot of chunk unnamed-chunk-5](/assets/images/2020-04-13-ww2-strategy/image5-aircrafts.png)
+  ![plot of chunk unnamed-chunk-5](/assets/images/2020-07-23-mlb-playoff-predictions/image5-aircrafts.png)
 
 
 The second most common type of aircraft was the fighter jet, and among those the A-20 Havoc led the most missions.  A much smaller, faster, and more agile plane than the bomber, the fighter jets were used for aerial combat, often shooting down the enemy and protecting their own bombers.<sup>(7)</sup>
@@ -65,10 +74,10 @@ The second most common type of aircraft was the fighter jet, and among those the
   
   
   
-  ![plot of chunk unnamed-chunk-6](/assets/images/2020-04-13-ww2-strategy/image6-aircraft_barchart.png)
+  ![plot of chunk unnamed-chunk-6](/assets/images/2020-07-23-mlb-playoff-predictions/image6-aircraft_barchart.png)
 
 
-![plot of chunk unnamed-chunk-7](/assets/images/2020-04-13-ww2-strategy/image7_aircraft_timeline.png)
+![plot of chunk unnamed-chunk-7](/assets/images/2020-07-23-mlb-playoff-predictions/image7_aircraft_timeline.png)
 
 
 
@@ -78,7 +87,7 @@ The second most common type of aircraft was the fighter jet, and among those the
 For the Americans and their Allies, the war could not have been won without the continuous improvement of science and technology.  In the case of aerial bombing, the force of explosive bombs that were being rained on Europe and the Pacific was rapidly increasing until the war began to die down late in 1944.  By the peak of the war, a typical bomb had a force akin to 20 tons of TNT, more than 5 times the force of what was being dropped by US bombers at the beginning of the war.   By comparison, the atomic bombs, named Little Boy and Fat Man, that USA dropped over the Japanese cities of Hiroshima and Nagasaki respectively, had TNT equivalents of 15 *thousand* and 20 *thousand* tons. 
 
 
-![plot of chunk unnamed-chunk-8](/assets/images/2020-04-13-ww2-strategy/image8_explosives_barchart.png)
+![plot of chunk unnamed-chunk-8](/assets/images/2020-07-23-mlb-playoff-predictions/image8_explosives_barchart.png)
 
 
 
@@ -89,7 +98,7 @@ There were four main categories of explosives used by the Americans, most common
 
 
 
-![plot of chunk unnamed-chunk-9](/assets/images/2020-04-13-ww2-strategy/image9_explosive_targets.png)
+![plot of chunk unnamed-chunk-9](/assets/images/2020-07-23-mlb-playoff-predictions/image9_explosive_targets.png)
 
 
 
@@ -101,7 +110,7 @@ We can further understand the Allies' brilliant chess-like strategy by plotting 
 
 
 
-![plot of chunk unnamed-chunk-10](/assets/images/2020-04-13-ww2-strategy/image10_target_map.png)
+![plot of chunk unnamed-chunk-10](/assets/images/2020-07-23-mlb-playoff-predictions/image10_target_map.png)
 
 
 
@@ -113,62 +122,3 @@ In the south of Europe, Italy endured as severe an aerial assault as any other c
 As this analysis goes to show, many key events in World War II can be better understood by supplementing the accounts of surviviors and historians with data.  Although this data has flaws and is specific to aerial missions, it's a reflection of the combat that unfolded from all branches of all armed forces that fought in the war.  If you're as interested in World War II as I am and would like to learn more, I've included below several related articles, books, and movies that I found enjoyable.  If you would like to share your thoughts or suggestions, reach out to me at <abmalter12@gmail.com>.
 
 
-
-**Web Sources:**
-  
-  
-  1. [Why Did Japan Attack Pearl Harbor?](https://www.history.com/news/why-did-japan-attack-pearl-harbor){:target="_blank"}
-
-2. [Bataan Death March](https://www.history.com/topics/world-war-ii/bataan-death-march){:target="_blank"}
-
-3. [Battle of Stalingrad](https://www.history.com/topics/world-war-ii/battle-of-stalingrad){:target="_blank"}
-
-4. [Eastern European Front ](https://www.nationalww2museum.org/war/articles/eastern-front){:target="_blank"}
-
-5. [B-24 Liberator](http://freepages.rootsweb.com/~webermd1/family/Liberator-Info.html){:target="_blank"}
-
-6. [Aircraft Details](https://www.militaryfactory.com/aircraft/detail.asp?aircraft_id=80){:target="_blank"}
-
-7. [Daylight Precision Bombing](https://www.airforcemag.com/article/1008daylight/){:target="_blank"}
-
-8. [The Elaborate Ruse Behind D-Day](https://www.history.com/news/fooling-hitler-the-elaborate-ruse-behind-d-day){:target="_blank"}
-
-9. [Italy Declares Way on Germany](https://www.history.com/this-day-in-history/italy-declares-war-on-germany){:target="_blank"}
-
-
-**Books:**
-  
-  *	Beneath a Scarlett Sky - Mark Sullivan
-
-*	Unbroken - Laura Hillenbrand
-
-*	We Were the Lucky Ones - Georgia Hunter
-
-*	City of Thieves - David Benioff
-
-*	The Nightingale - Kristen Hannah
-
-*	The Tattooist of Auschwitz - Heather Morris
-
-*	Operation Garbo: The Personal Story of the Most Successful Spy of World War II - Juan Pujol Garcia
-
-
-**Movies/Documentaries:**
-  
-  * Band of Brothers
-
-* Saving Private Ryan
-
-*	Inglorious Bastards
-
-*	Unbroken
-
-*	World War II in Colour - Netflix
-
-*	Schindler's List
-
-*	Dunkirk
-
-*	Patton
-
-*	The Pianist 
