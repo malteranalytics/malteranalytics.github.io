@@ -1,5 +1,5 @@
 ---
-  layout: post
+layout: post
 title:  "Are 60 Games Enough for Averages to 'Regress to the Mean?'"
 author: drew
 categories: [ mlb, dataviz ]
