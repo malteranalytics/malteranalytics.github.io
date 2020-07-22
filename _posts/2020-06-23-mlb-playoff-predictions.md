@@ -2,7 +2,7 @@
 layout: post
 title:  "Are 60 Games Enough for Averages to 'Regress to the Mean'?"
 author: drew
-categories: [ mlb, dataviz ]
+categories: [ mlb, baseball, dataviz ]
 image: "https://malteranalytics.github.io/assets/images/2020-07-23-mlb-playoff-predictions/image12.PNG"
 tags: [mlb, dataviz, analytics, moneyball, rstats]
 featured: false
