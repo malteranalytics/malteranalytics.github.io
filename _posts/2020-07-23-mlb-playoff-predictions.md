@@ -3,7 +3,7 @@ layout: post
 title:  "Are 60 Games Enough for MLB Trends to 'Regress to the Mean'?"
 author: drew
 categories: [ mlb, baseball, dataviz ]
-image: "https://malteranalytics.github.io/assets/images/2020-07-23-mlb-playoff-predictions/image12.PNG"
+image: "https://malteranalytics.github.io/assets/images/2020-07-23-mlb-playoff-predictions/image11.PNG"
 tags: [mlb, dataviz, analytics, moneyball, rstats]
 featured: false
 ---
@@ -79,6 +79,8 @@ Last year on MLB Opening Day, I posted [playoff probability predictions](https:/
   
   
 ![plot of chunk unnamed-chunk-11](/assets/images/2020-07-23-mlb-playoff-predictions/image11.PNG)
+
+![plot of chunk unnamed-chunk-11](/assets/images/2020-07-23-mlb-playoff-predictions/image12.PNG)
 
 
 
