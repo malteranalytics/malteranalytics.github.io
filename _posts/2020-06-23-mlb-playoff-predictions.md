@@ -78,7 +78,7 @@ Last year on MLB Opening Day, I posted [playoff probability predictions](https:/
   
   
   
-![plot of chunk unnamed-chunk-11](/assets/images/2020-07-23-mlb-playoff-predictions/image11.png)
+![plot of chunk unnamed-chunk-11](/assets/images/2020-07-23-mlb-playoff-predictions/image11.PNG)
 
 
 
