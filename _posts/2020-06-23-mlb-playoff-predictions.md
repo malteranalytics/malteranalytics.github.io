@@ -13,7 +13,7 @@ Every year after MLB's first month, there seems to be one or two players who are
 
 
 
-This MLB season, which will compose of just 60 games (seasons are typically 162 games) will be especially exciting because we're not sure if 60 games is a large enough sample size for all statistics to regress towards the mean.  Hence, we may see a much greater variation of team records and individual player statistics than we normally observe in a full season.  In this article, we'll analyze the regression of 2019 player and team stats to better predict what we might see in the 2020 season, followed by the results of my 2020 division win probability model. 
+This MLB season, which will comprise of just 60 games (seasons are typically 162 games) will be especially exciting because we're not sure if 60 games is a large enough sample size for all statistics to regress towards the mean.  Hence, we may see a much greater variation of team records and individual player statistics than we normally observe in a full season.  In this article, we'll analyze the regression of 2019 player and team stats to better predict what we might see in the 2020 season, followed by the results of my 2020 division win probability model. 
 
 
 
@@ -70,7 +70,7 @@ From the above charts, it might be a reasonable inference that team standings we
 
 
 
-Last year on MLB Opening Day, I posted [playoff probability predictions](https://malteranalytics.github.io/mlb-playoff-predictions/){:target="_blank"} and the method I used to obtain those predictions.  This year, I've used the same method, but adjusting the standard deviations for a 60-game season, to out the 2020 playoff probabilities.  In the charts below, I've also included what each team's chances would have been if there was a full season.  The glaring takeaway is that a 60-game season is very beneficial to underdogs.  In the American League, the Red Sox, Athletics, and Angels probabilities have been tripled, doubled, and tripled respectively.  In the National League, we see similar improvements for the Phillies, Padres, and Diamondbacks.  Contrary, teams that would have incredibly high playoff chances in a full season such as the Yankees, Astros, and Dodgers, now are no better than a coin flip.      
+Last year on MLB Opening Day, I posted [playoff probability predictions](https://malteranalytics.github.io/mlb-playoff-predictions/){:target="_blank"} and the method I used to obtain those predictions.  This year, I've used the same method, but I adjusted the standard deviations for a 60-game season, to get the 2020 playoff probabilities.  In the charts below, I've also included what each team's chances would have been if there was a full season.  The glaring takeaway is that a 60-game season is very beneficial to underdogs.  In the American League, the Red Sox, Athletics, and Angels probabilities have been tripled, doubled, and tripled respectively.  In the National League, we see similar improvements for the Phillies, Padres, and Diamondbacks.  On the contrary, teams that would have incredibly high playoff chances in a full season such as the Yankees, Astros, and Dodgers, now are no better than a coin flip.      
   
   
   
