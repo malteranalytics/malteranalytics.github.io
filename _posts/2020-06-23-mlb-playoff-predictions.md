@@ -3,7 +3,7 @@
 title:  "Are 60 Games Enough for Averages to 'Regress to the Mean?'"
 author: drew
 categories: [ mlb, dataviz ]
-image: "https://malteranalytics.github.io/assets/images/2020-07-23-mlb-playoff-predictions/image11.png"
+image: "https://malteranalytics.github.io/assets/images/2020-07-23-mlb-playoff-predictions/image11.PNG"
 tags: [mlb, dataviz, analytics, moneyball, rstats]
 featured: true
 ---
@@ -22,7 +22,8 @@ Batting Average and Home Runs are a baseball fan's two favorite stats to track a
 
 
 
-![plot of chunk unnamed-chunk-1](/assets/images/2020-07-23-mlb-playoff-predictions/image1.PNG)  
+![plot of chunk unnamed-chunk-1](/assets/images/2020-07-23-mlb-playoff-predictions/image1.png)
+
 
 
 
@@ -33,7 +34,7 @@ Christian Yelich of the Brewers and Cody Bellinger of the Dodgers were able to m
 
 
 
-![plot of chunk unnamed-chunk-2](/assets/images/2020-07-23-mlb-playoff-predictions/image2.PNG)
+![plot of chunk unnamed-chunk-2](/assets/images/2020-07-23-mlb-playoff-predictions/image2.png)
 
 
 At the team level, statistics will converge to their true average far before the individuals due to the team having a greater sample size.  The below charts look at On Base Percentage (OBP) for each team, showing that it took just about 30 games for teams to be within close range of their final season On Base Percentage. 
@@ -42,9 +43,9 @@ At the team level, statistics will converge to their true average far before the
 
 
 
-![plot of chunk unnamed-chunk-3](/assets/images/2020-07-23-mlb-playoff-predictions/image3.PNG)
+![plot of chunk unnamed-chunk-3](/assets/images/2020-07-23-mlb-playoff-predictions/image3.png)
 
-![plot of chunk unnamed-chunk-4](/assets/images/2020-07-23-mlb-playoff-predictions/image4.PNG)
+![plot of chunk unnamed-chunk-4](/assets/images/2020-07-23-mlb-playoff-predictions/image4.png)
 
 
 
