@@ -1,5 +1,5 @@
 ---
-layout: post
+  layout: post
 title:  "2020-21 NFL Odds"
 author: drew
 categories: [ NFL, football, simulation, python ]
@@ -9,8 +9,8 @@ featured: true
 ---
   
   
-
-The odds have been determined by the results of a Python simulation of 10 thousand seasons. The methodology used is similar to and can be explained by that used to [predict MLB odds](https://malteranalytics.github.io/mlb-probabilities/){:target="_blank"}.
+  
+  The odds have been determined by the results of a Python simulation of 10 thousand seasons. The methodology used is similar to and can be explained by that used to [predict MLB odds](https://malteranalytics.github.io/mlb-probabilities/){:target="_blank"}.
 
 Teams are shown by conference, ranked in order of probability of winning the Superbowl.  The strength of a team's division plays a large role in their chances of making the playoffs, so there's not a perfect correlation between projected wins and Superbowl odds. 
 
