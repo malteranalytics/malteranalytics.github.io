@@ -57,7 +57,7 @@ Email: <a href="mailto:abmalter12@gmail.com">abmalter12@gmail.com</a> <br> </p>
 <p>
 
 
-Follow <a href="https://www.instagram.com/malteranalytics/?hl=en" target = "_blank">MalterAnalytics</a> on Instagram </p>
+Follow <a href="https://www.instagram.com/malteranalytics/?hl=en" target = "_blank">@MalterAnalytics</a> on Instagram </p>
 
 
 </div>
