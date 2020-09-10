@@ -5,7 +5,7 @@ author: drew
 categories: [ ww2, Allies, D-Day ]
 image: "https://malteranalytics.github.io/assets/images/2020-04-13-ww2-strategy/image1-eto_map.PNG"
 tags: [ww2, Allies, D-Day]
-featured: true
+featured: false
 ---
   
   
