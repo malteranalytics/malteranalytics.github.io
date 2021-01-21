@@ -53,11 +53,11 @@ The next two charts below show another obvious change in the 2020 season; the hi
 From the chart below, we can see the driving force behind increase in points scored.  The arrows represent the yard lines in which the average NFL drive began and ended per season.  In 2020, offenses were averaging almost an additional 5 yards per drive.  The second chart below breaks down the average drive by team so that you can see how your team faired in 2020 compared to the league. 
 
 
-![plot of chunk unnamed-chunk-4](/assets/images/2021-01-25-nfl-covid-season/image4.png)  
+![plot of chunk unnamed-chunk-4](/assets/images/2021-01-25-nfl-covid-season/image4.PNG)  
 
 
 
-![plot of chunk unnamed-chunk-5](/assets/images/2021-01-25-nfl-covid-season/image5.png)  
+![plot of chunk unnamed-chunk-5](/assets/images/2021-01-25-nfl-covid-season/image5.PNG)  
 
 
 
