@@ -12,7 +12,7 @@ featured: false
 
 
 
-Like all sports leagues around the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played.  Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive.   Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week.  In attempt to understand how these adjustments may have affected game play, I've compared [NFL play-by-play](http://nflsavant.com/about.php){:target="_blank"} data between the 2020 season and previous seasons. 
+Like all sports leagues round the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played.  Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive.   Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week.  In attempt to understand how these adjustments may have affected game play, I've compared [NFL play-by-play](http://nflsavant.com/about.php){:target="_blank"} data between the 2020 season and previous seasons. 
 
 
 
@@ -53,11 +53,11 @@ The next two charts below show another obvious change in the 2020 season; the hi
 From the chart below, we can see the driving force behind increase in points scored.  The arrows represent the yard lines in which the average NFL drive began and ended per season.  In 2020, offenses were averaging almost an additional 5 yards per drive.  The second chart below breaks down the average drive by team so that you can see how your team faired in 2020 compared to the league. 
 
 
-![plot of chunk unnamed-chunk-4](/assets/images/2021-01-25-nfl-covid-season/image4.PNG)  
+![plot of chunk unnamed-chunk-4](/assets/images/2021-01-25-nfl-covid-season/image4.png)  
 
 
 
-![plot of chunk unnamed-chunk-5](/assets/images/2021-01-25-nfl-covid-season/image5.PNG)  
+![plot of chunk unnamed-chunk-5](/assets/images/2021-01-25-nfl-covid-season/image5.png)  
 
 
 
