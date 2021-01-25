@@ -12,7 +12,7 @@ featured: false
 
 
 
-Like all sports leagues round the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played.  Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive.   Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week.  In attempt to understand how these adjustments may have affected game play, I've compared [NFL play-by-play](http://nflsavant.com/about.php){:target="_blank"} data between the 2020 season and previous seasons. 
+Like all sports leagues around the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played.  Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive.   Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week.  In attempt to understand how these adjustments may have affected game play, I've compared [NFL play-by-play](http://nflsavant.com/about.php){:target="_blank"} data between the 2020 season and previous seasons. 
 
 
 
