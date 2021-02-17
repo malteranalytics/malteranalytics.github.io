@@ -9,7 +9,7 @@ comments: false
 <div class="col-md-8 pr-5">
 
 <p>
-Danny and Drew are brothers who are both data scientists in Chicago.  Drew works for Slalom and Danny has worked for Cengage Learning, Hyatt, and Molson Coors. Both sports fans, a hobby of ours is sports analytics and writing about our findings. This blog is a collection of some of the work we've done.  </p>
+Danny and Drew are brothers and both data scientists in Chicago.  Drew works for Slalom and Danny has worked for Hyatt Hotels, Molson Coors and Accenture. Both sports fans, a hobby of ours is sports analytics and writing about our findings. This blog is a collection of some of the work we've done.  </p>
 
 <p>
 Contact Info: </p>

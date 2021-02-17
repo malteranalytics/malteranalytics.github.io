@@ -5,14 +5,14 @@ description: ""
 logo: 'assets/images/Malter-Analytics-Logo.png'
 baseurl: 
 google_analytics: 'UA-137918066-1'
-disqus: 'nubo'
+disqus: ''
 follow-twitter: 'http://www.twitter.com/danmalter'
 follow-instagram: 'http://www.instagram.com/malteranalytics'
 follow-facebook: 'https://www.facebook.com/malteranalytics'
 #follow-linkedin: 'https://www.linkedin.com/in/malteranalytics/'
 follow-github: 'https://github.com/malteranalytics'
 mailchimp-list: 
-#'https://nubo.us3.list-manage.com/subscribe?u=6c85dfdd00be275ce46cdfa5c&id=b2f4f20705'
+#
 include: ["_pages"]
 permalink: /:title/
 show_drafts: false
