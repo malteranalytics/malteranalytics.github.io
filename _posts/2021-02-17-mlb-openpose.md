@@ -32,7 +32,7 @@ Technology like this can be used for various reasons, some of which include the 
 
 <br>
 
-<b>Walker Beuhler</b>
+<b>Mike Trout</b>
 <video width="520" controls>
 <source src="/assets/images/2021-02-17-mlb-openpose/trout.mp4">
 </video>
