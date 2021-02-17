@@ -5,7 +5,7 @@ description: ""
 logo: 'assets/images/Malter-Analytics-Logo.png'
 baseurl: 
 google_analytics: 'UA-137918066-1'
-disqus: ''
+disqus: 'danmalter'
 follow-twitter: 'http://www.twitter.com/danmalter'
 follow-instagram: 'http://www.instagram.com/malteranalytics'
 follow-facebook: 'https://www.facebook.com/malteranalytics'
