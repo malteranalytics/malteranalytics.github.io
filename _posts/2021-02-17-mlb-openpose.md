@@ -8,7 +8,7 @@ tags: [MLB, baseball, R]
 featured: false
 ---
   
-This post gives an example of how to use OpenPose for tracking pitcher and hitter mechanics in Major League Baseball. In the first example, we see a video of Walker Beuhler pitching in slow motion and in the second, a video of Mike Trout swinging through a home run. OpenPose is an open-source algorithm developed by MIT to detect real-time multi-person system to jointly detect human body, hand, facial, and foot keypoints.  
+This post gives an example of how to use OpenPose for tracking pitcher and hitter mechanics in Major League Baseball. In the first example, we see a video of Walker Beuhler pitching in slow motion and in the second, a video of Mike Trout swinging through a home run. OpenPose is a real-time multi-person system developed by MIT to detect human body, hand, facial, and foot keypoints.  
 
 Technology like this can be used for various reasons, some of which include the use of player scouting, tracking mechanics and detecting injuries ahead of time. 
 
