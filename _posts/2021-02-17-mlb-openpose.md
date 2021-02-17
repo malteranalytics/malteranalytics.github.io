@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2020-21 NFL Odds"
+title:  "Using OpenPose with MLB Players"
 author: danny
 categories: [ MLB, baseball, openpose, R ]
 image: "https://malteranalytics.github.io/assets/images/2021-02-17-mlb-openpose/trout.png"
