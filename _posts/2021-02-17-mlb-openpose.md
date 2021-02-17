@@ -3,7 +3,7 @@ layout: post
 title:  "2020-21 NFL Odds"
 author: danny
 categories: [ MLB, baseball, openpose, R ]
-image: "https://malteranalytics.github.io/assets/images/2020-09-10-nfl-odds/image1.PNG"
+image: "https://malteranalytics.github.io/assets/images/2021-02-17-mlb-openpose/trout.PNG"
 tags: [MLB, baseball, R]
 featured: false
 ---
