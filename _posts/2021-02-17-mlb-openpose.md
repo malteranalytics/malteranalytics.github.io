@@ -13,3 +13,6 @@ This tutorial gives an example of how to use OpenPose for tracking pitcher and b
 <video width="520" controls>
 <source src="/assets/images/2021-02-17-mlb-openpose/walker_beuhler.mp4">
 </video>
+
+
+Code to run the above examples can be seen [here](https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb){:target="_blank"}.
