@@ -37,5 +37,6 @@ Technology like this can be used for various reasons, some of which include the 
 <source src="/assets/images/2021-02-17-mlb-openpose/trout.mp4">
 </video>
 
+<br>
 
 Code to run the above examples can be seen [here](https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb){:target="_blank"}.
