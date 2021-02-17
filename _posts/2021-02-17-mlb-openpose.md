@@ -13,7 +13,7 @@ This post gives an example of how to use OpenPose for tracking pitcher and hitte
 Technology like this can be used for various reasons, some of which include the use of player scouting, tracking mechanics and detecting injuries ahead of time. 
 
 - Player Scouting:
-  - OpenPose can be used to measure how close one player's pitching or hitting mechanics are relative to another known player.  By collecting data like angles or body parts, movement, etc. clustering algorithms can be used to come the similarity between two player's pitches/swings.
+  - OpenPose can be used to measure how closely one player's pitching or hitting mechanics are relative to another known player.  By collecting data like angles or body parts, movement, etc. clustering algorithms can be used to come the similarity between two player's pitches/swings.
 
 <br>
 
