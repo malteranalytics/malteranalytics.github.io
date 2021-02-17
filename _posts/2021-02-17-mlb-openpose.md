@@ -23,7 +23,7 @@ Technology like this can be used for various reasons, some of which include the 
 <br>
 
 - Injury Prevention:
-  - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher's mechanics are differing too much from the norm.
+  - By using player movement tracking data, potential models like outlier detection algorithms can be used to detect if a pitcher's mechanics are differing too much from the norm.  It can also be used to measure a given pitcher's mechanics to those that have previously suffered from pitching related injuries.
 
 
 <br>
