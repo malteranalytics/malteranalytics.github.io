@@ -3,7 +3,7 @@ layout: post
 title:  "An Analytics Guide to March Madness"
 author: drew
 categories: [ MarchMadness, basketball, college ]
-image: "https://malteranalytics.github.io/assets/images/2021-03-16-march_madness2021/image6.png"
+image: "https://malteranalytics.github.io/assets/images/2021-03-16-march_madness2021/image8.png"
 tags: [marchmadness, basketball, rstats, dataviz]
 featured: false
 ---
