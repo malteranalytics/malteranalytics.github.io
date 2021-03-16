@@ -3,7 +3,7 @@ layout: post
 title:  "An Analytics Guide to March Madness"
 author: drew
 categories: [ MarchMadness, basketball, college ]
-image: "https://malteranalytics.github.io/assets/images/2021-03-16-march_madness2021/image16.png"
+image: "https://malteranalytics.github.io/assets/images/2021-03-16-march_madness2021/image6.png"
 tags: [marchmadness, basketball, rstats, dataviz]
 featured: false
 ---
@@ -34,7 +34,7 @@ It can also be seen that 10, 11, and 12 seeds make it to the Sweet 16 more often
 
 The next chart below shows the tournament win percentages by conference in the past 35 seasons, among conferences with at least 20 cumulative tournament wins.  While ACC teams are not as well represented this year compared to years past, the ACC is historically the most successful tournament conference.  The Big 10 Conference, third in all time tournament win percentage, will be the conference to watch this March as they have the most tournament teams at 9, 4 of which are in the top 2 seeds. 
 
-![plot of chunk unnamed-chunk-5](/assets/images/2021-01-25-nfl-covid-season/image5.png)  
+![plot of chunk unnamed-chunk-5](/assets/images/2021-03-16-march_madness2021/image5.png)  
 
 
 
