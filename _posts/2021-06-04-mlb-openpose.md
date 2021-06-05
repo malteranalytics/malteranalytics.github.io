@@ -12,8 +12,7 @@ featured: false
 
 MLB StatCast has done a lot to improve how player’s movements are analyzed, but little public research has been done using video and image processing to improve mechanics amongst players and to help prevent injuries.  This analysis will demonstrate how to use video and image processing techniques to improve how Major League Baseball players perform various actions, such as pitching and hitting.  Implementation of work uses a combined method of MIT’s open-source algorithm, OpenPose, as well as various data analysis and machine learning techniques.  Further information about OpenPose can be seen [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose).
   
-<br>
-  
+
 ### Data Capture
 
 Data for this project was captured by collecting various video clips of a given player from both a side and center field point of view.  A team can utilize this method of analysis by having a still camera directed at a pitcher throughout a game or during a bullpen/batting practice session.  For simplicity of this analysis, a few different pitches/swings are shown for a given player, but the ideal situation would be to have hundreds of pitches to draw further conclusions from the data.
