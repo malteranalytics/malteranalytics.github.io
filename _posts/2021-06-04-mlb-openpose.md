@@ -31,11 +31,13 @@ To start, we’ll look at a still image of the OpenPose algorithm applied to a s
 <br>
 
 A video fed through the OpenPose algorithm outputs a video like the one below.  Here we see the OpenPose algorithm in action throughout the duration of the video. During this particular 4 second clip, 101 snapshots were taken by the algorithm.  In other words, we can think of this 4 second clip as 101 unique images in a sequential format.  For each snapshot, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints. 
-  
-<b>Walker Beuhler</b>
+
+<b>Walker Beuhler Side View</b>
 <video width="520" controls>
 <source src="/assets/images/2021-06-04-mlb-openpose/walker_beuhler.mp4">
 </video>  
+
+<br>
   
 Using the output data from each of the 101 images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the above pitch.  As Buehler approaches the pitch, his shoulder drops and then elevates again after releasing the ball.
 
@@ -44,6 +46,8 @@ Using the output data from each of the 101 images, a plot for a given keypoint (
 <br>
 
 Valuable information can be shown from one unique pitch, but deeper analysis can start to be made from taking multiple pitches of the same pitcher.  The first chart shows an analysis from five different pitches.  Each clip is initiated at a slightly different time prior to Buehler starting his motion, so in order to make more meaning of these five pitchers, the second chart shows the same five pitches overlayed on top of each other starting from the same point in time.  It’s clear that Buehler has a slightly different motion for off-speed pitches than for his four-seam fastball. However, it’s important to note here that the distance is measured in pixels, so in order to know how much of a difference Buehler’s shoulder drops, we’d need to convert those pixels into inches.  With technology such as MLB’s Statcast, this should not be an issue implementing into gameday data.  
+<br>
+
 ![Walker Beuhler Image](/assets/images/2021-06-04-mlb-openpose/beuhler3.png)  
 ![Walker Beuhler Image](/assets/images/2021-06-04-mlb-openpose/beuhler4.png)  
 
