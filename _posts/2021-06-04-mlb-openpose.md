@@ -18,7 +18,6 @@ MLB StatCast has done a lot to improve how player’s movements are analyzed, bu
 
 Data for this project was captured by collecting various video clips of a given player from both a side and center field point of view.  A team can utilize this method of analysis by having a still camera directed at a pitcher throughout a game or during a bullpen/batting practice session.  For simplicity of this analysis, a few different pitches/swings are shown for a given player, but the ideal situation would be to have hundreds of pitches to draw further conclusions from the data.
   
-<br>
   
 ### Analysis 
 To start, we’ll look at a still image of the OpenPose algorithm applied to a side-view of Walker Buehler pitching.  OpenPose captures 25 data points (keypoints) of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and video.  When a keypoint is not found in the image, OpenPose uses machine learning to estimate where the body part is located. The OpenPose algorithm works with multiple people within one view, but it works best with only one person. In cases where non-relevant people are in the background, image processing techniques such as blurring or cropping can be used to filter those people out.
