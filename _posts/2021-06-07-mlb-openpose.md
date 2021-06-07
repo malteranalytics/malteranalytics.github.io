@@ -15,7 +15,7 @@ In this article, I will demonstrate how sample image and video data can be used 
 
 An example of the final algorithm in action is shown below.
 
-<b>Walker Beuhler Side View</b>
+<b>Walker Buehler Side View</b>
 <video width="520" controls>
 <source src="/assets/images/2021-06-07-mlb-openpose/buehler_side_output.mp4">
 </video>  
@@ -39,7 +39,7 @@ OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist�
 To start, we’ll look at a still image of the OpenPose algorithm applied to a side view of Walker Buehler throwing a pitch.  When a keypoint cannot be found in the image, OpenPose uses machine learning to estimate where the body part is located, which is referred to as pose estimation.  These cases can happen when a body part is hidden from view in the image or video.  The OpenPose algorithm also works with one or multiple people in a single view, but I have found that it works best with only one person in the picture to reduce background noise. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out this noise.  This article will not focus on this type of preprocessing work, but OpenCV or deep learning techniques would be appropriate for implementing background blurring effects. 
 
 
-| ![Walker Beuhler Image](/assets/images/2021-06-07-mlb-openpose/beuhler1.png) |
+| ![Walker Buehler Image](/assets/images/2021-06-07-mlb-openpose/buehler1.png) |
 |:--:| 
 | *OpenPose applied to a still image of Walker Buehler* |
   
@@ -49,14 +49,14 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <b>Walker Beuhler Center Field View</b>
 <video width="520" controls>
-<source src="/assets/images/2021-06-07-mlb-openpose/walker_beuhler2.mp4">
+<source src="/assets/images/2021-06-07-mlb-openpose/walker_buehler2.mp4">
 </video>  
 
 <br>
   
 Using the output data from each of the 101 center field view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the pitch above.  As Buehler approaches the release of the ball, his shoulder drops and then picks back up as he finishes the pitch.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to see.  Additionally, given the proper data, thousands of videos can be analyzed in a matter of minutes versus spending hours of film watching.
 
-| ![Walker Beuhler Image](/assets/images/2021-06-07-mlb-openpose/beuhler2.png) |
+| ![Walker Buehler Image](/assets/images/2021-06-07-mlb-openpose/buehler2.png) |
 |:--:| 
 | *Walker Buehler's right shoulder mapped out over the duration of a single pitch* | 
 
@@ -68,7 +68,7 @@ It is important to note here that the distance of the plot is measured in pixels
 
 <br>
 
-| ![Walker Beuhler Image](/assets/images/2021-06-07-mlb-openpose/beuhler5.png) |
+| ![Walker Buehler Image](/assets/images/2021-06-07-mlb-openpose/buehler5.png) |
 |:--:| 
 | *Walker Buehler's right shoulder mapped out over the duration for five distinct pitches* |
 
