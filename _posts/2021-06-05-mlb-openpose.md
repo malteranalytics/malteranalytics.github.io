@@ -46,7 +46,9 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
   
 Using the output data from each of the 101 behind view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the above pitch.  As Buehler approaches the pitch, his shoulder drops and then elevates again after releasing the ball.  This is evident by simply watching the video, but the advantage of this type of analysis is that this data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to pick up.  Additionally, in a matter of minutes running this algorithm, we can find patterns that would otherwise take hours of video watching to maybe find with a good eye.
 
-![Walker Beuhler Image](/assets/images/2021-06-05-mlb-openpose/beuhler2.png)  
+| ![Walker Beuhler Image](/assets/images/2021-06-05-mlb-openpose/beuhler2.png) |
+|:--:| 
+| *Walker Buehler's right shoulder mapped out over the duration of a single pitch* | 
 
 <br>
 
@@ -54,7 +56,9 @@ Valuable information can be shown from one unique pitch, but deeper analysis can
 
 <br>
 
-![Walker Beuhler Image](/assets/images/2021-06-05-mlb-openpose/beuhler5.png)  
+| ![Walker Beuhler Image](/assets/images/2021-06-05-mlb-openpose/beuhler5.png) |
+|:--:| 
+| *Walker Buehler's right shoulder mapped out over the duration for five distinct pitches* |
 
 <br>
 
