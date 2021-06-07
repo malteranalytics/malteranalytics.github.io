@@ -31,6 +31,9 @@ OpenPose captures data for 25 keypoints of a human body, such as â€œRight Wristâ
 | ![OpenPose Keyoints](/assets/images/2021-06-07-mlb-openpose/openpose_keypoints.png){width=70%} |
 |:--:| 
 | *OpenPose keypoints* |
+
+<img src="figure/2021-06-07-mlb-openpose/openpose_keypoints.png" width="200" />
+
   
 <br>
   
