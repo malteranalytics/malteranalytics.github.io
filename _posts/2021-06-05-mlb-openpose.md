@@ -34,6 +34,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 <video width="520" controls>
 <source src="/assets/images/2021-06-05-mlb-openpose/walker_beuhler2.mp4">
 </video>  
+<caption>Video 1</caption>
 
 <br>
 
@@ -41,6 +42,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 <video width="520" controls>
 <source src="/assets/images/2021-06-05-mlb-openpose/buehler_side_output.mp4">
 </video>  
+<caption>Video 2</caption>
 
 <br>
   
