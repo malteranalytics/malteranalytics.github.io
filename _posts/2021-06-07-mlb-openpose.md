@@ -3,7 +3,7 @@ layout: post
 title:  "Using AI with MLB Video to Detect Changes in Mechanics"
 author: danny
 categories: [ MLB, baseball, openpose, R ]
-image: "https://malteranalytics.github.io/assets/images/2021-06-05-mlb-openpose/trout.png"
+image: "https://malteranalytics.github.io/assets/images/2021-06-07-mlb-openpose/trout.png"
 tags: [MLB, baseball, R]
 featured: false
 ---
