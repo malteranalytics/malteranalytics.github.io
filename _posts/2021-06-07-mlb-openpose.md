@@ -28,11 +28,11 @@ Data for this project was captured by collecting various video clips of a given 
 
 OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and videos.  A mapping of the keypoints to human body part can be seen below.  For each image fed through the algorithm, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts).  If the algorithm is applied to a video, then the video is essentially broken up into many separate images.
 
-| ![Walker Beuhler Image](/assets/images/2021-06-07-mlb-openpose/openpose_keypoints.png) |
+| ![OpenPose Keyoints](/assets/images/2021-06-07-mlb-openpose/openpose_keypoints.png){ width=70% } |
 |:--:| 
-| *OpenPose applied to a still image of Walker Buehler* |
+| *OpenPose keypoints* |
   
-  
+<br>
   
 ### Analysis 
 To start, we’ll look at a still image of the OpenPose algorithm applied to a side view of Walker Buehler throwing a pitch.  When a keypoint is cannot be found in the image, OpenPose uses machine learning to estimate where the body part is located, referred to as pose estimation.  These cases can happen when a part of the body is hidden from view in the image or video.  The OpenPose algorithm also works with one or multiple people in a single view, but I have found that it works best with only one person in the picture to reduce background noise. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out this noise.  This article will not focus on this type of preprocessing work, but OpenCV or deep learning techniques would be appropriate for implementing background blurring effects.
