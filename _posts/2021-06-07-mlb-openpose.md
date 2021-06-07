@@ -49,7 +49,7 @@ By feeding in a video through the OpenPose algorithm, we get an output like the 
 
 <b>Walker Beuhler Center Field View</b>
 <video width="520" controls>
-<source src="/assets/images/2021-06-07-mlb-openpose/buehler_cf_output.mp4">
+<source src="/assets/images/2021-06-07-mlb-openpose/buehler1_output.mp4">
 </video>  
 
 <br>
