@@ -3,7 +3,7 @@ layout: post
 title:  "Special Teams Edge"
 author: drew
 categories: [ NFL, Football ]
-image: "https://malteranalytics.github.io/assets/images/2022-01-06-special-teams/image10.png"
+image: "https://malteranalytics.github.io/assets/images/2022-01-06-special-teams/image10.PMG"
 tags: [NFL, sports, football, rstats, dataviz]
 featured: false
 ---
