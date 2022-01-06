@@ -3,7 +3,7 @@ layout: post
 title:  "Special Teams Edge"
 author: drew
 categories: [ NFL, Football ]
-image: "https://malteranalytics.github.io/assets/images/2022-01-06-special-teams/image10.PNG"
+image: "https://malteranalytics.github.io/assets/images/2022-01-06-special-teams/image10.png"
 tags: [NFL, sports, football, rstats, dataviz]
 featured: false
 ---
@@ -21,7 +21,7 @@ Let's begin with the chart below that shows the correlation of several numeric v
 
   
 
-![plot of chunk unnamed-chunk-1](/assets/images/2022-01-05-special-teams/image1.PNG) 
+![plot of chunk unnamed-chunk-1](/assets/images/2022-01-06-special-teams/image1.png) 
 
 
 
