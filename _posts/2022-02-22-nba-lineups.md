@@ -36,10 +36,10 @@ Generally, many NBA team's 5-player lineups add up to somewhere between \$50-\$8
 
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image2.png) 
 
-In order to determine to what extent lineup total salary correlates to success, I've used the NBA advanced metric Net Rating as an objective measure.  This value represents the net points (positive or negative) scored while a set of players are on the court together per 100 possessions.  A team who wins a game by 5 points that featured 100 offensive and defensive possessions will have a Net Rating of +5. While there are other metrics that better predict future success and win/loss records, Net Rating serves as a simple and concrete description of 'what happened?' while a given lineup was out on the court.  A notable flaw of the metric, however, is that is does not account for who the team is playing against.  In a future analysis, I would potentially try alternative other evaluations of success. 
+In order to determine the connection between total salary and success, I've used the NBA advanced metric Net Rating as an objective measure.  This value represents the net points (positive or negative) scored while a set of players are on the court together per 100 possessions.  A team who wins a game by 5 points that featured 100 offensive and defensive possessions will have a Net Rating of +5. While there are other metrics that better predict future success and win/loss records, Net Rating serves as a simple and concrete description of 'what happened?' while a given lineup was out on the court.  A notable flaw of the metric, however, is that is does not account for who the team is playing against.  In a future analysis, I would potentially try alternative other evaluations of success. 
 
  
-Before looking at the relationship between Net Rating and lineup salary, we'll first look at the top 10 highest and lowest salaried lineups thus far this season, among lineups that have played 48 minutes together.   The Warriors and Bucks have played the most expensive lineups and are having great seasons, however the Warrior's \$126 million lineup of Curry, Thompson, Wiggins, Looney, and Kuminga is negative in their 58 minutes.  On the other hand, the 76ers have an incredibly inexpensive lineup that has played great together in their 67 minutes. 
+Before analyzing the Net Rating and Salary relationships in our data, we'll first look at the top 10 highest and lowest salaried lineups thus far this season, among lineups that have played 48 minutes together.   The Warriors and Bucks have played the most expensive lineups and are having great seasons, however the Warrior's \$126 million lineup of Curry, Thompson, Wiggins, Looney, and Kuminga is negative in their 58 minutes on the court.  On the other hand, the 76ers have an incredibly inexpensive lineup that has played great together in their 67 minutes. 
 
 
 **Top 10 Highest Paid 5-Player Lineups in 2021-22 Season**
@@ -51,7 +51,7 @@ Before looking at the relationship between Net Rating and lineup salary, we'll f
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image4.png) 
 
 
-The next two tables display the top 10 and bottom 10 lineups by Net Rating.  With Luka Doncic on the final year of his rookie contract, the Mavericks have an extremely low salaried lineup as one of the best in the league.  The Knicks, Trailblazers, and Heat additionally have inexpensive, yet successful lineups.  Conversely, Sacramento has an above average priced lineup that is struggling in their 51 minutes together, however the rest of the low performing lineups with significant minutes together are also on the lower end of the salary spectrum.  
+The next two tables display the top 10 and bottom 10 lineups by Net Rating.  With Luka Doncic on the final year of his rookie contract, the Mavericks have an extremely low salaried lineup as one of the best in the league.  The Knicks, Trailblazers, and Heat additionally have inexpensive, yet successful lineups.  Conversely, Sacramento has an above average priced lineup that is struggling in their 51 minutes together, but typically the low performing lineups with significant minutes together are also on the lower end of the salary spectrum.  
 
 
 **Top 10 Highest Net Rating (NETRTG) 5-Player Lineups in 2021-22 Season First Half**
@@ -70,7 +70,7 @@ In the below chart, we can see a definitive uphill relationship between Net Rati
 
 
 
-The next two charts break out Net Rating by offense and defense and tell an interesting story of their own.  Just like the overall Net Rating, offensive ratings are well correlated with lineup salaries, especially among the most used lineups.  We can also see that defensive ratings have virtually zero correlation with lineup salaries.  There are just an many inexpensive, yet successful defensive lineups as there are expensive defensive lineups, inferring that NBA players get paid for their offensive abilities far more than their defensive abilities.  As we'll see later, the clever teams are very much aware of this notion and are taking advantage of it accordingly. 
+The next two charts break down Net Rating by offense and defense and tell an interesting story of their own.  Just like the overall Net Rating, offensive ratings are well correlated with lineup salaries, especially among the most used lineups.  We can also see that defensive ratings have virtually zero correlation with lineup salaries.  There are just an many inexpensive, yet successful defensive lineups as there are expensive defensive lineups, inferring that NBA players get paid for their offensive abilities far more than their defensive abilities.  As we'll see later, the clever teams are very much aware of this notion and are taking advantage of it accordingly. 
 
 
 
