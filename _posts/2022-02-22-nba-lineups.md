@@ -42,20 +42,22 @@ In order to determine to what extent lineup total salary correlates to success, 
 Before looking at the relationship between Net Rating and lineup salary, we'll first look at the top 10 highest and lowest salaried lineups thus far this season, among lineups that have played 48 minutes together.   The Warriors and Bucks have played the most expensive lineups and are having great seasons, however the Warrior's \$126 million lineup of Curry, Thompson, Wiggins, Looney, and Kuminga is negative in their 58 minutes.  On the other hand, the 76ers have an incredibly inexpensive lineup that has played great together in their 67 minutes. 
 
 
+**Top 10 Highest Paid 5-Player Lineups in 2021-22 Season**
 
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image3.png) 
 
 
+**Top 10 Lowest Paid 5-Player Lineups in 2021-22 Season**
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image4.png) 
 
 
 The next two tables display the top 10 and bottom 10 lineups by Net Rating.  With Luka Doncic on the final year of his rookie contract, the Mavericks have an extremely low salaried lineup as one of the best in the league.  The Knicks, Trailblazers, and Heat additionally have inexpensive, yet successful lineups.  Conversely, Sacramento has an above average priced lineup that is struggling in their 51 minutes together, however the rest of the low performing lineups with significant minutes together are also on the lower end of the salary spectrum.  
 
 
-
+**Top 10 Highest Net Rating (NETRTG) 5-Player Lineups in 2021-22 Season First Half**
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image5.png) 
 
-
+**Top 10 Lowest Net Rating (NETRTG) 5-Player Lineups in 2021-22 Season First Half**
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image6.png) 
 
 
