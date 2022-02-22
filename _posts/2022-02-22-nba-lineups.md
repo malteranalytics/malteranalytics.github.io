@@ -101,7 +101,7 @@ In the East, a glaring takeaway is that the Knicks have some very successful lin
 
 
 
-From the defensive chart, the Cavs get my vote for the 'Moneyball' team of the year so far out of the Eastern Conference.  While they're not completely standing out offensively, we can see that their strong defense likely holds a lot of weight towards their standing of being tied for 3rd in the conference.   Additionally, while the Bulls are spending more this season than they did last season, they are also showing strong defensive numbers that are carrying much of their success. 
+From the defensive chart, the Cavs are clearly the most successful low-budget team in the East.  While their offense is solid but doesn't necessarily stand out among the rest of the league, we can see that their strong defense likely holds a lot of weight towards their standing of being tied for 3rd in the conference.   Additionally, while the Bulls aren't in the low-budget category that the Cavs are in, and they are spending more this season than they did last season, they are also showing strong defensive numbers that out project expectations and have led to a successful first half. 
 
 
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image12.png) 
@@ -120,4 +120,4 @@ In the Western Conference, the Warriors, Suns, Jazz, and Nuggets are all spendin
 
 
 
-As the prior 6 charts suggest, NBA success weighs not only on the amount of money a team spends, but the way in which they spend their money as well.  While it would be nearly impossible for a team resembling the Piston's payroll to compete at the same level as a team resembling the Warrior's payroll, roster development strategies certainly play a role in fluctuations between expected results and actual results.  No team can be ruled out of playoff hopes simply based on their total salary spend, and it doesn't take being in the top ranks of total payroll to consider yourself a championship contender, either. 
+As the prior 6 charts suggest, NBA success weighs not only on the amount of money a team spends, but the way in which they spend their money as well.  Although it would be nearly impossible for a team resembling the Piston's payroll to compete at the same level as a team resembling the Warrior's payroll, roster development strategies certainly play a role in fluctuations between expected results and actual results.  No team can be ruled out of playoff hopes simply based on their total salary spend, and it doesn't take being in the top ranks of total payroll to consider yourself a championship contender, either. 
