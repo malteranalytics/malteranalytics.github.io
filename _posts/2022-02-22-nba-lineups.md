@@ -25,7 +25,7 @@ To set the stage, the chart below shows a distribution of NBA player salaries in
 
 
 The next chart looks at the sum of salaries on the court at any given time for a 5-player lineup.  220 distinct 5-player lineups were analyzed, on the condition that the lineup has played together for at least 48 minutes of game time this season. For example, the two most common lineups that Bulls coach Billy Donovan has used this season are DeRozen, Vucevic, LaVine, Ball, Green at 152 minutes and DeRozen, Vucevic, LaVine, Green, Dosunmu at 127 minutes.  In all, 10 unique combinations of 5 players have been on the court at the same time for the Bulls for at least 48 minutes so far this season. 
-Generally, many NBA team's 5-player lineups add up to somewhere between \$50-\$80 million in salary.  At the extremes, the 76ers have routinely used the most expensive lineup worth over \$140 million and 46 lineups with combined salaries less than that of Steph Curry's $46 million have hit the 48-minute threshold as well. 
+Generally, many NBA team's 5-player lineups add up to somewhere between \$50-\$80 million in salary.  At the extremes, the Warriors have routinely used the most expensive lineup worth about \$125 million and 46 lineups with combined salaries less than that of Steph Curry's $46 million have hit the 48-minute threshold as well. 
 
 
 
