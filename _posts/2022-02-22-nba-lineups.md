@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Can NBA Teams Stay Competitive on a Low Budget??"
+title:  "Can NBA Teams Stay Competitive on a Low Budget?"
 author: drew
 categories: [ NBA, Basketball ]
 image: "https://malteranalytics.github.io/assets/images/2022-02-22-nba-lineups/image16.png"
