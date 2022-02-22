@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Who's playing 'Moneyball' this season in the NBA?"
+title:  "Can NBA Teams Stay Competitive on a Low Budget??"
 author: drew
 categories: [ NBA, Basketball ]
 image: "https://malteranalytics.github.io/assets/images/2022-02-22-nba-lineups/image16.png"
@@ -115,3 +115,7 @@ In the Western Conference, the Warriors, Suns, Jazz, and Nuggets are all spendin
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image14.png) 
 
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image15.png) 
+
+
+
+As the prior 6 charts suggest, NBA success weighs not only on the amount of money a team spends, but the way in which they spend their money as well.  While it would be nearly impossible for a team resembling the Piston's payroll to compete at the same level as a team resembling the Warrior's payroll, roster development strategies certainly play a role in fluctuations between expected results and actual results.  No team can be ruled out of playoff hopes simply based on their total salary spend, and it doesn't take being in the top ranks of total payroll to consider yourself a championship contender, either. 
