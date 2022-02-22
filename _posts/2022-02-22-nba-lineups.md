@@ -3,7 +3,7 @@ layout: post
 title:  "Who's playing 'Moneyball' this season in the NBA?"
 author: drew
 categories: [ NBA, Basketball ]
-image: "https://malteranalytics.github.io/assets/images/2022-02-22-nba-lineups/image10.png"
+image: "https://malteranalytics.github.io/assets/images/2022-02-22-nba-lineups/image16.png"
 tags: [NBA, sports, baseball, rstats, dataviz]
 featured: false
 ---
