@@ -39,7 +39,7 @@ Generally, many NBA team's 5-player lineups add up to somewhere between \$50-\$8
 In order to determine to what extent lineup total salary correlates to success, I've used the NBA advanced metric Net Rating as an objective measure.  This value represents the net points (positive or negative) scored while a set of players are on the court together per 100 possessions.  A team who wins a game by 5 points that featured 100 offensive and defensive possessions will have a Net Rating of +5. While there are other metrics that better predict future success and win/loss records, Net Rating serves as a simple and concrete description of 'what happened?' while a given lineup was out on the court.  A notable flaw of the metric, however, is that is does not account for who the team is playing against.  In a future analysis, I would potentially try alternative other evaluations of success. 
 
  
-Before looking at the relationship between Net Rating and lineup salary, we'll first look at the top 10 highest and lowest salaried lineups thus far this season, among lineups that have played 48 minutes together.   The 76ers, Warriors, and Bucks have played the most expensive lineups and are all having great seasons, however a few of the specific lineups have negative Net Ratings.  Ironically, the 76ers also have an incredibly inexpensive lineup that has played great together in their 67 minutes. 
+Before looking at the relationship between Net Rating and lineup salary, we'll first look at the top 10 highest and lowest salaried lineups thus far this season, among lineups that have played 48 minutes together.   The Warriors and Bucks have played the most expensive lineups and are having great seasons, however the Warrior's \$126 million lineup of Curry, Thompson, Wiggins, Looney, and Kuminga is negative in their 58 minutes.  On the other hand, the 76ers have an incredibly inexpensive lineup that has played great together in their 67 minutes. 
 
 
 
@@ -59,7 +59,7 @@ The next two tables display the top 10 and bottom 10 lineups by Net Rating.  Wit
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-02-22-nba-lineups/image6.png) 
 
 
-In the below chart, we can see a definitive uphill relationship between Net Rating and lineup salary among the most used lineups.  However, there seems to be little to no relationship between the two variables among more infrequently used lineups.  In these cases, it is just as likely that an inexpensive lineup will succeed as will an expensive lineup.  Perhaps the expensive lineups that are performing poorly are getting less minutes together throughout the season, while inexpensive lineups that are outperforming expectations are getting more minutes than otherwise expected. 
+In the below chart, we can see a definitive uphill relationship between Net Rating and lineup salary among the most used lineups, although there seems to be little to no relationship between the two variables among more infrequently used lineups.  In these cases, it is just as likely that an inexpensive lineup will succeed as will an expensive lineup.  Perhaps the expensive lineups that are performing poorly are getting less minutes together throughout the season, while inexpensive lineups that are outperforming expectations are getting more minutes than otherwise expected. 
 
 
 
@@ -68,7 +68,7 @@ In the below chart, we can see a definitive uphill relationship between Net Rati
 
 
 
-The next two charts break out Net Rating by offense and defense and tell an interesting story of their own.  Just like the overall Net Rating, offensive ratings are well correlated with lineup salaries, especially among the most used lineups.  However, we can also see that defensive ratings have virtually zero correlation with lineup salaries.  There are just an many inexpensive, yet successful defensive lineups as there are expensive defensive lineups, inferring that NBA players get paid for their offensive abilities far more than their defensive abilities.  As we'll see later, the clever teams are very much aware of this notion and are taking advantage of it accordingly. 
+The next two charts break out Net Rating by offense and defense and tell an interesting story of their own.  Just like the overall Net Rating, offensive ratings are well correlated with lineup salaries, especially among the most used lineups.  We can also see that defensive ratings have virtually zero correlation with lineup salaries.  There are just an many inexpensive, yet successful defensive lineups as there are expensive defensive lineups, inferring that NBA players get paid for their offensive abilities far more than their defensive abilities.  As we'll see later, the clever teams are very much aware of this notion and are taking advantage of it accordingly. 
 
 
 
@@ -85,7 +85,7 @@ The next series of charts break down which teams each of the lineups represent f
 
 
 
-In the East, a glaring takeaway is that the Knicks have some very successful lineups at inexpensive costs, as Rose, Gibson, Burks, Toppin, and Quickly have produced a +29 rating in 89 minutes.  Ironically their most expensive lineup with Burks, Fournier, Noel, Randle, and Barrett is sitting at a Net Rating of -20 from 63 minutes of court time.  It's possible, however, that the more expensive lineup is going up against more expensive and better opponent lineups, thus deflating their Net Rating.   The Cavs and Hornets also show up well in the quadrant of low salaries and high Net Ratings; the latter can be attributed in large part to the star play of LaMello Ball, who sits on his rookie contract of just about $8 million.   Conversely, the Pacers are considerably underperforming this season relative to the salaries of their lineups. 
+In the East, a glaring takeaway is that the Knicks have some very successful lineups at inexpensive costs, as Rose, Gibson, Burks, Toppin, and Quickly have produced a +29 rating in 89 minutes.  Ironically their most expensive lineup with Burks, Fournier, Noel, Randle, and Barrett is sitting at a Net Rating of -20 from 63 minutes of court time.  It's possible, though, that the more expensive lineup is going up against more expensive and better opponent lineups, thus deflating their Net Rating.   The Cavs and Hornets also show up well in the quadrant of low salaries and high Net Ratings; the latter can be attributed in large part to the star play of LaMello Ball, who sits on his rookie contract of just about $8 million.   Conversely, the Pacers are considerably underperforming this season relative to the salaries of their lineups. 
 
 
 
