@@ -74,7 +74,8 @@ Having a better understanding of the data behind the box score, let's now look a
 
 ***Western Conference:***
 
-*Phoenix Suns:*
+**Phoenix Suns:**
+
 The Suns have a small sample size of losses, but from those 16 games we can see that their defensive movement is down by almost half a mile per game and they're getting the ball in the paint 4 times less per game.  From what we saw last year in their run as the Western Conference champions, I would expect the same high intensity defense to show up for them again in this year's playoffs. 
 
 
@@ -83,12 +84,14 @@ The Suns have a small sample size of losses, but from those 16 games we can see 
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-04-07-nba-playoff-analysis/image9.png) 
 
 **Memphis Grizzlies:**
+
 Simply put, the Grizzlies are extremely tough to beat when they're possessing the ball, getting more touches and dribbling (allowing Ja Morant to take over games).  They're most vulnerable when they rush and aren't passing well.  There can be plenty of theories of cause and effect, but it's interesting to see that when they win, they generally have much less offensive movement. 
 
 
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-04-07-nba-playoff-analysis/image10.png) 
 
 **Golden State Warriors:**
+
 The Warriors just need to stay true to themselves.  They didn't win championships by playing big and the post up game hasn't been what's driving their success this year either. 
 
 
@@ -96,6 +99,7 @@ The Warriors just need to stay true to themselves.  They didn't win championship
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-04-07-nba-playoff-analysis/image11.png) 
 
 **Dallas Mavericks:**
+
 While one of the West's best teams, there's not much statistically significant insight here for Dallas.  On a small scale, their wins come from games in which they move the ball around more and get the ball into the paint. 
 
 
@@ -104,6 +108,7 @@ While one of the West's best teams, there's not much statistically significant i
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-04-07-nba-playoff-analysis/image12.png) 
 
 **Denver Nuggets:**
+
 For the best post up team in the NBA, it's essential for the Nuggets to be getting Jokic the ball down low.  The Nuggets also utilize the ball well from the elbow and have slightly more defensive movement for their wins. 
 
 
@@ -112,6 +117,7 @@ For the best post up team in the NBA, it's essential for the Nuggets to be getti
 
 
 **Utah Jazz:**
+
 The Jazz 46 wins look almost identical to their 32 losses, with slightly more paint and elbow touches when they're winning games. 
 
 
@@ -120,6 +126,7 @@ The Jazz 46 wins look almost identical to their 32 losses, with slightly more pa
 
 
 **Minnesota Timberwolves:**
+
 Passing, possessing, and getting more touches hasn't correlated to Timberwolves success, but offensive movement has a slightly positive correlation with winning games for them. 
 
 
@@ -127,6 +134,7 @@ Passing, possessing, and getting more touches hasn't correlated to Timberwolves 
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-04-07-nba-playoff-analysis/image15.png) 
 
 **LA Clippers:**
+
 Like the Timberwolves, passing and possessing more hasn't been the answer for the Clippers, and their only positive distinction here would be with post ups. 
 
 
@@ -135,6 +143,7 @@ Like the Timberwolves, passing and possessing more hasn't been the answer for th
 
 
 **New Orleans Pelicans:**
+
 While the Pelicans have a larger sample size of losses than wins, their wins are coming from games where they're passing more and getting some more touches both at the elbow and in the paint. 
 
 
@@ -143,6 +152,7 @@ While the Pelicans have a larger sample size of losses than wins, their wins are
 
 
 **San Antonio Spurs:**
+
 The final play-in team in the West will give themselves the best shot to compete if they can get the ball down low, both from the post up game and allowing their guards to drive. 
 
 
@@ -152,7 +162,8 @@ The final play-in team in the West will give themselves the best shot to compete
 
 ***Eastern Conference:***
 
-Miami Heat:
+**Miami Heat:**
+
 For the best regular season team in the East, the Heat play better when they're not overpassing.  They also are at their best when they're getting the ball down low and are possessing on offense. 
 
 
@@ -161,6 +172,7 @@ For the best regular season team in the East, the Heat play better when they're 
 
 
 **Boston Celtics:**
+
 One of the hottest teams in the NBA, the Celtics move significantly less than most teams.  Yet their losses often come when they're not moving well, even for their own standards. 
 
 
@@ -170,6 +182,7 @@ One of the hottest teams in the NBA, the Celtics move significantly less than mo
 
 
 **Milwaukee Bucks:**
+
 Not surprisingly, the Bucks are one of the best teams in the NBA when they can get the ball in the paint.  Otherwise, their wins and losses don't have a ton of variation among the other metrics. 
 
 
@@ -179,6 +192,7 @@ Not surprisingly, the Bucks are one of the best teams in the NBA when they can g
 
 
 **Philadelphia 76ers:**
+
 Like the Nuggets, the unsurprising key to victory for the 76ers is using their MVP big man to their advantage.  When they get Embiid the ball down low, they're in great shape. 
 
 
@@ -187,6 +201,7 @@ Like the Nuggets, the unsurprising key to victory for the 76ers is using their M
 
 
 **Toronto Raptors:**
+
 The Raptors are significantly better when they are passing more and possessing more.  For them, it's not about working the ball low or to the elbow, if they are moving the ball around well on offense. 
 
 
@@ -194,6 +209,7 @@ The Raptors are significantly better when they are passing more and possessing m
 ![plot of chunk unnamed-chunk-1](/assets/images/2022-04-07-nba-playoff-analysis/image23.png) 
 
 **Chicago Bulls:**
+
 There's no glaring stand out for the Bulls here, but they do have almost half a mile more in movement on average when they win versus when they lose.  They average an extra paint touch per game when they win, yet fewer passes and touches for their wins as well and their time of possession doesn't change for wins or losses. 
 
 
@@ -202,6 +218,7 @@ There's no glaring stand out for the Bulls here, but they do have almost half a 
 
 
 **Cleveland Cavaliers:**
+
 The Cavaliers can look like two completely different teams between their wins and losses.  Winning for them means getting the ball down low significantly more often and passing more, getting each player more touches. 
 
 
@@ -210,6 +227,7 @@ The Cavaliers can look like two completely different teams between their wins an
 
 
 **Brooklyn Nets:**
+
 As a scary play-in team that can make some noise, the Nets are great working the ball to the elbow and are passing the ball almost 15 times more per game when they win vs when they lose.  If they're possessing on offense and sharing the ball, they can be tough to beat. 
 
 
@@ -219,6 +237,7 @@ As a scary play-in team that can make some noise, the Nets are great working the
 
 
 **Atlanta Hawks:**
+
 Another team that struggles when they aren't passing, ball movement and possession are two key factors for the Hawks to focus on heading into the playoffs.  They also play well from the elbow, and their down low game doesn't change much between wins and losses.  
 
 
@@ -227,6 +246,7 @@ Another team that struggles when they aren't passing, ball movement and possessi
 
 
 **Charlotte Hornets:**
+
 A team that moves a ton both on offense and defense, they can tire opponents out and win games when they're moving well, even by their own standards.  They can also slightly benefit from holding onto the ball longer and not rushing their decision making on offense. 
 
 
