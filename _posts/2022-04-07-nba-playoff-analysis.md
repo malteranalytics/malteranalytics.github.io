@@ -3,7 +3,7 @@ layout: post
 title:  "An Application of Unsupervised Machine Learning: What Each Team Should Focus on Heading into the NBA Playoffs"
 author: drew
 categories: [ NBA, Basketball ]
-image: "https://malteranalytics.github.io/assets/images/2022-04-07-nba-playoff-analysis/image29.PNG"
+image: "https://malteranalytics.github.io/assets/images/2022-04-07-nba-playoff-analysis/image29.png"
 tags: [NBA, sports, basketball, rstats, dataviz]
 featured: false
 ---
