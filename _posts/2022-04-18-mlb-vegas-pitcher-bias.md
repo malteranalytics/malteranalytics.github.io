@@ -21,8 +21,8 @@ To dig deeper into whether this was a one off for an elite pitcher like Cole, we
 For more information about our MLB betting model, check out [GameWagers](https://www.gamewagers.ai/){:target="_blank"} or reach out and we’ll answer any questions. With over thousands of lines of code, 100% of our picks are from an automated machine learning model and we continue to show success so far into the 2022 season.  Let us help you find the edge in MLB betting.
 
 
+<img align="left" width="100" height="100" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/cole.png">
 
-![Image of Gerrit Cole Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/cole.png) 
 
 ![Image of Clayton Kershaw Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/kershaw.png) 
 
