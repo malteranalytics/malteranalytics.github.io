@@ -32,6 +32,6 @@ For more information about our MLB betting model, check out [GameWagers](https:/
 
 
 
-Bet like a mathematician,
-GameWagers Team
+Bet like a mathematician, <br>
+GameWagers Team <br>
 https://www.gamewagers.ai
