@@ -3,7 +3,7 @@ layout: post
 title:  "Bettor and Vegas Bias Towards Gerrit Cole"
 author: danny
 categories: [ MLB, Baseball ]
-image: "https://malteranalytics.github.io/assets/images/2022-04-07-nba-playoff-analysis/gerrit_cole.png"
+image: "https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png"
 tags: [MLB, sports, baseball, rstats]
 featured: true
 ---
