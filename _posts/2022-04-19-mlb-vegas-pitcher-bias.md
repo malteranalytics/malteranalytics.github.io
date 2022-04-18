@@ -2,11 +2,12 @@
 layout: post
 title:  "Bettor and Vegas Bias Towards Gerrit Cole"
 author: danny
-categories: [ MLB, Baseball ]
+categories: [MLB, Baseball]
 image: "https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png"
 tags: [MLB, sports, baseball, rstats]
 featured: true
 ---
+
 
 
 There’s no doubt that Gerrit Cole is an elite pitcher playing for a great team, the New York Yankees.  
