@@ -18,7 +18,7 @@ Assuming a consistent $100 bet placed on each game, if a bettor took the opposin
 
 To dig deeper into whether this was a one off for an elite pitcher like Cole, we also looked into Clayton Kershaw, Max Scherzer and Jacob deGrom for their 2021 starts and actually found a slightly positive return for these star pitchers.  In fact, had you taken every regular season game that these four pitchers started (including Cole), you’d have finished +4 units over 97 games for an ROI of 4.46% and had you taken the opposing team in all 97 games you’d have finished -9 units. For both Scherzer and deGrom, the evidence shows that the Vegas money was actually undervaluing their starts.
 
-For more information about our MLB betting model, check out [GameWagers](https://www.gamewagers.ai/){:target="_blank"} or reach out and we’ll answer any questions.  With over thousands of lines of code, 100% of our picks are from an automated machine learning model and we continue to show success so far into the 2022 season.  Let us help you find the edge in MLB betting.
+For more information about our MLB betting model, check out [GameWagers](https://www.gamewagers.ai/){:target="_blank"} or reach out and we’ll answer any questions. With over thousands of lines of code, 100% of our picks are from an automated machine learning model and we continue to show success so far into the 2022 season.  Let us help you find the edge in MLB betting.
 
 
 
