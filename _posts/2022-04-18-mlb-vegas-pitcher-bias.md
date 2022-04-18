@@ -3,7 +3,7 @@ layout: post
 title:  "Bettor and Vegas Bias Towards Gerrit Cole"
 author: danny
 categories: [MLB, Baseball]
-image: "https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png"
+image: "https://malteranalytics.github.io/assets/images/2022-04-18-mlb-vegas-pitcher-bias/gerrit_cole.png"
 tags: [MLB, sports, baseball, rstats]
 featured: true
 ---
@@ -22,13 +22,13 @@ For more information about our MLB betting model, check out [GameWagers](https:/
 
 
 
-![Image of Gerrit Cole Stats](/assets/images/2022-04-19-mlb-vegas-pitcher-bias/cole.png) 
+![Image of Gerrit Cole Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/cole.png) 
 
-![Image of Clayton Kershaw Stats](/assets/images/2022-04-19-mlb-vegas-pitcher-bias/kershaw.png) 
+![Image of Clayton Kershaw Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/kershaw.png) 
 
-![Image of Max Scherzer Stats](/assets/images/2022-04-19-mlb-vegas-pitcher-bias/scherzer.png) 
+![Image of Max Scherzer Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/scherzer.png) 
 
-![Image of Jacob deGrom Stats](/assets/images/2022-04-19-mlb-vegas-pitcher-bias/degrom.png) 
+![Image of Jacob deGrom Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/degrom.png) 
 
 
 
