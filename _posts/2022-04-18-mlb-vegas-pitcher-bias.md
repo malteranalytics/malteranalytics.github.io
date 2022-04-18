@@ -23,12 +23,11 @@ For more information about our MLB betting model, check out [GameWagers](https:/
 
 <img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/cole.png"> <br>
 
+<img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/kershaw.png"> <br>
 
-![Image of Clayton Kershaw Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/kershaw.png) 
+<img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/scherzer.png"> <br>
 
-![Image of Max Scherzer Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/scherzer.png) 
-
-![Image of Jacob deGrom Stats](/assets/images/2022-04-18-mlb-vegas-pitcher-bias/degrom.png) 
+<img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/degrom.png"> <br>
 
 
 
