@@ -3,7 +3,7 @@ layout: post
 title:  "Bettor and Vegas Bias Towards Gerrit Cole"
 author: danny
 categories: [MLB, Baseball]
-image: "https://malteranalytics.github.io/assets/images/2022-04-18-mlb-vegas-pitcher-bias/gerrit_cole.png"
+image: "https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png"
 tags: [MLB, sports, baseball, rstats]
 featured: true
 ---
@@ -21,13 +21,13 @@ To dig deeper into whether this was a one off for an elite pitcher like Cole, we
 For more information about our MLB betting model, check out [GameWagers](https://www.gamewagers.ai/){:target="_blank"} or reach out and we’ll answer any questions. With over thousands of lines of code, 100% of our picks are from an automated machine learning model and we continue to show success so far into the 2022 season.  Let us help you find the edge in MLB betting.
 
 
-<img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/cole.png"> <br>
+<img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/cole.png"> <br>
 
-<img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/kershaw.png"> <br>
+<img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/kershaw.png"> <br>
 
-<img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/scherzer.png"> <br>
+<img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/scherzer.png"> <br>
 
-<img align="center" src="/assets/images/2022-04-18-mlb-vegas-pitcher-bias/degrom.png"> <br>
+<img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/degrom.png"> <br>
 
 
 
