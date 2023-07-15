@@ -9,7 +9,7 @@ comments: false
 <div class="col-md-8 pr-5">
 
 <p>
-Danny and Drew are brothers and both data scientists.  Drew lives in Denver and has worked for Slalom and currently at Nowsta. Danny lives in Chicago and has worked for Hyatt Hotels, Molson Coors and currently Accenture. Both sports fans, a hobby of ours is sports analytics and writing about our findings. This blog is a collection of some of the work we've done.  </p>
+Danny and Drew are brothers and both data scientists.  Danny lives in Chicago and has worked for Hyatt Hotels, Molson Coors and currently works at Accenture.  Drew lives in Denver and has worked for Slalom Consulting and currently works at Nowsta. Both sports fans, a hobby of ours is pairing sports with data science and writing about our findings. This blog is a collection of some of our work.  </p>
 
 <p>
 Contact Info: </p>
