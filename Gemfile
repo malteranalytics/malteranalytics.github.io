@@ -18,5 +18,5 @@ group :jekyll_plugins do
     gem 'kramdown'
     gem 'rouge'
     gem 'jekyll-target-blank'
-    gem 'nokogiri', '~> 1.13.0'
+    gem 'nokogiri'
 end
