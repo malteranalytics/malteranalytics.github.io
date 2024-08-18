@@ -1,0 +1,15 @@
+
+
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - vendor/**/*
+
+Layout/LineLength:
+  Exclude:
+    - spec/**/*
+    - jekyll-target-blank.gemspec
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
