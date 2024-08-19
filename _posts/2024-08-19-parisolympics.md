@@ -52,40 +52,40 @@ Finally, the last series of maps breaks down the medal count across the world am
 
 
 **Artistic Exercise:** Gymnastics, Rhythmic Gymnastics, Diving, Trampolining, and Break Dancing
-![plot of chunk unnamed-chunk-7](/assets/images/2024-08-19-olympics/paris-olympics/image7.PNG) 
+![plot of chunk unnamed-chunk-7](/assets/images/2024-08-19-olympics/paris-olympics/image7.png) 
 
 **Boat Sports:** Canoe Slalom, Canoe Sprint, Rowing, and Sailing
-![plot of chunk unnamed-chunk-8](/assets/images/2024-08-19-olympics/paris-olympics/image8.PNG) 
+![plot of chunk unnamed-chunk-8](/assets/images/2024-08-19/paris-olympics/image8.png) 
 
 **Martial Arts & Combat Sports:** Fencing, Judo, Karate, Taekwondo, Boxing, Wrestling
-![plot of chunk unnamed-chunk-9](/assets/images/2024-08-19-olympics/paris-olympics/image9.PNG) 
+![plot of chunk unnamed-chunk-9](/assets/images/2024-08-19/paris-olympics/image9.png) 
 
 **Endurance and Exercise Sports:** Track (>= 800 meters), Marathon, Triathlon, Cycling
-![plot of chunk unnamed-chunk-10](/assets/images/2024-08-19-olympics/paris-olympics/image10.PNG) 
+![plot of chunk unnamed-chunk-10](/assets/images/2024-08-19/paris-olympics/image10.png) 
 
 **Extreme Sports:** BMX freestyle, BMX racing, Mountain Biking, Skateboarding, Climbing, Surfing, Wing Surfing
-![plot of chunk unnamed-chunk-12](/assets/images/2024-08-19-olympics/paris-olympics/image11.PNG) 
+![plot of chunk unnamed-chunk-12](/assets/images/2024-08-19/paris-olympics/image11.png) 
 
 **Horse Sports:** Equestrian Dressage, Equestrian Eventing
-![plot of chunk unnamed-chunk-13](/assets/images/2024-08-19-olympics/paris-olympics/image12.PNG) 
+![plot of chunk unnamed-chunk-13](/assets/images/2024-08-19/paris-olympics/image12.png) 
 
 **Precision Sports:** Archery, Shooting, Golf
-![plot of chunk unnamed-chunk-15](/assets/images/2024-08-19-olympics/paris-olympics/image13.PNG) 
+![plot of chunk unnamed-chunk-15](/assets/images/2024-08-19/paris-olympics/image13.png) 
 
 **Racket Sports:** Tennis, Badminton, Table Tennis
-![plot of chunk unnamed-chunk-16](/assets/images/2024-08-19-olympics/paris-olympics/image14.PNG) 
+![plot of chunk unnamed-chunk-16](/assets/images/2024-08-19/paris-olympics/image14.png) 
 
 **Speed and Athletics:** Track (<=400 meters), Decathlon, High Jump, Triple Jump, Long Jump, Pole Vault, Heptathlon 
-![plot of chunk unnamed-chunk-17](/assets/images/2024-08-19-olympics/paris-olympics/image15.PNG) 
+![plot of chunk unnamed-chunk-17](/assets/images/2024-08-19/paris-olympics/image15.png) 
 
 **Strength Sports:** Weightlifting, Discus Throw, Hammer Throw, Shotput, Javelin Throw
-![plot of chunk unnamed-chunk-18](/assets/images/2024-08-19-olympics/paris-olympics/image16.PNG) 
+![plot of chunk unnamed-chunk-18](/assets/images/2024-08-19/paris-olympics/image16.png) 
 
 **Swimming:** All indoor swimming events, open water long distance swimming
 
-![plot of chunk unnamed-chunk-19](/assets/images/2024-08-19-olympics/paris-olympics/image17.PNG) 
+![plot of chunk unnamed-chunk-19](/assets/images/2024-08-19/paris-olympics/image17.png) 
 
 **Team Sports:** Basketball, Field Hockey, Soccer, Volleyball, Beach Volleyball, Rugby Sevens, Handball, Water Polo
-![plot of chunk unnamed-chunk-20](/assets/images/2024-08-19-olympics/paris-olympics/image18.PNG) 
+![plot of chunk unnamed-chunk-20](/assets/images/2024-08-19/paris-olympics/image18.png) 
 
 
