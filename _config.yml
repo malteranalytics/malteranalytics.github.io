@@ -12,6 +12,7 @@ follow-facebook: 'https://www.facebook.com/malteranalytics'
 #follow-linkedin: 'https://www.linkedin.com/in/malteranalytics/'
 follow-github: 'https://github.com/malteranalytics'
 mailchimp-list: 
+url: ""
 #
 include: ["_pages"]
 permalink: /:title/
@@ -32,7 +33,7 @@ authors:
     display_name: Drew
     gravatar: 22bbf73d98a84d2a896c474e26a1a8fe
     web: 
-    twitter: https://www.instagram.com/malteranalytics/?hl=en
+    #twitter: https://www.instagram.com/malteranalytics/?hl=en
     description: "Data Scientist"
   danny_drew:
     name: Danny Malter & Drew Malter

@@ -1,0 +1,150 @@
+---
+layout: post
+title:  "COVID-19 Data Visuals"
+author: drew
+categories: [ covid, covid19, coronavirus ]
+image: "https://malteranalytics.github.io/assets/images/2020-10-27-covid_20201027/image2.png"
+tags: [covid, covid19, coronavirus, rstats, dataviz]
+featured: false
+---
+  
+The below graphs are updated through October 26, 2020.  For an explanation of key takeaways and interpretations of the graphs, see [my original COVID-19 data analysis post](https://malteranalytics.github.io/covid/){:target="_blank"} from the beginning of September.   
+  
+  
+### **Data Sources:**
+
+
+COVID-19 Cases and Deaths: [Data.World](https://data.world/covid-19-data-resource-hub/covid-19-case-counts/workspace/file?filename=COVID-19+Activity.csv){:target="_blank"}
+
+
+
+COVID-19 Age Demographics and Comorbidities: [Centers for Disease Control and Prevention](https://data.cdc.gov/NCHS/Conditions-contributing-to-deaths-involving-corona/hk9y-quqm){:target="_blank"}
+
+
+U.S. Population Data: [U.S. Census Bureau](https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html){:target="_blank"}
+
+
+World Population Data: [United Nations](https://population.un.org/){:target="_blank"}
+
+
+
+
+# World Comparisons
+
+![plot of chunk unnamed-chunk-1](/assets/images/2020-10-27-covid_20201027/image1.png)  
+
+
+
+![plot of chunk unnamed-chunk-2](/assets/images/2020-10-27-covid_20201027/image2.png)  
+
+
+
+![plot of chunk unnamed-chunk-3](/assets/images/2020-10-27-covid_20201027/image3.png)  
+
+
+
+![plot of chunk unnamed-chunk-4](/assets/images/2020-10-27-covid_20201027/image4.png)  
+
+
+![plot of chunk unnamed-chunk-5](/assets/images/2020-10-27-covid_20201027/image5.png)  
+
+
+![plot of chunk unnamed-chunk-6](/assets/images/2020-10-27-covid_20201027/image6.png)  
+
+
+![plot of chunk unnamed-chunk-7](/assets/images/2020-10-27-covid_20201027/image7.png)  
+
+
+![plot of chunk unnamed-chunk-8](/assets/images/2020-10-27-covid_20201027/image8.png)  
+
+
+![plot of chunk unnamed-chunk-9](/assets/images/2020-10-27-covid_20201027/image9.png)  
+
+
+![plot of chunk unnamed-chunk-10](/assets/images/2020-10-27-covid_20201027/image10.png)  
+
+
+![plot of chunk unnamed-chunk-11](/assets/images/2020-10-27-covid_20201027/image11.png)  
+
+
+
+# United States Breakdown
+
+
+![plot of chunk unnamed-chunk-12](/assets/images/2020-10-27-covid_20201027/image12.png)  
+
+
+![plot of chunk unnamed-chunk-13](/assets/images/2020-10-27-covid_20201027/image13.png)  
+
+
+![plot of chunk unnamed-chunk-14](/assets/images/2020-10-27-covid_20201027/image14.png)  
+
+
+![plot of chunk unnamed-chunk-15](/assets/images/2020-10-27-covid_20201027/image15.png)  
+
+
+![plot of chunk unnamed-chunk-16](/assets/images/2020-10-27-covid_20201027/image16.png)  
+
+
+![plot of chunk unnamed-chunk-17](/assets/images/2020-10-27-covid_20201027/image17.png)  
+
+
+![plot of chunk unnamed-chunk-18](/assets/images/2020-10-27-covid_20201027/image18.png)  
+
+
+![plot of chunk unnamed-chunk-32](/assets/images/2020-10-27-covid_20201027/image32.png)  
+
+
+![plot of chunk unnamed-chunk-19](/assets/images/2020-10-27-covid_20201027/image19.png)  
+
+
+![plot of chunk unnamed-chunk-20](/assets/images/2020-10-27-covid_20201027/image20.png)  
+
+
+![plot of chunk unnamed-chunk-21](/assets/images/2020-10-27-covid_20201027/image21.png)  
+
+
+![plot of chunk unnamed-chunk-22](/assets/images/2020-10-27-covid_20201027/image22.png)  
+
+
+![plot of chunk unnamed-chunk-23](/assets/images/2020-10-27-covid_20201027/image23.png)  
+
+
+![plot of chunk unnamed-chunk-24](/assets/images/2020-10-27-covid_20201027/image24.png)  
+
+
+![plot of chunk unnamed-chunk-25](/assets/images/2020-10-27-covid_20201027/image25.png)  
+
+# States with Significant Rising Cases in October
+
+![plot of chunk unnamed-chunk-3](/assets/images/2020-10-27-covid_20201027/image33.png)  
+
+
+![plot of chunk unnamed-chunk-34](/assets/images/2020-10-27-covid_20201027/image34.png)  
+
+
+
+# Individual State Breakdown
+
+![plot of chunk unnamed-chunk-26](/assets/images/2020-10-27-covid_20201027/image26.png)  
+
+
+![plot of chunk unnamed-chunk-27](/assets/images/2020-10-27-covid_20201027/image27.png)  
+
+
+![plot of chunk unnamed-chunk-28](/assets/images/2020-10-27-covid_20201027/image28.png)  
+
+
+![plot of chunk unnamed-chunk-29](/assets/images/2020-10-27-covid_20201027/image29.png)  
+
+
+
+# Age and Comorbidities
+
+![plot of chunk unnamed-chunk-30](/assets/images/2020-10-27-covid_20201027/image30.png)  
+
+
+![plot of chunk unnamed-chunk-31](/assets/images/2020-10-27-covid_20201027/image31.png)  
+
+
+
