@@ -13,7 +13,7 @@ featured: false
 
 The Tokyo Olympics featured 339 events across 50 disciplines, with 93 different nations bringing home medals.  Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more.  The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in women's sports, and to what extent population and GDP predict a nation's success.  
 
-The first chart below shows the top 12 medaling countries with a break down of each medal.  The United States led the world in gold, silver, and bronze; and with a total of 113 medals, medaled in roughly one-third of all events.
+The first chart shows the top 12 medaling countries with a break down of each medal.  The United States led the world in gold, silver, and bronze; and with a total of 113 medals, medaled in roughly one-third of all events.
 
 
   
