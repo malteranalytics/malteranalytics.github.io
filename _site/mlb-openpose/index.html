@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>Using AI with MLB Video to Detect Changes in Mechanics | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Using AI with MLB Video to Detect Changes in Mechanics | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Using AI with MLB Video to Detect Changes in Mechanics" />
+<meta name="author" content="danny" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Major League Baseball’s Statcast has done a lot to improve how player’s movements are analyzed, but little public research has been done using video and image processing to improve mechanics of players and to help prevent injuries. In part, this is due to the fact that machine learning related to images and videos requires lots of storage and high computing. Even though storage and computing are relatively cheap, there is a small cost and high complexity associated to performing data science on this type of data, which creates a barrier to entry working with it. Additionally, MLB and individual teams own video rights making accessibility of data difficult." />
+<meta property="og:description" content="Major League Baseball’s Statcast has done a lot to improve how player’s movements are analyzed, but little public research has been done using video and image processing to improve mechanics of players and to help prevent injuries. In part, this is due to the fact that machine learning related to images and videos requires lots of storage and high computing. Even though storage and computing are relatively cheap, there is a small cost and high complexity associated to performing data science on this type of data, which creates a barrier to entry working with it. Additionally, MLB and individual teams own video rights making accessibility of data difficult." />
+<link rel="canonical" href="http://localhost:4000/mlb-openpose/" />
+<meta property="og:url" content="http://localhost:4000/mlb-openpose/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2021-06-08-mlb-openpose/trout2.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-08T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"danny"},"@type":"BlogPosting","description":"Major League Baseball’s Statcast has done a lot to improve how player’s movements are analyzed, but little public research has been done using video and image processing to improve mechanics of players and to help prevent injuries. In part, this is due to the fact that machine learning related to images and videos requires lots of storage and high computing. Even though storage and computing are relatively cheap, there is a small cost and high complexity associated to performing data science on this type of data, which creates a barrier to entry working with it. Additionally, MLB and individual teams own video rights making accessibility of data difficult.","image":"https://malteranalytics.github.io/assets/images/2021-06-08-mlb-openpose/trout2.png","headline":"Using AI with MLB Video to Detect Changes in Mechanics","dateModified":"2021-06-08T00:00:00-05:00","datePublished":"2021-06-08T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mlb-openpose/"},"url":"http://localhost:4000/mlb-openpose/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"danny"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Using%20AI%20with%20MLB%20Video%20to%20Detect%20Changes%20in%20Mechanics&amp;url=http://localhost:4000/mlb-openpose/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/mlb-openpose/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/mlb-openpose/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Danny</a><a target="_blank" href="https://twitter.com/danmalter" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Using AI with MLB Video to Detect Changes in Mechanics</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2021-06-08-mlb-openpose/trout2.png" alt="Using AI with MLB Video to Detect Changes in Mechanics">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Major League Baseball’s Statcast has done a lot to improve how player’s movements are analyzed, but little public research has been done using video and image processing to improve mechanics of players and to help prevent injuries.  In part, this is due to the fact that machine learning related to images and videos requires lots of storage and high computing.  Even though storage and computing are relatively cheap, there is a small cost and high complexity associated to performing data science on this type of data, which creates a barrier to entry working with it. Additionally, MLB and individual teams own video rights making accessibility of data difficult.</p>
+
+<p>In this article, I will demonstrate how sample image and video data can be used in different ways to help MLB’s pitchers improve various actions, such as their mechanics, prevent future injuries, detect changes in arm movement throughout a game, as well as some other use cases.  All of the concepts shown below can be used at a larger scale to make more significant impacts.  Implementation of work uses a combined method of MIT’s open-source algorithm, OpenPose, as well as various data analysis and machine learning techniques.  Further information about OpenPose can be seen <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank" rel="noopener noreferrer">here</a>.</p>
+
+<p>An example of the final algorithm in action is shown below.</p>
+
+<video width="520" controls="">
+<source src="/assets/images/2021-06-08-mlb-openpose/buehler_side_output.mp4"></source>
+</video>
+<p><em>Walker Buehler Side View</em></p>
+
+<p><br></p>
+
+<h3 id="data-capture">Data Capture</h3>
+
+<p>Data for this project was captured by collecting various video clips of a given player from both a side and center field point of view.  All video and images used in this analysis are solely for a research purpose and are not being used for any team specifically.  However, a team can utilize this method of analysis by having a still camera directed at a pitcher throughout a game or during a bullpen/batting practice session.  For the most part, the infrastructure is already in place, so it comes down to a matter of teams collecting and utilizing this type of data.  For simplicity of this analysis, a few different pitches/swings were collected for a small sample of players, but the ideal situation would be to have hundreds of pitches or swings to gain better insights from the data.</p>
+
+<p>OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and videos.  A mapping of the keypoints to human body part can be seen in Image 1.  For each image fed through the algorithm, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts).  If the algorithm is applied to a video, then the video is essentially broken up into many separate images.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/assets/images/2021-06-08-mlb-openpose/openpose_keypoints.png" alt="OpenPose Keyoints"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>Image 1: OpenPose keypoints</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<h3 id="analysis">Analysis</h3>
+<p>To start, we’ll look at a still image of the OpenPose algorithm applied to a side view of Walker Buehler throwing a pitch.  When a keypoint cannot be found in the image, OpenPose uses machine learning to estimate where the body part is located, which is referred to as pose estimation.  These cases can happen when a body part is hidden from view in the image or video.  The OpenPose algorithm also works with one or multiple people in a single view, but I have found that it works best with only one person in the picture to reduce background noise. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out this noise.  This article will not focus on this the preprocessing work implemented prior to running images and video through the OpenPose algorithm, but OpenCV or deep learning techniques would be appropriate for implementing background blurring effects.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/assets/images/2021-06-08-mlb-openpose/buehler1.png" alt="Walker Buehler Image"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>Image 2: OpenPose applied to a still image of Walker Buehler</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<p>By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this one center field view clip, 101 snapshots were taken by the algorithm.  Another way to think about this is that the video is turned into a sequence of 101 still images.  This number will differ depending on the length of a particular video.</p>
+
+<p><img src="https://raw.githubusercontent.com/malteranalytics/malteranalytics.github.io/master/assets/images/2021-06-08-mlb-openpose/buehler_cf_output.gif" alt="Walker Buehler"> <br>
+<em>Walker Buehler Center Field View</em></p>
+
+<p>Using the output data from each of the 101 center field view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the pitch above.  As Buehler approaches the release of the ball, his shoulder drops and then picks back up as he finishes the pitch.  This is evident by simply watching the video, but the advantage of this type of analysis is that the data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to see.  Additionally, given the proper data, thousands of videos can be analyzed in a matter of minutes versus spending hours of film watching.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/assets/images/2021-06-08-mlb-openpose/buehler2.png" alt="Walker Buehler Image"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>Image 3: Walker Buehler’s right shoulder mapped out over the duration of a single pitch</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<p>Valuable information can be shown from one unique pitch, but deeper analysis can start to be made from taking multiple pitches of the same pitcher over the duration of a game or multiple appearances.  The left chart below shows an analysis from five different pitches Buehler threw over the same game.  Each clip is initiated at a slightly different time prior to Buehler starting his motion, so in order to make more meaning of these five pitches, the right chart shows the same five pitches overlayed on top of each other starting from roughly the same point in time.  The data shows that Buehler has a slightly different motion for his cutter and slider than for his four-seam fastball.  Although not evidence, this possibly can mean that Buehler is tipping his pitches as shown in the clear change in patterns.</p>
+
+<p>It is important to note here that the distance of the plot is measured in pixels, so in order to know how significant this difference really is to a batter, the pixels need to be converted into inches.  With technology such as MLB’s Statcast, this should not be an issue implementing into gameday data.  In this example, based on an estimated PPI (pixels per inch) of 250px, it’s estimated that difference in shoulder height distance between Buehler’s four-seam fastball versus his cutter and slider is about 0.25 inches.</p>
+
+<p><br></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/assets/images/2021-06-08-mlb-openpose/buehler5.png" alt="Walker Buehler Image"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>Image 4: Walker Buehler’s right shoulder mapped out over the duration for five distinct pitches</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<h3 id="future-implementation">Future Implementation</h3>
+
+<p>There are lots of opportunities for further research still to be done in this area, but the difficulty is having the appropriate input data.  Some options would be for MLB to release video clips of this type for research purposes or to implement this data into MLB’s open-source data as it’s own standalone data source.  Another option would be to work with teams or individual players to collect video footage during offseason training.  In regards for use cases of this data, here are a few ideas.</p>
+
+<p>Player Scouting:</p>
+<ul>
+  <li>OpenPose can be used to measure how closely one player’s pitching or hitting mechanics are relative to another known player. By collecting data like angles of body parts, movement, etc., clustering algorithms can be used to measure the similarity between two player’s pitches or swings.  From a scouting perspective, these types of models can output something along the lines of, “Player A’s swing is 80% similar to Mike Trout”.</li>
+</ul>
+
+<p>Tracking Mechanics:</p>
+<ul>
+  <li>Rather than a player or coach going through video one by one, OpenPose technology can be used to better align hundreds or thousands of videos all at once. If a pitcher is unknowingly changing their mechanics, data from OpenPose can be mapped out with a time dimension, similar to the charts used for Buehler, to determine how much of a change is occurring and which body part is causing mechanics to differ.</li>
+</ul>
+
+<p>Injury Prevention:</p>
+<ul>
+  <li>
+    <p>By using this type of pitcher or batter tracking data, models like outlier detection algorithms can be used to detect if a pitcher’s mechanics are differing too much from the norm. If an outlier is detected, an alert system can be programmed to provide information to the pitcher that a significant change in their mechanics was detected and this hopefully would help to prevent a future injury.</p>
+  </li>
+  <li>
+    <p>This type of data can also be used to measure a given pitcher’s mechanics to those that have previously suffered from pitching related injuries. For example, let’s say that Pitcher A suffered from Tommy John surgery. At the start of the season, Pitcher A and Pitcher B start out with a 60% similarity in pitching mechanics. However, by the end of the season, Pitcher B’s mechanics are off and now the similarity between the two pitchers is at 90%. Perhaps this would be a red flag for Pitcher B to investigate further so that he too does not ultimately suffer from Tommy John.</p>
+  </li>
+</ul>
+
+<p>Whether it be pitchers like Trevor Bauer filming their practice sessions in the off-season, batters trying to gain an advantage, or simply just trying to prevent injuries, there are lots of use cases for this type of data.  Time will tell if MLB provides this data in more readily available formats, but there is no doubt that teams can already start utilizing this type of data if they aren’t already.</p>
+
+<p>Example code to run the OpenPose algorithm be seen <a href="https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb" target="_blank" rel="noopener noreferrer">here</a>. This example code excludes data cleaning, preprocessing and analyzing of data.</p>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2021-06-08">08 Jun 2021</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#MLB">MLB</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#R">R</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#baseball">baseball</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#openpose">openpose</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#MLB">#MLB</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#R">#R</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#baseball">#baseball</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//masters/"> « What are the Traits of a Successful Golfer at the Masters?</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//olympics/">Paris Olympics Recapped in Data » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

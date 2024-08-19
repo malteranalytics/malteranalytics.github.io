@@ -40,7 +40,7 @@ The next chart below shows that GDP is an even greater predictor of Olympic succ
 
 ![plot of chunk unnamed-chunk-5](/assets/images/2024-08-19-paris-olympics/image5.png)
 
-The next chart looks at the percent of a country's medals that were won in women sports, among countries that won at least 7 medals.  While a small sample size of medals for several countries leave us unable to draw a definitive conclusion, these percentages possibly give indication into what counties could be leading the way in encouraging in and or investing in womens' sports.  Bulgaria won 10 medals, 8 of which in women's events.  The United States also ranks near the top of the list with 59% of 123 medals going to female athletes.  As expected, most counties fall within a few percentage points up or down from 50%.
+The next chart looks at the percent of a country's medals that were won in women sports, among countries that won at least 7 medals.  While a small sample size of medals for several countries leave us unable to draw a definitive conclusion, these percentages possibly give indication into what counties could be leading the way in encouraging in and or investing in womens' sports.  Bulgaria won 10 medals, 8 of which in women's events.  The United States also ranks near the top of the list with 59% of 123 medals going to female athletes.
 
 
 

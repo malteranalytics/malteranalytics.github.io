@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>UFC Fighting Analysis | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>UFC Fighting Analysis | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="UFC Fighting Analysis" />
+<meta name="author" content="drew" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In preparation for the highly anticipated UFC title fight between the current Men’s Lightweight champion, Khabib Nurmagomedov, and contender, Justin Gaethje, I’ve analyzed over 8 thousand UFC fights to gain a greater understanding of the sport of MMA and to determine what factors contribute to a fighter’s success. The UFC judging system is subjective in nature, which often leaves fans confused about the outcome of fights. By looking at fight data, we can better recognize fight strategy, the impact of fighter attributes, and the match decision made by the judges. The UFC fight data sets can be found here and here." />
+<meta property="og:description" content="In preparation for the highly anticipated UFC title fight between the current Men’s Lightweight champion, Khabib Nurmagomedov, and contender, Justin Gaethje, I’ve analyzed over 8 thousand UFC fights to gain a greater understanding of the sport of MMA and to determine what factors contribute to a fighter’s success. The UFC judging system is subjective in nature, which often leaves fans confused about the outcome of fights. By looking at fight data, we can better recognize fight strategy, the impact of fighter attributes, and the match decision made by the judges. The UFC fight data sets can be found here and here." />
+<link rel="canonical" href="http://localhost:4000/ufc/" />
+<meta property="og:url" content="http://localhost:4000/ufc/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2020-10-20-ufc/image11.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-20T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"drew"},"@type":"BlogPosting","description":"In preparation for the highly anticipated UFC title fight between the current Men’s Lightweight champion, Khabib Nurmagomedov, and contender, Justin Gaethje, I’ve analyzed over 8 thousand UFC fights to gain a greater understanding of the sport of MMA and to determine what factors contribute to a fighter’s success. The UFC judging system is subjective in nature, which often leaves fans confused about the outcome of fights. By looking at fight data, we can better recognize fight strategy, the impact of fighter attributes, and the match decision made by the judges. The UFC fight data sets can be found here and here.","image":"https://malteranalytics.github.io/assets/images/2020-10-20-ufc/image11.png","headline":"UFC Fighting Analysis","dateModified":"2020-10-20T00:00:00-05:00","datePublished":"2020-10-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ufc/"},"url":"http://localhost:4000/ufc/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"drew"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=UFC%20Fighting%20Analysis&amp;url=http://localhost:4000/ufc/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/ufc/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/ufc/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Drew</a><a target="_blank" href="https://www.instagram.com/malteranalytics/?hl=en" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">UFC Fighting Analysis</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2020-10-20-ufc/image11.png" alt="UFC Fighting Analysis">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>In preparation for the highly anticipated UFC title fight between the current Men’s Lightweight champion, Khabib Nurmagomedov, and contender, Justin Gaethje, I’ve analyzed over 8 thousand UFC fights to gain a greater understanding of the sport of MMA and to determine what factors contribute to a fighter’s success.  The UFC judging system is subjective in nature, which often leaves fans confused about the outcome of fights.  By looking at fight data, we can better recognize fight strategy, the impact of fighter attributes, and the match decision made by the judges.  The UFC fight data sets can be found <a href="https://www.kaggle.com/rajeevw/ufcdata" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://www.kaggle.com/calmdownkarm/ufcdataset" target="_blank" rel="noopener noreferrer">here</a>.</p>
+
+<p>In UFC, there are 3 ways in which the winner of a fight can be determined; decision by judges, knock out or technical knockout, or submission.   The below chart shows how often each result type has occurred in the dataset, with about half of all fights going the distance and resulting in decision.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>Just about half of all punch attempts are landed, and the chart below shows the rate of punches landed and attempted over the course of the average fight.  UFC fights can either be 3 or 5 rounds with all title fights being 5 rounds (e.g. - Khabib vs Gaethje).  In the third round, fighters attempt more punches on average, but fatigue shows in that they don’t necessarily land more punches than in the previous rounds.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image2.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+<p>The next plot looks at kicks attempted over the course of the fight.  The winner of the fight on average kicks more in the first few rounds while the loser of the fight starts to kick more than the winner in the later rounds.  Perhaps this is out of desperation of the losing fighter who wants to change their strategy, or perhaps fighters should focus on out kicking their opponent early in the match.   Also, the fighter who goes on to win may generally feel comfortable with his or her lead in the late rounds and be compelled to avoid the higher-risk strike.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image3.png" alt="plot of chunk unnamed-chunk-3"></p>
+
+<p>Another metric that factors into winning a fight is time in control for each fighter.  The below chart shows the average time in control for the winner and loser of a fight, with the shaded region denoting the 95% internval of time in control. As seen below, the winner of the fight usually spends more time in control. For example, part of Khabib’s fighting strategy is to take his opponent down to the ground and to control him there. It also appears that as the fight goes on and fatigue plays a larger role, there is more neutral time where neither fighter is in control.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image4.png" alt="plot of chunk unnamed-chunk-4"></p>
+
+<p>The UFC has several weight classes in both the men’s and women’s divisions, and each weight class has its own unique style of fighting.  Generally, heavier weight classes have a slower pace of fighting.  We can see from the below chart that as the weight class increases, there is a downward trend in average significant strikes per fight per fighter.  Additionally, women’s divisions tend to have higher rates of significant strikes when compared to men’s divisions of the same weight.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image5.png" alt="plot of chunk unnamed-chunk-5"></p>
+
+<p>*** Significant strikes refer to all strikes at distance and power strikes in the clinch and on the ground.</p>
+
+<p>Significant strikes can also be broken down by strikes to the head, body, or leg.  The below chart shows the average number of each type of significant strikes by weight class per fight.  Head strikes account for more than half of all significant strikes, and heavier weight classes have a slightly greater proportion of their strikes to the head compared to lighter weight classes.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image6.png" alt="plot of chunk unnamed-chunk-6"></p>
+
+<p>In addition to breaking down strikes by head, body, and leg, the following chart slices strikes by clinch (up close), distance, and ground.  There is an approximately even distribution of the three types of strikes across the board.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image7.png" alt="plot of chunk unnamed-chunk-7"></p>
+
+<p>The subsequent chart shows a similar trend around average kicks per fight by weight class.  A statistically notable difference in kicks per fight occurs when comparing women’s divisions to men’s division, with women applying leg kicks about 33% more frequently than men.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image8.png" alt="plot of chunk unnamed-chunk-8"></p>
+
+<p>The next focus will be on the percent of strikes that are landed by each weight class.  In general, roughly half of all strikes are considered ‘landed’.  As the weight class increases, the rate of landed strikes rises as well.  Lighter weight fighters may have tendencies to attempt strikes even when there’s a low chance of landing them, whereas heavier fighters could be more cautious about only striking when they feel confident in landing.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image9.png" alt="plot of chunk unnamed-chunk-9"></p>
+
+<p>Because the UFC does not have an objective scoring system in which judges determine the winner of the fight, it’s difficult to say for certain which fighter is winning while watching.  Hence, I’ve created a multivariate regression model in python that predicts the winner of a fight based on their in-fight statistics using data from previous fights.  The below chart takes the results of that model and outputs the most important features that influence the model’s prediction of which fighter won the fight.  Significant strikes to the head and time in control are the two most important features, perhaps due to their nature of clarity and blatancy to judges.  In the case of the dominant women’s Featherweight and Bantamweight belt holder, Amanda Nunes, she typically wins her fights by controlling her opponents and delivering frequent strikes to inflict damage to her opponent.  However, there are other fighters who strategize around controlling their opponents while limiting their strikes and maintaining a defensive approach.  This leads to debate among MMA fans about whether controlling a fight without inflicting much damage to your opponent is worthy of victory.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image10.png" alt="plot of chunk unnamed-chunk-10"></p>
+
+<p>Finally, I created a second model in python using a Random Forest Classifier algorithm to predict which fighter will win a fight based on their overall statistics entering the fight.  Like the previous model, I outputted the feature importance among the several inputs of the model.  Features prefixed with R denote the fighter in the red corner of the ring (the higher ranked fighter) and features prefixed with B denote the fighter in the blue corner (the lower ranked fighter).</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image11.png" alt="plot of chunk unnamed-chunk-11"></p>
+
+<p>*** “R” prefixed features indicates Red corner fighter and “B” prefixed features indicates Blue corner fighter</p>
+
+<p>The most important feature to predict fight outcome is the average significant strikes that a fighter allows their opponent to land on them, followed by the percentage of significant strikes that a fighter allows their opponent to land.  The ‘Defense wins Championships’ expression certainly applies to MMA, as Khabib is rarely hurt by his opponents because of his ability to avoid putting himself in a position for his opponent to land significant strikes.  On the other hand, Gaethje, who comes from a strong wrestling background, tends to fight more offensively by throwing many strikes on his opponents without focusing on controlling them.  The two unique fighting styles should lead to an exciting fight.</p>
+
+<p>Some less important features include whether the fighter fights orthodox or southpaw, the weight of the fighter (since opponents are always within proximity of weight with one another), and the number of knock outs.   However, because fighters are of similar weight, it’s not surprising that the height of a fighter plays a somewhat significant role in predicting the fight, as the taller fighter wins just 42% of all fights due to taller fighters likely having less muscle mass than a shorter fighter at the same weight.  Lastly, the above chart indicates that the relative importance of the Red fighter is greater than that of the Blue fighter which implies that the Red fighter’s data is more valuable when predicting the outcome of a fight.</p>
+
+<p>While analytics in sports is often associated with team sports like baseball and basketball, individual sports like MMA can also benefit from data driven analyses.  I expect data to eventually shape UFC fight strategy, judging, and spectators’ perception of mixed martial arts as data becomes more prevalent.</p>
+
+<p>And finally, using the methodology outlined above, I ran the Random Forest Python model with the statistical inputs from both Khabib and Gaethje, and the results give Khabib a 73% chance to win the fight.</p>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-10-20">20 Oct 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#MMA">MMA</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#UFC">UFC</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#dataviz">dataviz</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#python">python</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#MMA">#MMA</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#Rstats">#Rstats</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#UFC">#UFC</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#dataviz">#dataviz</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//nbadraft/"> « 2023 NBA Draft Scouting Report</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//covid_20201027/">COVID-19 Data Visuals » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

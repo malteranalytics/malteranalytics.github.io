@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>The Statistical Value of Going For It On 4<sup>th</sup> Down | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The Statistical Value of Going For It On 4th Down | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="The Statistical Value of Going For It On 4th Down" />
+<meta name="author" content="drew" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="With the 2019 NFL season under way, we’re reminded of the timeless debate about whether teams should go for it on 4th down, depending on the game situation. While coaches, players, and fans may all have different opinions on the matter, I’ve analyzed over 100 thousand snaps from the 2016-2018 NFL regular seasons to form statistical decisions that will maximize the probability of winning the game. The below chart summarizes my results, followed by an in-depth breakdown of the steps I took in Python to transform raw play-by-play data into usable results. This chart should be interpreted as a general baseline for NFL teams as it does not account for game factors such as score, time left in the game, team ability, weather, etc." />
+<meta property="og:description" content="With the 2019 NFL season under way, we’re reminded of the timeless debate about whether teams should go for it on 4th down, depending on the game situation. While coaches, players, and fans may all have different opinions on the matter, I’ve analyzed over 100 thousand snaps from the 2016-2018 NFL regular seasons to form statistical decisions that will maximize the probability of winning the game. The below chart summarizes my results, followed by an in-depth breakdown of the steps I took in Python to transform raw play-by-play data into usable results. This chart should be interpreted as a general baseline for NFL teams as it does not account for game factors such as score, time left in the game, team ability, weather, etc." />
+<link rel="canonical" href="http://localhost:4000/nfl-4th-down/" />
+<meta property="og:url" content="http://localhost:4000/nfl-4th-down/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2019-09-09-nfl-4th-down/image1.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-09T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"drew"},"@type":"BlogPosting","description":"With the 2019 NFL season under way, we’re reminded of the timeless debate about whether teams should go for it on 4th down, depending on the game situation. While coaches, players, and fans may all have different opinions on the matter, I’ve analyzed over 100 thousand snaps from the 2016-2018 NFL regular seasons to form statistical decisions that will maximize the probability of winning the game. The below chart summarizes my results, followed by an in-depth breakdown of the steps I took in Python to transform raw play-by-play data into usable results. This chart should be interpreted as a general baseline for NFL teams as it does not account for game factors such as score, time left in the game, team ability, weather, etc.","image":"https://malteranalytics.github.io/assets/images/2019-09-09-nfl-4th-down/image1.png","headline":"The Statistical Value of Going For It On 4th Down","dateModified":"2019-09-09T00:00:00-05:00","datePublished":"2019-09-09T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nfl-4th-down/"},"url":"http://localhost:4000/nfl-4th-down/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"drew"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=The%20Statistical%20Value%20of%20Going%20For%20It%20On%204&lt;sup&gt;th&lt;/sup&gt;%20Down&amp;url=http://localhost:4000/nfl-4th-down/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/nfl-4th-down/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/nfl-4th-down/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Drew</a><a target="_blank" href="https://www.instagram.com/malteranalytics/?hl=en" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">The Statistical Value of Going For It On 4<sup>th</sup> Down</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2019-09-09-nfl-4th-down/image1.png" alt="The Statistical Value of Going For It On 4<sup>th</sup> Down">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>With the 2019 NFL season under way, we’re reminded of the timeless debate about whether teams should go for it on 4th down, depending on the game situation.  While coaches, players, and fans may all have different opinions on the matter, I’ve analyzed over 100 thousand snaps from the <a href="http://nflsavant.com/about.php" target="_blank" rel="noopener noreferrer">2016-2018 NFL regular seasons</a> to form statistical decisions that will maximize the probability of winning the game.  The below chart summarizes my results, followed by an in-depth breakdown of the steps I took in Python to transform raw play-by-play data into usable results.   This chart should be interpreted as a general baseline for NFL teams as it does not account for game factors such as score, time left in the game, team ability, weather, etc.</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>The primary goal of my analysis was to create a decision chart that displays the statistically optimal 4<sup>th</sup> down choice a team should make depending on field position and yards to go.   With an ever-changing NFL (higher scoring games, new rules, etc.) I decided that 3 seasons of data (2016-2018) would give me enough plays to have valid results while also not derailing my analysis with old data that might not apply in today’s game.  In order to achieve my output, I broke the analysis into 4 sections and aggregated the results as my final step.  The 4 areas of analysis are:</p>
+
+<ul>
+  <li>Expected Points on a Drive (Depending on starting field position)</li>
+  <li>4th Down Conversion Rates (Different for goal to go Vs. regular)</li>
+  <li>Expected Net Punt Distance (Depending on returns and touchbacks)</li>
+  <li>Field Goal Percentage (Depending on distance)</li>
+</ul>
+
+<p>For each of these areas, I used Python in a Jupyter Notebook as my statistical analysis tool.  I’ve detailed the results and interpretations in the below sections, while my Python code as well as the steps I took to transform raw play-by-play data into a usable aggregated data set can be found on my <a href="https://github.com/drewmalter12/NFL4thDownAnalysis/blob/master/Field%20Position%20Value.ipynb" target="_blank" rel="noopener noreferrer">Github page</a>.</p>
+
+<p><strong>Expected Points on a Drive</strong></p>
+
+<p>The expected points on a drive metric was the foundation of the analysis, providing us the value of starting field position.   The expected point values can be interpreted as the league average of how many points get scored among all drives that began with the same field position.  For example, if there were 100 drives that began between the offensive team’s 20-24-yard line for a total of 200 points scored (including defensive touchdowns as negative points), then the expected points for those drives is 2.  Additionally, I removed drives from my data set that began with under 3 minutes left in the 1<sup>st</sup> half and under 5 minutes left in the game since those drives often have alternative intentions to scoring a touchdown (e.g. - running the clock out, kicking a half-ending field goal).  Unsurprisingly, the expected point value trends upwards as the starting field position gets better, however also note that the variation of expected points slightly grows as field position gets better.</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image2.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+<p>The table below provides further metrics on a basis of field position that bring additional value to the analysis.  I found it interesting that the average plays per drive are relatively steady just until you get close to the opposing team’s end zone.  Other notable takeaways are that the percent chance of a touchdown has an unsurprising upward trend with field position and drives starting between the opponents 21-25 have the highest chance of ending in a field goal.</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image3.png" alt="plot of chunk unnamed-chunk-3"></p>
+
+<p><strong>4<sup>th</sup> Down Success Rates</strong></p>
+
+<p>The next essential metric to make the 4th down decision is the average success rates based on how many yards are to go for a first down.  As the distance to the first down gets greater, there are fewer attempts to look at, however enough to generally confirm that the success rates drop as distance grows.  Intuitively, 4<sup>th</sup> and 10 has far more attempts than it’s neighboring distances due to the high quantity of drives that have 3 consecutive incomplete passes.  4<sup>th</sup> down plays with greater than 10 yards to go has an insignificant number of attempts so I chose to remove those from the equation.</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image4.png" alt="plot of chunk unnamed-chunk-4"></p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image5.png" alt="plot of chunk unnamed-chunk-5"></p>
+
+<p>Separately, I calculated the 4<sup>th</sup> down conversion rates for 4<sup>th</sup> and goal-to-go plays.  For plays of greater than 1 yard to the endzone, there are very few attempts for conclusive evidence, however we can still get a reasonable understanding of what happens in these situations.  Since these plays deal with a 12th defender (the back of the end zone) and are generally higher-pressure situations, it’s predictable that the 4th down conversion rate in goal-to-go situations is lower than it is for other parts of the field.</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image6.png" alt="plot of chunk unnamed-chunk-6"></p>
+
+<p><strong>Net Punt Distances</strong></p>
+
+<p>Another consideration to make when deciding whether to go for it is the expected yard line that the opposing team will begin their next drive.  This includes the possibility of a return, a touchback, penalties, or a block.  The chart and table below display the average net distances of punts, and that there’s a noticeable downward trend in net distance as punting team’s field position gets closer to the opposing team’s end zone.  Punts on the opposing side of the field generally have a very low net distance, and we will later see how they provide very little field position value.</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image7.png" alt="plot of chunk unnamed-chunk-7"></p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image8.png" alt="plot of chunk unnamed-chunk-8"></p>
+
+<p><strong>Field Goal Percentages</strong></p>
+
+<p>When within range, the 4<sup>th</sup> down conversation changes from ‘should we punt?’ to ‘should we kick the field goal?’  This requires us to take into consideration field goal averages when making this decision, and the below chart and table lay these out for us.   The surprising result here is that 41% of field goals in the opponents 41-45-yard line range are successful.  Likely the reason for this is that only elite kickers are given the opportunity to kick from that range and it would be much lower more teams attempted field goals from this distance.</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image9.png" alt="plot of chunk unnamed-chunk-9"></p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image10.png" alt="plot of chunk unnamed-chunk-10"></p>
+
+<p><strong>Putting it all together</strong></p>
+
+<p>The final step of the analysis is to compile all the above information to make our decisions in each situation, as displayed on the chart on the front page.  This step of the process has a heavy math focus and the below example will demonstrate how probability theory can be used to obtain the final conclusions.  As mentioned in the introduction, these conclusions are generic and would need to be adjusted depending on the game situation.  For example, teams with great defenses may be more inclined to punt with their ability to force a 3-and-out in order to get good field position back on their next possession.  In other cases, you may just need a field goal based on the game situation or have a great quarter back and play drawn up that will give you a better chance to convert than the league average.  Additionally, the weather and ability of your offensive line, kicker, or punter could play large factors that are not accounted for in this calculation.</p>
+
+<p><strong>Example:  4<sup>th</sup> and 3 on your own 42-yard line.</strong></p>
+
+<p>We will first record the important metrics for the calculation.</p>
+
+<ul>
+  <li>4<sup>th</sup> down conversion rate with 3 yards to go: 45%</li>
+  <li>Expected points scored if converted (assuming 1st down will be in own 45 - 49 yard-line range: 3.15 points</li>
+  <li>Expected points for opposing team if they start on their opponents 41-45-yard line: (incase the conversion fails) 3.29 points</li>
+  <li>Expected Net Punt Distance (from 42-yard line): 40.43 yards</li>
+  <li>Expected points for opposing team if punted (assuming start at 18-yard line with expected punt distance: 1.65 points</li>
+</ul>
+
+<p>Next, we will walk through the possible decisions and their consequential outcomes:</p>
+
+<ul>
+  <li>Go for it and convert: 45% of conversion success for 3.15 expected points if converted gives this outcome a value of 1.42 points</li>
+  <li>Go for it and fail: 55% chance of fail for 3.29 expected points gives this outcome a value of 1.81 points for the opposing team</li>
+  <li>Punt: The opposing team’s expected points is 1.65; your team expected points is 0 (drive over)</li>
+</ul>
+
+<p>Here is what the expected point outcomes look like in a contingency table:</p>
+
+<p><img src="/assets/images/2019-09-09-nfl-4th-down/image11.png" alt="plot of chunk unnamed-chunk-11"></p>
+
+<p>The decision to go for it gives your team a net difference in expected points of -0.39, while the decision to punt is -1.65.  Therefor, simply by making the decision to punt, you are conceding an additional 1.26 net expected points.  For punting to be the smarter decision, the net difference in going for it would have to be a larger negative than the net difference in punting.</p>
+
+<p>Using the same logic, I went through all the combinations of game situations to make a unique conclusion that maximizes the offensive team’s expected outcome.  If I found the difference in expected points for each decision was within a small deviation of each other or if I did not have enough observations to be convinced in the result, then I disregarded a definitive choice and labelled that situation ‘neutral’.   For all others, I’ve confidently recorded my results and hope that NFL teams will adopt this data driven approach to 4<sup>th</sup> down decision making!</p>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2019-09-09">09 Sep 2019</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#NFL">NFL</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Python">Python</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#football">football</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#4thDown">#4thDown</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#nfl">#nfl</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//mlb-probabilities/"> « Using Calculus to Derive MLB Division Probabilities</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//kobe/">The Legendary Career of Kobe Bryant Visualized in Data » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

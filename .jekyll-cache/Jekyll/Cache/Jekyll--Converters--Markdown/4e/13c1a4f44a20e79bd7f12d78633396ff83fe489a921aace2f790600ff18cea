@@ -1,0 +1,91 @@
+I"!<p>The below graphs are updated through October 26, 2020.  For an explanation of key takeaways and interpretations of the graphs, see <a href="https://malteranalytics.github.io/covid/" target="_blank">my original COVID-19 data analysis post</a> from the beginning of September.</p>
+
+<h3 id="data-sources"><strong>Data Sources:</strong></h3>
+
+<p>COVID-19 Cases and Deaths: <a href="https://data.world/covid-19-data-resource-hub/covid-19-case-counts/workspace/file?filename=COVID-19+Activity.csv" target="_blank">Data.World</a></p>
+
+<p>COVID-19 Age Demographics and Comorbidities: <a href="https://data.cdc.gov/NCHS/Conditions-contributing-to-deaths-involving-corona/hk9y-quqm" target="_blank">Centers for Disease Control and Prevention</a></p>
+
+<p>U.S. Population Data: <a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html" target="_blank">U.S. Census Bureau</a></p>
+
+<p>World Population Data: <a href="https://population.un.org/" target="_blank">United Nations</a></p>
+
+<h1 id="world-comparisons">World Comparisons</h1>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image1.png" alt="plot of chunk unnamed-chunk-1" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image2.png" alt="plot of chunk unnamed-chunk-2" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image3.png" alt="plot of chunk unnamed-chunk-3" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image4.png" alt="plot of chunk unnamed-chunk-4" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image5.png" alt="plot of chunk unnamed-chunk-5" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image6.png" alt="plot of chunk unnamed-chunk-6" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image7.png" alt="plot of chunk unnamed-chunk-7" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image8.png" alt="plot of chunk unnamed-chunk-8" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image9.png" alt="plot of chunk unnamed-chunk-9" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image10.png" alt="plot of chunk unnamed-chunk-10" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image11.png" alt="plot of chunk unnamed-chunk-11" /></p>
+
+<h1 id="united-states-breakdown">United States Breakdown</h1>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image12.png" alt="plot of chunk unnamed-chunk-12" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image13.png" alt="plot of chunk unnamed-chunk-13" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image14.png" alt="plot of chunk unnamed-chunk-14" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image15.png" alt="plot of chunk unnamed-chunk-15" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image16.png" alt="plot of chunk unnamed-chunk-16" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image17.png" alt="plot of chunk unnamed-chunk-17" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image18.png" alt="plot of chunk unnamed-chunk-18" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image32.png" alt="plot of chunk unnamed-chunk-32" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image19.png" alt="plot of chunk unnamed-chunk-19" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image20.png" alt="plot of chunk unnamed-chunk-20" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image21.png" alt="plot of chunk unnamed-chunk-21" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image22.png" alt="plot of chunk unnamed-chunk-22" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image23.png" alt="plot of chunk unnamed-chunk-23" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image24.png" alt="plot of chunk unnamed-chunk-24" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image25.png" alt="plot of chunk unnamed-chunk-25" /></p>
+
+<h1 id="states-with-significant-rising-cases-in-october">States with Significant Rising Cases in October</h1>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image33.png" alt="plot of chunk unnamed-chunk-3" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image34.png" alt="plot of chunk unnamed-chunk-34" /></p>
+
+<h1 id="individual-state-breakdown">Individual State Breakdown</h1>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image26.png" alt="plot of chunk unnamed-chunk-26" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image27.png" alt="plot of chunk unnamed-chunk-27" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image28.png" alt="plot of chunk unnamed-chunk-28" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image29.png" alt="plot of chunk unnamed-chunk-29" /></p>
+
+<h1 id="age-and-comorbidities">Age and Comorbidities</h1>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image30.png" alt="plot of chunk unnamed-chunk-30" /></p>
+
+<p><img src="/assets/images/2020-10-27-covid_20201027/image31.png" alt="plot of chunk unnamed-chunk-31" /></p>
+
+:ET

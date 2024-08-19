@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>Using Calculus to Derive MLB Division Probabilities | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Using Calculus to Derive MLB Division Probabilities | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Using Calculus to Derive MLB Division Probabilities" />
+<meta name="author" content="drew" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Happy MLB Opening Day! You may be wondering what your team’s chances are of making the playoffs, but you’re not sure which website’s model to trust. I’ve created my own set of predictions using calculus and probability theory to derive the chance for each team to win their respective division. For the math crowd, I’ve detailed my process and formulas below the results." />
+<meta property="og:description" content="Happy MLB Opening Day! You may be wondering what your team’s chances are of making the playoffs, but you’re not sure which website’s model to trust. I’ve created my own set of predictions using calculus and probability theory to derive the chance for each team to win their respective division. For the math crowd, I’ve detailed my process and formulas below the results." />
+<link rel="canonical" href="http://localhost:4000/mlb-probabilities/" />
+<meta property="og:url" content="http://localhost:4000/mlb-probabilities/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2019-03-28-mlb-playoff-predictions/image1.PNG" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-28T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"drew"},"@type":"BlogPosting","description":"Happy MLB Opening Day! You may be wondering what your team’s chances are of making the playoffs, but you’re not sure which website’s model to trust. I’ve created my own set of predictions using calculus and probability theory to derive the chance for each team to win their respective division. For the math crowd, I’ve detailed my process and formulas below the results.","image":"https://malteranalytics.github.io/assets/images/2019-03-28-mlb-playoff-predictions/image1.PNG","headline":"Using Calculus to Derive MLB Division Probabilities","dateModified":"2019-03-28T00:00:00-05:00","datePublished":"2019-03-28T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mlb-probabilities/"},"url":"http://localhost:4000/mlb-probabilities/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"drew"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Using%20Calculus%20to%20Derive%20MLB%20Division%20Probabilities&amp;url=http://localhost:4000/mlb-probabilities/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/mlb-probabilities/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/mlb-probabilities/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Drew</a><a target="_blank" href="https://www.instagram.com/malteranalytics/?hl=en" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Using Calculus to Derive MLB Division Probabilities</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2019-03-28-mlb-playoff-predictions/image1.PNG" alt="Using Calculus to Derive MLB Division Probabilities">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Happy MLB Opening Day!  You may be wondering what your team’s chances are of making the playoffs, but you’re not sure which website’s model to trust.  I’ve created my own set of predictions using calculus and probability theory to derive the chance for each team to win their respective division.  For the math crowd, I’ve detailed my process and formulas below the results.</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image1.PNG" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>The steps I used to reach my conclusions are summarized below:</p>
+
+<ol>
+  <li>Averaged out the predicted 2019 win totals from several analytics websites and Vegas books</li>
+  <li>Analyzed 9 previous seasons worth of win total predictions to understand the trends of means and variance of the residuals (How far off predictions were from actual win totals)</li>
+  <li>Based on above steps, for each team I built a unique probability density function (PDF) for the expected wins for 2019</li>
+  <li>Used calculus in Python to derive the probability that each team wins more games than the other 4 teams in their division</li>
+</ol>
+
+<p><strong>Step 1: Average out the 2019 predicted win totals from several analytics websites and Vegas books</strong></p>
+
+<p>Many analytics websites have published the results from their respective models to predict the 2019 season outcome.  While most models have similar results, it’s difficult to tell what went into each model and which models are likely to be the most accurate.  Rather than picking just one or trying to develop my own model, I leveraged and averaged the results from several models as well as Vegas over/under totals as a starting point for my analysis.  The averages are what is displayed in the above tables.</p>
+
+<p><strong>Step 2: Analyze previous seasons of win total predictions to understand the trends of means and variance of the residuals (How far off predictions were from actual win totals)</strong></p>
+
+<p>If I’m going to use these predictions in my analysis, I first need to understand historically how well these same types of models perform.  Thankfully, Fangraphs, one of the website models I leveraged, has already published the results of a 9 year win total prediction analysis compared to actual outcomes.  Relevant to what I’m trying to accomplish, here are a couple key takeaways:</p>
+<ul>
+  <li>Teams with low win total predictions have a better chance of overperforming their prediction than teams with high win total predictions.  The function for predicted wins vs. actual wins can be written as y = 0.81x + 14.97</li>
+  <li>The variance of residuals for low win total predictions is wider than the variance for high win total predictions (teams with high win total predictions are more likely to have actual win totals closer to the predicted win totals)</li>
+  <li>The residuals appear to be normally distributed
+To address the change in residual variance, I downloaded the prediction and actual win total data and calculated the standard deviation of the residuals for high win total predictions, medium win total predictions, and low win total predictions.</li>
+</ul>
+
+<p>s_High = 6.262369</p>
+
+<p>s_Med = 6.41859</p>
+
+<p>s_Low  = 7.30217</p>
+
+<p><strong>Step 3: Build a unique probability density function (PDF) for the expected wins for each team in 2019</strong></p>
+
+<p>In probability theory, a <a href="https://en.wikipedia.org/wiki/Probability_density_function" target="_blank" rel="noopener noreferrer">probability density function</a> (PDF) is a distribution that describes the probability of events occurring from a continuous random variable.  By only knowing the mean and standard deviation, we can derive each PDF with calculus.  We’ll use the Yankees as an example to demonstrate how this plays out: 
+The Yankees are projected to win 97 games with a standard deviation of 6.26 games.  We’ve previously concluded that the prediction distribution for their win total is very close to normally distributed, so we can draw the distribution in the bell curved fashion:</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image2.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+<p>where:</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image3.png" alt="plot of chunk unnamed-chunk-3"></p>
+
+<p>The important takeaway from the above curve is that the values on the x axis are more likely under tall points in the curve and less likely under short parts of the curve.   A nice feature of PDF’s is that by using standard probability theorems we can easily calculate the probability of the Yankees winning at least X games in 2019 or derive a prediction interval for the range of win totals that they are likely to finish between.</p>
+
+<p><strong>Step 4: Use calculus in Python to derive the probability that each team wins more games than the other 4 teams in their division</strong></p>
+
+<p>To predict the probability that each team wins their division, we need to calculate the probability that they finish with a better record than all the other teams in their division. (Disclaimer: I did not consider the possibility of ties and winning the division in game 163) The formula can be expressed as:</p>
+
+<p><strong>P(A wins) = P(A&gt;B) <code class="language-plaintext highlighter-rouge">*</code> P(A&gt;C) <code class="language-plaintext highlighter-rouge">*</code> P(A&gt;D) <code class="language-plaintext highlighter-rouge">*</code> P(A&gt;E)</strong></p>
+
+<p>where the 5 divisional teams are A, B, C, D and E</p>
+
+<p>Thus, the challenge is to derive P(A&gt;B), and the rest will follow suit.</p>
+
+<p>To visualize this, let’s go back into context and use the Yankees and Rays as an example.</p>
+
+<p><em>Mu_Yankees</em> = 97, <em>s_Yankees</em> = 6.262369</p>
+
+<p><em>Mu_Rays</em> = 85, <em>s_Rays</em> = 6.41859</p>
+
+<p>Their overlapping PDF’s would look like the graph below with the Rays in green and the Yankees in blue.</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image4.png" alt="plot of chunk unnamed-chunk-4"></p>
+
+<p>The probability that the Yankees finish with a greater win total than the Rays is equivalent to the probability that a random point chosen under the blue curve is greater than a random point chosen under the green curve.  In order to do so, we will derive the below formula:</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image5.png" alt="plot of chunk unnamed-chunk-5"></p>
+
+<p>It’s technically improper that we assumed that the distributions are independent of each other.  Afterall, the Yankees and Rays play each other 18 times per season.  However, to account for the dependence of those games would only complicate the equation and likely not change our results much.<br>
+Now that we understand how to derive P(A&gt;B), the final step was to write some Python code to make all these calculations for me and output the results.  Below is a sample of my code for the AL East.</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image6.png" alt="plot of chunk unnamed-chunk-6"></p>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2019-03-28">28 Mar 2019</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Baseball">Baseball</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#MLB">MLB</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Moneyball">Moneyball</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#R">R</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#mlb">#mlb</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#moneyball">#moneyball</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//nba-clusters/"> « Using K-Means Clustering to Optimize NBA Lineups</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//nfl-4th-down/">The Statistical Value of Going For It On 4<sup>th</sup> Down » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

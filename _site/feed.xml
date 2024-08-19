@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analytics and Data Science Blog</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 18 Aug 2024 22:20:37 -0500</pubDate>
+    <lastBuildDate>Sun, 18 Aug 2024 22:20:37 -0500</lastBuildDate>
+    <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>2023 NBA Draft Scouting Report</title>
+        <description>&lt;p&gt;The NBA has extremely high expectations for the 2023 draft class, led by French phenom Victor Wembanyama.  However, it’s not just the 7’2” generational prospect that fans and coaches are looking forward to this upcoming season.   The wide range of talent has plenty of teams excited and optimistic about their future.  For the 9 lottery picks that played NCAA men’s basketball, we’ve taken snapshots from our custom advanced analytics scouting report to get a feel for what we might expect out of each player’s rookie season.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note about the data:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This data has been captured from ESPN.com for NCAA Division I Men’s Basketball games.  Therefore, we only have scouting reports available for drafted NCAA players.  Also, about 70% of NCAA men’s basketball games have available shot location data on ESPN.  While some data is missing, these heat map charts serve as close representations for each player for the entire season.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Notes about the graphs:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Heat Map:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This shows a player’s shooting percentage from each part of the court, where data is available.  Red refers to above NCAA D1 average and blue is below average.  Effective Field Goal Percentage (eFG%) refers to a weighted field goal percentage that gives 3-point shots a 50% heavier weight than 2-point shots.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Full Season Stats:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Averages are provided followed by the players percentile within all NCAA D1 men’s basketball.
+Points Differential Per 40 Minutes: A team’s net point differential standardized per 40 minutes of game time while each player is on or off the court, throughout the season.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Team Time to Shoot:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This chart breaks the 30 second shot clock into 5 second buckets, showing the percentage of shots that are taken within each bucket, for a sense of the team’s pace of play.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Five Minute Buckets:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;These charts break the 40 minute games into 5 minute consecutive buckets, showing how a player’s trends throughout the game for each respective statistic.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Shooting After Offensive Rebounds:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Chart on left shows who shoots within 5 seconds after the a team gets an offensive rebound.  Chart on right shows what happens within 5 seconds after the given player gets an offensive rebound.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Top 3 Assists by Player:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This chart shows who a player gets most assists to and from throughout the season.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Scouting Reports:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For comments and suggestions, please reach out to danmalter@gmail.com and abmalter12@gmail.com&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 2: Charlotte Hornets select Brandon Miller, Alabama&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Brandon Miller shined from both wing 3-point locations this season and sits near the top percentile in just about every statistical category.   Above his great individual stats however, is that Alabama had over a 14 point per 40-minute boost with Miller on the court compared to when he was off the court.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 6: Orlando Magic select Anthony Black, Arkansas&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Anthony Black doesn’t stand out as a notably great shooter but does it all well.  He is an excellent defender, can get to the rim to score, and is a great passer.  Arkansas was a below average team without him on the court, as he gave his team a near 10-point swing while playing.  As Arkansas’ point guard this season, he also liked to play as a fast pace as about 60% of possessions his team got a shot off in the first 15 seconds of the shot clock.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt; 
+&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt; 
+&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 8: Indiana Pacers select Jarace Walker, Houston&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two words to describe Jarace Walker: effective and clutch.  He’s a more conservative shooter than other stars around the NCAA, but his effective field goal percentage matches that of Brandon Miller.  He can score from anywhere on the court and is arguably more valuable on defense.  Amazingly, in the last 5 minutes of games, his 2-point shooting percentage sits over 80%, making him one of the best closers in men’s college basketball this season.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt; 
+&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 9: Utah Jazz select Taylor Hendricks, UCF&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Playing for a smaller school, we unfortunately are not able to get as much shooting location data on Hendricks, but what we do know is that he is completely dominant with the ball down low.  He also comes away with a ton of blocks and UCF is a completely different team with him on the court vs off the court.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 10: Oklahoma City Thunder select Carson Wallace, Kentucky&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at Carson Wallace’s 5-minute bucket stats for both points and steals, you can see he comes out of the gates on fire, both to start the game and to start the second half.   He also turns a gear back up in the final 5 minutes of play but has inconstant trends throughout the rest of the game.  He’s among the top in the nation in both assists and steals, and for a guard does an excellent job scoring in the paint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image10.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt; 
+&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image11.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt; 
+&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image12.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 11: Orlando Magic select Jett Howard, Michigan&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Son of 19-year NBA veteran and Michigan coach Juwan Howard, Jett stands out as an effective scorer, great passer, sharp 3-point shooter, and someone who comes out of the gates hot.  Michigan, however, played better this season with Jett off the court than on.&lt;br /&gt;
+&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image13.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image14.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image15.png&quot; alt=&quot;plot of chunk unnamed-chunk-15&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 12: Dallas Mavericks select Derrick Lively II, Duke&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;While not much of a scorer for Duke this season, big man Derrick Lively was a force down low in the paint on both sides of the ball.  His almost 2 and a half blocks per game were among the top in men’s college basketball this season, and his ability to rebound and give his team second chance points made him a nightmare for opponents.   He works well with point guards, as Duke’s guards Roach and Proctor fed him assists often and he was able to feed Roach back.  Despite his only 5 points per game and lack of shooting anywhere outside of the rim, Duke had an amazing 17-point positive swing per 40 minutes with Lively on the court, making him one of the most valuable men’s college basketball players in the country.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image16.png&quot; alt=&quot;plot of chunk unnamed-chunk-16&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image17.png&quot; alt=&quot;plot of chunk unnamed-chunk-17&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image18.png&quot; alt=&quot;plot of chunk unnamed-chunk-18&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image19.png&quot; alt=&quot;plot of chunk unnamed-chunk-19&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 13: Toronto Raptors select Grady Dick, Kansas&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Sharpshooter Grady Dick gave NCAA’s toughest conference, the Big 12, a lot of problems this year, with an effective field goal percentage of 55%, his shooting ability around the court makes him incredibly difficult to guard.  He stays consistent throughout the game and gave Kansas a major boost while on the court.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image20.png&quot; alt=&quot;plot of chunk unnamed-chunk-20&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image21.png&quot; alt=&quot;plot of chunk unnamed-chunk-21&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image22.png&quot; alt=&quot;plot of chunk unnamed-chunk-22&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pick 14: New Orleans Pelicans select Jordan Hawkins, UConn&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Another great shooter, Jordan Hawkins was consistent and effective with the ball all season long.  He was deadly from 3, can get to the rim, and his shooting helped lead UConn to a national championship.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image23.png&quot; alt=&quot;plot of chunk unnamed-chunk-23&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-06-26-nba-draft2023/image24.png&quot; alt=&quot;plot of chunk unnamed-chunk-24&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Jun 2023 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/nba-draft2023/</link>
+        <guid isPermaLink="true">http://localhost:4000/nba-draft2023/</guid>
+        
+        <category>NBA</category>
+        
+        <category>sports</category>
+        
+        <category>basketball</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>NBA</category>
+        
+        <category>Basketball</category>
+        
+      </item>
+    
+      <item>
+        <title>Bettor and Vegas Bias Towards Gerrit Cole</title>
+        <description>&lt;p&gt;There’s no doubt that Gerrit Cole is an elite pitcher playing for a great team, the New York Yankees.  He finished second in the AL Cy Young award in 2021 with a 3.23 ERA, however, Vegas bettors seemed to think that the Yankees were a better team with Cole on the mound than they really were.  According to the Vegas opening moneyline consensus, the Yankees had an average win probability of 65.6% when Cole pitched in 2021 and sometimes a win probability as high as 80%.  Seven times throughout the season, our model at &lt;a href=&quot;https://www.gamewagers.ai/&quot; target=&quot;_blank&quot;&gt;Game Wagers&lt;/a&gt; found positive edge betting against the Yankees when Cole was on the mound.  At first glance, it seems counterintuitive to bet against a name like Cole, so we analyzed our picks and found that our Game Wagers model had positive return against Cole.&lt;/p&gt;
+
+&lt;p&gt;The first thing that stands out is that the Yankees only won 53.3% of the games that Cole started in 2021 even though their opening line win probability hovered around 65%. Although surprising, these numbers alone don’t provide any information about a bettor’s net return, so we looked at the opening line for every game Cole started and calculated the return given you only took the opposing team and separately given you had only taken the Yankees.&lt;/p&gt;
+
+&lt;p&gt;Assuming a consistent $100 bet placed on each game, if a bettor took the opposing team facing Cole in all 30 starts, you’d come out ahead +8.5 units.  On the other hand, had a bettor only taken the Yankees during all of Coles 31 starts, you’d have finished -5.2 units.  Your typical sports bettor probably is not taking every single game Cole pitched, but we’d also find it surprising to know that the average sports bettor took as many as 7 games against Cole in a single season like our Game Wagers model did.&lt;/p&gt;
+
+&lt;p&gt;To dig deeper into whether this was a one off for an elite pitcher, we also looked into Clayton Kershaw, Max Scherzer and Jacob deGrom for their 2021 starts and found a positive return.  In fact, had you taken every regular season game that these four pitchers started (including Cole), you’d have finished +4.3 units over 97 games for an ROI of 4.46% and had you taken the opposing team in all 97 games you’d have finished -8.9 units. For both Scherzer and deGrom, the evidence shows that the Vegas money was actually undervaluing their starts.&lt;/p&gt;
+
+&lt;p&gt;For more information about our MLB betting model, check out &lt;a href=&quot;https://www.gamewagers.ai/&quot; target=&quot;_blank&quot;&gt;Game Wagers&lt;/a&gt; or reach out and we’ll answer any questions. With over thousands of lines of code, 100% of our picks are from an automated machine learning model and we continue to show success so far into the 2022 season.  Let us help you find the edge in MLB betting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; src=&quot;/assets/images/2022-04-19-mlb-vegas-pitcher-bias/cole.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; src=&quot;/assets/images/2022-04-19-mlb-vegas-pitcher-bias/kershaw.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; src=&quot;/assets/images/2022-04-19-mlb-vegas-pitcher-bias/scherzer.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; src=&quot;/assets/images/2022-04-19-mlb-vegas-pitcher-bias/degrom.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bet like a mathematician, &lt;br /&gt;
+Game Wagers Team &lt;br /&gt;
+&lt;a href=&quot;https://www.gamewagers.ai/&quot; target=&quot;_blank&quot;&gt;www.gamewagers.ai&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 19 Apr 2022 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/mlb-vegas-pitcher-bias/</link>
+        <guid isPermaLink="true">http://localhost:4000/mlb-vegas-pitcher-bias/</guid>
+        
+        <category>MLB</category>
+        
+        <category>sports</category>
+        
+        <category>baseball</category>
+        
+        <category>rstats</category>
+        
+        
+        <category>MLB</category>
+        
+        <category>Baseball</category>
+        
+      </item>
+    
+      <item>
+        <title>An Application of Unsupervised Machine Learning: What Each Team Should Focus on Heading into the NBA Playoffs</title>
+        <description>&lt;p&gt;The 20 NBA teams that will compete in the playoffs and play-in games have been set, each with their own unique abilities and vulnerabilities.  A game style that works for one team could very well be the demise of another.  Aside from the obvious (i.e. - shooting better, defending better), I’ve dug into NBA Advanced Tracking data to identify coachable and manageable actions that each team can take to improve their chances of heading into the off-season as champions.&lt;/p&gt;
+
+&lt;p&gt;The first plot introduces many of the data features that may end up being focus points for playoff teams.  Other than points and assists, these are all metrics that don’t show up in a box score, yet metrics that coaches and scouts care about.   The data is measured on a per-game basis and the purpose of the matrix is to understand the correlation between how teams fair for each metric with scoring and winning.  For example, there is a positive correlation of 0.38 between how well a team boxes out and winning games.  Conversely, and perhaps counter intuitively, the cumulative distance traveled by the players on a team is inversely correlated to winning.  Do winning teams reduce movement to save energy?  Do losing teams find themselves running around more because they’re struggling to run offensive plays or keep up with their opponents?  There’s a lot to the story that this correlation plot doesn’t share with us, so we’ll dig deeper into the data to learn more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is the first look at how some teams succeed by doing something intuitively good, in this case passing more, yet other teams are doing just fine without passing much.  The teams on the x-axis are ranked in order of record as of April 5.  The Suns have the best record in the NBA, yet they pass less than just about every team as well.  We also see two of the highest passing teams, the Warriors and Pacers, falling on opposite sides of the win spectrum.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at the next chart, we see that there’s a variation across the league of about a half dribble per player touch, which is significant when you extrapolate the number of touches throughout a game (Around 400 touches per game is standard).  We see both good and bad teams that do a lot of dribbling, and visa versa.  While a lot of dribbling and little passing fits the Suns system well, perhaps a team like the Trailblazers could benefit from dribbling less and passing more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Moving forward, there does seem to be at least a small connection between good teams and posting up, despite some of the best teams not using the post up often.  To no surprise, the Nuggets and 76ers dominate this area of basketball with Nikola Jokic and Joel Embiid on the court.  On the contrary, the Grizzlies have shown that there are other ways to be effective on offense.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the case of the Grizzlies with the following chart, it turns out that they still get the ball in the paint almost as much as any other team, with the driving abilities of Ja Morant leading the way for them.   In almost completely opposite fashion, the 76ers rarely drive and therefor have fewer paint touches than the rest of the league, despite Embiid’s amazing post-up ability.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another key offensive strategy for some teams is getting the ball to the elbow.  Like the previous metrics, this strategy is very dependent on player personnel, and hence varies across the spectrum of good and bad teams.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the below chart shows, the cumulative distance traveled among each team’s players per game is another interesting metric.  The Hornets and Spurs move more than any other team yet are playing play-in games.  The Celtics are the most successful team that minimizes movement.  Later, we’ll see a breakdown for teams’ movement between offense and defense which will provide more insight.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, we’ll look at the breakdown of boxing out by team.  Good teams don’t necessarily box out more than bad teams, but as it not surprisingly turns out, when teams box out more often with respect to themselves, they win more games as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Having a better understanding of the data behind the box score, let’s now look at each playoff team to look for patterns when they are winning games compared to losing games.   While the tables may not give the complete story as to why the trend is apparent, some useful insights can be determined by supplementing this information with what we know about the team’s personnel and strategies.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Western Conference:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Phoenix Suns:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Suns have a small sample size of losses, but from those 16 games we can see that their defensive movement is down by almost half a mile per game and they’re getting the ball in the paint 4 times less per game.  From what we saw last year in their run as the Western Conference champions, I would expect the same high intensity defense to show up for them again in this year’s playoffs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Memphis Grizzlies:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Simply put, the Grizzlies are extremely tough to beat when they’re possessing the ball, getting more touches and dribbling (allowing Ja Morant to take over games).  They’re most vulnerable when they rush and aren’t passing well.  There can be plenty of theories of cause and effect, but it’s interesting to see that when they win, they generally have much less offensive movement.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image10.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Golden State Warriors:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Warriors just need to stay true to themselves.  They didn’t win championships by playing big and the post up game hasn’t been what’s driving their success this year either.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image11.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dallas Mavericks:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;While one of the West’s best teams, there’s not much statistically significant insight here for Dallas.  On a small scale, their wins come from games in which they move the ball around more and get the ball into the paint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image12.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Denver Nuggets:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For the best post up team in the NBA, it’s essential for the Nuggets to be getting Jokic the ball down low.  The Nuggets also utilize the ball well from the elbow and have slightly more defensive movement for their wins.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image13.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Utah Jazz:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Jazz 46 wins look almost identical to their 32 losses, with slightly more paint and elbow touches when they’re winning games.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image14.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Minnesota Timberwolves:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Passing, possessing, and getting more touches hasn’t correlated to Timberwolves success, but offensive movement has a slightly positive correlation with winning games for them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image15.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;LA Clippers:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Like the Timberwolves, passing and possessing more hasn’t been the answer for the Clippers, and their only positive distinction here would be with post ups.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image16.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;New Orleans Pelicans:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;While the Pelicans have a larger sample size of losses than wins, their wins are coming from games where they’re passing more and getting some more touches both at the elbow and in the paint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image17.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;San Antonio Spurs:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The final play-in team in the West will give themselves the best shot to compete if they can get the ball down low, both from the post up game and allowing their guards to drive.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image18.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Eastern Conference:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Miami Heat:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For the best regular season team in the East, the Heat play better when they’re not overpassing.  They also are at their best when they’re getting the ball down low and are possessing on offense.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image19.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Boston Celtics:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the hottest teams in the NBA, the Celtics move significantly less than most teams.  Yet their losses often come when they’re not moving well, even for their own standards.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image20.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Milwaukee Bucks:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Not surprisingly, the Bucks are one of the best teams in the NBA when they can get the ball in the paint.  Otherwise, their wins and losses don’t have a ton of variation among the other metrics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image21.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Philadelphia 76ers:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Like the Nuggets, the unsurprising key to victory for the 76ers is using their MVP big man to their advantage.  When they get Embiid the ball down low, they’re in great shape.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image22.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Toronto Raptors:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Raptors are significantly better when they are passing more and possessing more.  For them, it’s not about working the ball low or to the elbow, if they are moving the ball around well on offense.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image23.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chicago Bulls:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s no glaring stand out for the Bulls here, but they do have almost half a mile more in movement on average when they win versus when they lose.  They average an extra paint touch per game when they win, yet fewer passes and touches for their wins as well and their time of possession doesn’t change for wins or losses.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image24.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cleveland Cavaliers:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Cavaliers can look like two completely different teams between their wins and losses.  Winning for them means getting the ball down low significantly more often and passing more, getting each player more touches.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image25.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Brooklyn Nets:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As a scary play-in team that can make some noise, the Nets are great working the ball to the elbow and are passing the ball almost 15 times more per game when they win vs when they lose.  If they’re possessing on offense and sharing the ball, they can be tough to beat.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image26.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Atlanta Hawks:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Another team that struggles when they aren’t passing, ball movement and possession are two key factors for the Hawks to focus on heading into the playoffs.  They also play well from the elbow, and their down low game doesn’t change much between wins and losses.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image27.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Charlotte Hornets:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A team that moves a ton both on offense and defense, they can tire opponents out and win games when they’re moving well, even by their own standards.  They can also slightly benefit from holding onto the ball longer and not rushing their decision making on offense.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-07-nba-playoff-analysis/image28.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For any recommendations for enhancements or future analysis, please reach out to me at abmalter12@gmail.com&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Apr 2022 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/nba-playoff-analysis/</link>
+        <guid isPermaLink="true">http://localhost:4000/nba-playoff-analysis/</guid>
+        
+        <category>NBA</category>
+        
+        <category>sports</category>
+        
+        <category>basketball</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>NBA</category>
+        
+        <category>Basketball</category>
+        
+      </item>
+    
+      <item>
+        <title>Can NBA Teams Stay Competitive on a Low Budget?</title>
+        <description>&lt;p&gt;With the NBA All-Star weekend now behind us, it’s a great time for basketball fans to reflect on the exciting 2021-22 season so far.  Notably, several teams have thus far drastically improved in the standings compared to last season, including the Bulls, Heat, Grizzlies, Cavs, and Timberwolves.   Success for some of these teams is partially due to &lt;a href=&quot;https://hoopshype.com/salaries/&quot; target=&quot;_blank&quot;&gt;increased player payrolls&lt;/a&gt;, however other teams are thriving with lower salaried rosters.  The extent to which a team can compete on a low budget depends on many factors, including draft lottery luck, but this season’s All Star break standings might prove that budget can’t guarantee wins and losses.&lt;/p&gt;
+
+&lt;p&gt;To set the stage, the chart below shows a distribution of NBA player salaries in the 2021-22 season.  Most players in the league make between $1-$5 million and two-thirds of starters are making over $5 million, with a max salary just under $46 million held by Steph Curry.  55 players, an average of about 2 players per team, are making at least $20 million.  With an NBA minimum at $558,000, just 16 players on a full season contract are making less than $1 million, one of which being the Bulls notable rookie, Ayo Dosunmo, at $925,258.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next chart looks at the sum of salaries on the court at any given time for a 5-player lineup.  220 distinct 5-player lineups were analyzed, on the condition that the lineup has played together for at least 48 minutes of game time this season. For example, the two most common lineups that Bulls coach Billy Donovan has used this season are DeRozen, Vucevic, LaVine, Ball, Green at 152 minutes and DeRozen, Vucevic, LaVine, Green, Dosunmu at 127 minutes.  In all, 10 unique combinations of 5 players have been on the court at the same time for the Bulls for at least 48 minutes so far this season. 
+Generally, many NBA team’s 5-player lineups add up to somewhere between $50-$80 million in salary.  At the extremes, the Warriors have routinely used the most expensive lineup worth about $125 million and 46 lineups with combined salaries less than that of Steph Curry’s $46 million have hit the 48-minute threshold as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to determine the connection between total salary and success, I’ve used the NBA advanced metric Net Rating as an objective measure.  This value represents the net points (positive or negative) scored while a set of players are on the court together per 100 possessions.  A team who wins a game by 5 points that featured 100 offensive and defensive possessions will have a Net Rating of +5. While there are other metrics that better predict future success and win/loss records, Net Rating serves as a simple and concrete description of ‘what happened?’ while a given lineup was out on the court.  A notable flaw of the metric, however, is that is does not account for who the team is playing against.  In a future analysis, I would potentially try alternative other evaluations of success.&lt;/p&gt;
+
+&lt;p&gt;Before analyzing the Net Rating and Salary relationships in our data, we’ll first look at the top 10 highest and lowest salaried lineups thus far this season, among lineups that have played 48 minutes together.   The Warriors and Bucks have played the most expensive lineups and are having great seasons, however the Warrior’s $126 million lineup of Curry, Thompson, Wiggins, Looney, and Kuminga is negative in their 58 minutes on the court.  On the other hand, the 76ers have an incredibly inexpensive lineup that has played great together in their 67 minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Top 10 Highest Paid 5-Player Lineups in 2021-22 Season&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Top 10 Lowest Paid 5-Player Lineups in 2021-22 Season&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next two tables display the top 10 and bottom 10 lineups by Net Rating.  With Luka Doncic on the final year of his rookie contract, the Mavericks have an extremely low salaried lineup as one of the best in the league.  The Knicks, Trailblazers, and Heat additionally have inexpensive, yet successful lineups.  Conversely, Sacramento has an above average priced lineup that is struggling in their 51 minutes together, but typically the low performing lineups with significant minutes together are also on the lower end of the salary spectrum.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Top 10 Highest Net Rating (NETRTG) 5-Player Lineups in 2021-22 Season First Half&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Top 10 Lowest Net Rating (NETRTG) 5-Player Lineups in 2021-22 Season First Half&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the below chart, we can see a definitive uphill relationship between Net Rating and lineup salary among the most used lineups, although there seems to be little to no relationship between the two variables among more infrequently used lineups.  In these cases, it is just as likely that an inexpensive lineup will succeed as will an expensive lineup.  Perhaps the expensive lineups that are performing poorly are getting less minutes together throughout the season, while inexpensive lineups that are outperforming expectations are getting more minutes than otherwise expected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next two charts break down Net Rating by offense and defense and tell an interesting story of their own.  Just like the overall Net Rating, offensive ratings are well correlated with lineup salaries, especially among the most used lineups.  We can also see that defensive ratings have virtually zero correlation with lineup salaries.  There are just an many inexpensive, yet successful defensive lineups as there are expensive defensive lineups, inferring that NBA players get paid for their offensive abilities far more than their defensive abilities.  As we’ll see later, the clever teams are very much aware of this notion and are taking advantage of it accordingly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next series of charts break down which teams each of the lineups represent for Net Ratings, Offensive Ratings, and Defensive Ratings.  To avoid overcrowding, the charts have been split by Eastern Conference and Western Conference.&lt;/p&gt;
+
+&lt;p&gt;In the East, a glaring takeaway is that the Knicks have some very successful lineups at inexpensive costs, as Rose, Gibson, Burks, Toppin, and Quickly have produced a +29 rating in 89 minutes.  Ironically their most expensive lineup with Burks, Fournier, Noel, Randle, and Barrett is sitting at a Net Rating of -20 from 63 minutes of court time.  It’s possible, though, that the more expensive lineup is going up against more expensive and better opponent lineups, thus deflating their Net Rating.   The Cavs and Hornets also show up well in the quadrant of low salaries and high Net Ratings; the latter can be attributed in large part to the star play of LaMello Ball, who sits on his rookie contract of just about $8 million.   Conversely, the Pacers are considerably underperforming this season relative to the salaries of their lineups.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image10.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image11.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the defensive chart, the Cavs are clearly the most successful low-budget team in the East.  While their offense is solid but doesn’t necessarily stand out among the rest of the league, we can see that their strong defense likely holds a lot of weight towards their standing of being tied for 3rd in the conference.   Additionally, while the Bulls aren’t in the low-budget category that the Cavs are in, and they are spending more this season than they did last season, they are also showing strong defensive numbers that out project expectations and have led to a successful first half.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image12.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the Western Conference, the Warriors, Suns, Jazz, and Nuggets are all spending a ton of money, but are seeing positive results to show for it.  The Grizzlies and Mavericks are successful teams playing off low salaries, both with breakout superstars on rookie contracts, Ja Morant and Luka Doncic.   Contrarily, the Lakers are far underperforming expectations with their high payroll, and the Clippers and Trailblazers both have wide variance of successful and costly lineups that put them in all four quadrants.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image13.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image14.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-02-22-nba-lineups/image15.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the prior 6 charts suggest, NBA success weighs not only on the amount of money a team spends, but the way in which they spend their money and manage their rosters in gameplay.  Although it would be nearly impossible for a team resembling the Piston’s payroll to compete at the same level as a team resembling the Warrior’s payroll, roster development strategies certainly play a role in fluctuations between expected results and actual results.  No team can be ruled out of playoff hopes simply based on their total salary spend, and it doesn’t take being in the top ranks of total payroll to consider yourself a championship contender, either.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Feb 2022 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/nba-lineups/</link>
+        <guid isPermaLink="true">http://localhost:4000/nba-lineups/</guid>
+        
+        <category>NBA</category>
+        
+        <category>sports</category>
+        
+        <category>baseball</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>NBA</category>
+        
+        <category>Basketball</category>
+        
+      </item>
+    
+      <item>
+        <title>Special Teams Edge</title>
+        <description>&lt;p&gt;With the growing prevalence of analytics in the NFL and the playoffs right around the corner, it’s more important than ever for teams to give themselves every statistical edge possible to win games.  Offensive play calling and game management have noticeably changed in the era of analytics, but an area of the game that is still relatively immature with analytics is Special Teams.  Using NFL data from the 2018-2020 seasons, we can begin to think about how to manage Special Teams in order to maximize yardage both on the punting and returning sides of the ball.&lt;/p&gt;
+
+&lt;p&gt;Let’s begin with the chart below that shows the correlation of several numeric variables within the punt game.  The resulting play yardage is the key variable that teams want to focus on.  This is the net distance between the yard line the punting team began on and the yard line the returning team finishes the play on.  No surprise here as punt length and hang time are the two most correlated variables that the punting team can control.  Snap time and the time it takes for the punter to handle the football are both statistically insignificant since there is little variation for these metrics across the league.  However, it’s intuitive that a quicker snap would lead to a better punt due to more time for the punter, and a rushed punter operation could also lead to a worse punt.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While the above correlation matrix doesn’t particularly teach us anything that teams don’t already know, the below visuals could potentially offer punters and coaches a usable strategy.  On average, punts to the left result in an extra one net yard per play for the punting team compared to center, and punts to the right result in an extra two yards per play compared to center.  We can dive deeper into net yardage by looking at return direction as well.  The table following the below graph shows the net yardage by punt direction and return direction, with a proceeding visual to demonstrate the results.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image4.PNG&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The general idea from the above diagram shows that the optimal punt strategy is to punt towards a sideline and force the returner center or to the side.  This strategy runs the risk of punting out of bounds and losing yardage, but due to the top talent of NFL punters, this strategy still gives the best results on average. However, if you punt to the sideline and allow the returner to get towards the middle, you are now at a greater disadvantage than if you just punted center.&lt;/p&gt;
+
+&lt;p&gt;When it comes to Special Teams personnel, it’s often thought of that the punters and the returners are the two most important players on the field.  As the below four charts show, the gunners (punt team players who specialize in running down the returner) and the vises (the return team players who attempt to prevent the gunners from running down the returner) play a much larger role.  Note that the variation in return yards among the top gunners and vises ranges from an average of about 10 yards per punt.  Meanwhile, the variation in return and punt yards among the top returners and punters is just about 5 yards per punt.   With returners, there are occasionally outlying superstars, such as Devin Hester or in 2020, Gunner Olscewski, but the difference between top tier and bottom tier NFL punters is much more insignificant.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If teams can optimize punt strategy and player personnel, significantly better results can be achieved.  The chart below shows the expected points per drive depending on where a drive begins.  Every 5 yards corresponds to about 0.25 less expected points per drive.  In a game where a team punts four times, five additional yards per punt can save the team a full expected point on defense.  While Special Teams and punting is just one of many aspects of a football game, taking these statically optimal steps can be the difference between winning and losing a close game.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-01-06-special-teams/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 06 Jan 2022 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/special-teams/</link>
+        <guid isPermaLink="true">http://localhost:4000/special-teams/</guid>
+        
+        <category>NFL</category>
+        
+        <category>sports</category>
+        
+        <category>football</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>NFL</category>
+        
+        <category>Football</category>
+        
+      </item>
+    
+      <item>
+        <title>Paris Olympics Recapped in Data</title>
+        <description>&lt;p&gt;The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals.  Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more.  The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in womens’ sports, and to what extent population and GDP predict a nation’s success.&lt;/p&gt;
+
+&lt;p&gt;The first chart below shows the top 12 countries in medals with a break down of each medal.  The United States led the world in gold, silver, and bronze; and with a total of 123 medals, and earned medals in roughly one-third of all events.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The map below represents the number of medals won across the world.  While each continent had podium representation, we’ll later look at specific types of sports that different regions of the world succeed in.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The plot below explains the effect that a nation’s population has on their success in the Olympics.  Outliers removed, the correlation of the below plot is 0.6 (R&lt;sup&gt;2&lt;/sup&gt; = 0.35), which means about one-third of the variance of medal counts can be explained by population, leaving two-thirds up to other possible variables.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If Olympic success is measured on a per capita basis, the top nations would be Grenada, Dominica, and Saint Lucia.  The below chart shows the ratio of the number of medals per 1 million population of each country.   Among the 13 nations with at least 20 medals, New Zealand has by far the lowest population at about 5 million.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next chart below shows that GDP is an even greater predictor of Olympic success than population.  Outliers removed, the correlation of this plot is .8 (R&lt;sup&gt;2&lt;/sup&gt; = 0.62), demonstrating a very strong connection between medal count and GDP.   Countries that vastly outperformed their GDP are Kenya, Cuba, and Ukraine, and Uzbekistan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next chart looks at the percent of a country’s medals that were won in women sports, among countries that won at least 7 medals.  While a small sample size of medals for several countries leave us unable to draw a definitive conclusion, these percentages possibly give indication into what counties could be leading the way in encouraging in and or investing in womens’ sports.  Bulgaria won 10 medals, 8 of which in women’s events.  The United States also ranks near the top of the list with 59% of 123 medals going to female athletes.  As expected, most counties fall within a few percentage points up or down from 50%.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The last series of maps breaks down the medal count across the world among specific Olympic sport categories.  This gives some insight into which geographic regions tend to excel in which types of sports.  The categories that sports are broken into are Artistic Exercise, Boat, Martial Arts and Combat, Endurance and Exercise, Extreme Sports, Horse, Precision Sports, Racket Sports, Speed and Athletics, Strength Sports, Swimming, and Team Sports.  The individual sports that fall into each category are laid out with each chart.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Artistic Exercise:&lt;/strong&gt; Gymnastics, Rhythmic Gymnastics, Diving, Trampolining, and Break Dancing
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Boat Sports:&lt;/strong&gt; Canoe Slalom, Canoe Sprint, Rowing, and Sailing
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Martial Arts &amp;amp; Combat Sports:&lt;/strong&gt; Fencing, Judo, Karate, Taekwondo, Boxing, Wrestling
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Endurance and Exercise Sports:&lt;/strong&gt; Track (&amp;gt;= 800 meters), Marathon, Triathlon, Cycling
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image10.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Extreme Sports:&lt;/strong&gt; BMX freestyle, BMX racing, Mountain Biking, Skateboarding, Climbing, Surfing, Wing Surfing
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image11.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Horse Sports:&lt;/strong&gt; Equestrian Dressage, Equestrian Eventing
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image12.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Precision Sports:&lt;/strong&gt; Archery, Shooting, Golf
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image13.png&quot; alt=&quot;plot of chunk unnamed-chunk-15&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Racket Sports:&lt;/strong&gt; Tennis, Badminton, Table Tennis
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image14.png&quot; alt=&quot;plot of chunk unnamed-chunk-16&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Speed and Athletics:&lt;/strong&gt; Track (&amp;lt;=400 meters), Decathlon, High Jump, Triple Jump, Long Jump, Pole Vault, Heptathlon 
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image15.png&quot; alt=&quot;plot of chunk unnamed-chunk-17&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Strength Sports:&lt;/strong&gt; Weightlifting, Discus Throw, Hammer Throw, Shotput, Javelin Throw
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image16.png&quot; alt=&quot;plot of chunk unnamed-chunk-18&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Swimming:&lt;/strong&gt; All indoor swimming events, open water long distance swimming&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image17.png&quot; alt=&quot;plot of chunk unnamed-chunk-19&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Team Sports:&lt;/strong&gt; Basketball, Field Hockey, Soccer, Volleyball, Beach Volleyball, Rugby Sevens, Handball, Water Polo
+&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image18.png&quot; alt=&quot;plot of chunk unnamed-chunk-20&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 17 Aug 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/olympics/</link>
+        <guid isPermaLink="true">http://localhost:4000/olympics/</guid>
+        
+        <category>olympics</category>
+        
+        <category>sports</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>Olympics</category>
+        
+        <category>Paris</category>
+        
+      </item>
+    
+      <item>
+        <title>Using AI with MLB Video to Detect Changes in Mechanics</title>
+        <description>&lt;p&gt;Major League Baseball’s Statcast has done a lot to improve how player’s movements are analyzed, but little public research has been done using video and image processing to improve mechanics of players and to help prevent injuries.  In part, this is due to the fact that machine learning related to images and videos requires lots of storage and high computing.  Even though storage and computing are relatively cheap, there is a small cost and high complexity associated to performing data science on this type of data, which creates a barrier to entry working with it. Additionally, MLB and individual teams own video rights making accessibility of data difficult.&lt;/p&gt;
+
+&lt;p&gt;In this article, I will demonstrate how sample image and video data can be used in different ways to help MLB’s pitchers improve various actions, such as their mechanics, prevent future injuries, detect changes in arm movement throughout a game, as well as some other use cases.  All of the concepts shown below can be used at a larger scale to make more significant impacts.  Implementation of work uses a combined method of MIT’s open-source algorithm, OpenPose, as well as various data analysis and machine learning techniques.  Further information about OpenPose can be seen &lt;a href=&quot;https://github.com/CMU-Perceptual-Computing-Lab/openpose&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;An example of the final algorithm in action is shown below.&lt;/p&gt;
+
+&lt;video width=&quot;520&quot; controls=&quot;&quot;&gt;
+&lt;source src=&quot;/assets/images/2021-06-08-mlb-openpose/buehler_side_output.mp4&quot; /&gt;
+&lt;/video&gt;
+&lt;p&gt;&lt;em&gt;Walker Buehler Side View&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;data-capture&quot;&gt;Data Capture&lt;/h3&gt;
+
+&lt;p&gt;Data for this project was captured by collecting various video clips of a given player from both a side and center field point of view.  All video and images used in this analysis are solely for a research purpose and are not being used for any team specifically.  However, a team can utilize this method of analysis by having a still camera directed at a pitcher throughout a game or during a bullpen/batting practice session.  For the most part, the infrastructure is already in place, so it comes down to a matter of teams collecting and utilizing this type of data.  For simplicity of this analysis, a few different pitches/swings were collected for a small sample of players, but the ideal situation would be to have hundreds of pitches or swings to gain better insights from the data.&lt;/p&gt;
+
+&lt;p&gt;OpenPose captures data for 25 keypoints of a human body, such as “Right Wrist”, “Neck”, “Left Knee”, etc. for both still images and videos.  A mapping of the keypoints to human body part can be seen in Image 1.  For each image fed through the algorithm, the x-coordinates, y-coordinates and confidence (0-1) are given for each of the 25 keypoints (body parts).  If the algorithm is applied to a video, then the video is essentially broken up into many separate images.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/2021-06-08-mlb-openpose/openpose_keypoints.png&quot; alt=&quot;OpenPose Keyoints&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;Image 1: OpenPose keypoints&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;analysis&quot;&gt;Analysis&lt;/h3&gt;
+&lt;p&gt;To start, we’ll look at a still image of the OpenPose algorithm applied to a side view of Walker Buehler throwing a pitch.  When a keypoint cannot be found in the image, OpenPose uses machine learning to estimate where the body part is located, which is referred to as pose estimation.  These cases can happen when a body part is hidden from view in the image or video.  The OpenPose algorithm also works with one or multiple people in a single view, but I have found that it works best with only one person in the picture to reduce background noise. In cases where non-relevant people are in the background, image processing techniques such as blurring effects or cropping can be used to filter out this noise.  This article will not focus on this the preprocessing work implemented prior to running images and video through the OpenPose algorithm, but OpenCV or deep learning techniques would be appropriate for implementing background blurring effects.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/2021-06-08-mlb-openpose/buehler1.png&quot; alt=&quot;Walker Buehler Image&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;Image 2: OpenPose applied to a still image of Walker Buehler&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;By feeding in a video through the OpenPose algorithm, we get an output like the video below.  Here we see the OpenPose algorithm in action throughout the duration of a full pitch for Walker Buehler. During this one center field view clip, 101 snapshots were taken by the algorithm.  Another way to think about this is that the video is turned into a sequence of 101 still images.  This number will differ depending on the length of a particular video.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/malteranalytics/malteranalytics.github.io/master/assets/images/2021-06-08-mlb-openpose/buehler_cf_output.gif&quot; alt=&quot;Walker Buehler&quot; /&gt; &lt;br /&gt;
+&lt;em&gt;Walker Buehler Center Field View&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the output data from each of the 101 center field view images, a plot for a given keypoint (body part) can be mapped out over time.  From a windup approach, the below chart shows an example of Buehler’s right shoulder movement over the duration of the pitch above.  As Buehler approaches the release of the ball, his shoulder drops and then picks back up as he finishes the pitch.  This is evident by simply watching the video, but the advantage of this type of analysis is that the data can pick up changes in a pitcher’s mechanics that the naked eye may not be able to see.  Additionally, given the proper data, thousands of videos can be analyzed in a matter of minutes versus spending hours of film watching.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/2021-06-08-mlb-openpose/buehler2.png&quot; alt=&quot;Walker Buehler Image&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;Image 3: Walker Buehler’s right shoulder mapped out over the duration of a single pitch&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Valuable information can be shown from one unique pitch, but deeper analysis can start to be made from taking multiple pitches of the same pitcher over the duration of a game or multiple appearances.  The left chart below shows an analysis from five different pitches Buehler threw over the same game.  Each clip is initiated at a slightly different time prior to Buehler starting his motion, so in order to make more meaning of these five pitches, the right chart shows the same five pitches overlayed on top of each other starting from roughly the same point in time.  The data shows that Buehler has a slightly different motion for his cutter and slider than for his four-seam fastball.  Although not evidence, this possibly can mean that Buehler is tipping his pitches as shown in the clear change in patterns.&lt;/p&gt;
+
+&lt;p&gt;It is important to note here that the distance of the plot is measured in pixels, so in order to know how significant this difference really is to a batter, the pixels need to be converted into inches.  With technology such as MLB’s Statcast, this should not be an issue implementing into gameday data.  In this example, based on an estimated PPI (pixels per inch) of 250px, it’s estimated that difference in shoulder height distance between Buehler’s four-seam fastball versus his cutter and slider is about 0.25 inches.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/2021-06-08-mlb-openpose/buehler5.png&quot; alt=&quot;Walker Buehler Image&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;Image 4: Walker Buehler’s right shoulder mapped out over the duration for five distinct pitches&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;future-implementation&quot;&gt;Future Implementation&lt;/h3&gt;
+
+&lt;p&gt;There are lots of opportunities for further research still to be done in this area, but the difficulty is having the appropriate input data.  Some options would be for MLB to release video clips of this type for research purposes or to implement this data into MLB’s open-source data as it’s own standalone data source.  Another option would be to work with teams or individual players to collect video footage during offseason training.  In regards for use cases of this data, here are a few ideas.&lt;/p&gt;
+
+&lt;p&gt;Player Scouting:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;OpenPose can be used to measure how closely one player’s pitching or hitting mechanics are relative to another known player. By collecting data like angles of body parts, movement, etc., clustering algorithms can be used to measure the similarity between two player’s pitches or swings.  From a scouting perspective, these types of models can output something along the lines of, “Player A’s swing is 80% similar to Mike Trout”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tracking Mechanics:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Rather than a player or coach going through video one by one, OpenPose technology can be used to better align hundreds or thousands of videos all at once. If a pitcher is unknowingly changing their mechanics, data from OpenPose can be mapped out with a time dimension, similar to the charts used for Buehler, to determine how much of a change is occurring and which body part is causing mechanics to differ.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Injury Prevention:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;By using this type of pitcher or batter tracking data, models like outlier detection algorithms can be used to detect if a pitcher’s mechanics are differing too much from the norm. If an outlier is detected, an alert system can be programmed to provide information to the pitcher that a significant change in their mechanics was detected and this hopefully would help to prevent a future injury.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This type of data can also be used to measure a given pitcher’s mechanics to those that have previously suffered from pitching related injuries. For example, let’s say that Pitcher A suffered from Tommy John surgery. At the start of the season, Pitcher A and Pitcher B start out with a 60% similarity in pitching mechanics. However, by the end of the season, Pitcher B’s mechanics are off and now the similarity between the two pitchers is at 90%. Perhaps this would be a red flag for Pitcher B to investigate further so that he too does not ultimately suffer from Tommy John.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whether it be pitchers like Trevor Bauer filming their practice sessions in the off-season, batters trying to gain an advantage, or simply just trying to prevent injuries, there are lots of use cases for this type of data.  Time will tell if MLB provides this data in more readily available formats, but there is no doubt that teams can already start utilizing this type of data if they aren’t already.&lt;/p&gt;
+
+&lt;p&gt;Example code to run the OpenPose algorithm be seen &lt;a href=&quot;https://github.com/malteranalytics/malteranalytics.github.io/blob/master/research/OpenPose.ipynb&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. This example code excludes data cleaning, preprocessing and analyzing of data.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Jun 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/mlb-openpose/</link>
+        <guid isPermaLink="true">http://localhost:4000/mlb-openpose/</guid>
+        
+        <category>MLB</category>
+        
+        <category>baseball</category>
+        
+        <category>R</category>
+        
+        
+        <category>MLB</category>
+        
+        <category>baseball</category>
+        
+        <category>openpose</category>
+        
+        <category>R</category>
+        
+      </item>
+    
+      <item>
+        <title>What are the Traits of a Successful Golfer at the Masters?</title>
+        <description>&lt;p&gt;The 2021 Masters is underway this week and despite all the unpredictability of the tournament, golfer trends from the past several years will show which traits are most often correlated with success.  The below table shows the correlation that several variables have with a player’s performance during Master’s Weekend.  The data that feeds into this table goes back to 2015 to find golfer’s statistics between the start of each season and the tournament leading up to the Masters, as well as the rank in which the player finished in the respective Masters tournament.&lt;br /&gt;
+Because of the erratic nature of the Masters, no variable is completely reliable but the number of top 10 finishes, the previous year’s Masters rank, the season scoring average, and shots gained off the tee have noteworthy significance.  Meanwhile, shots gained on approach, around the green, and putting, have near zero correlation, because the separation of the best from the worst in these areas is less significant.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-04-07-masters/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next chart breaks down the average stats among those who finish in the top 10 in the Masters against the rest of the field.  A similar conclusion can be drawn here as in the correlation matrix.  The metrics with the greatest difference between top 10 finishers and the rest of the field imply greater predictability towards Master’s success.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-04-07-masters/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next chart shows the average rank that a golfer finishes in the Master’s, broken down by the number of top 10 finishes they have leading up to the tournament.  Unsurprisingly, the more top 10 finishes, the better the average rank despite the outlier at 7 top ten finishes.  However, only half of the best golfers with 4-6 top 10 finishes will finish in the top 25 in the Masters.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-04-07-masters/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s often theorized that some golfer’s have the ability to bring about their best in the most intense circumstances, while others cannot pull themselves together regardless of how good they are.  The below charts show the pattern of year over year Master’s rankings, indepentant of any other variable.  The rows represent the number golfers who finished within the respective ranked bucket of 10 in a given year while the columns denote the number of golfers who finished within the respective ranked bucket of 10 in the following year.  Hence, among the 25 golfers in the study who finished in the top 10 in a given year, 9 of them finished in the top 10 in the following year.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-04-07-masters/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The same chart as above can be output as percentages, like in the table below.  This table provides insight into an estimate of how many golfers from last tournament’s ranked bucket would be expected to fall into each ranked bucket for this year.  As shown, 48% of previous year top 10 golfers finished in the top 10 in the following year, and 41% of golfers who finished 60+ finished60+ again the following year.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-04-07-masters/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, it’s important to make clear just how unpredicatable the Masters really is, in statistical terms.  The below output is the result of running a Least-Squares Regression Model, using just the most correlated variables to predict a golfer’s Master’s rank.  While there are a lot of metrics in this output, the important one to note is the R-squared at 0.140.  This means that just 14% of the variance in the model can be attributed to (predicted by) the variables in the model.  The other 86% of the model’s variance is just randomness.  As seen in recent years, crazy things happen in the Master’s that nobody (and no statistical model) can possibly predict.  However, if you’re looking for some slight edge in predicting your Master’s pool, the above tables would be the best thing to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-04-07-masters/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 07 Apr 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/masters/</link>
+        <guid isPermaLink="true">http://localhost:4000/masters/</guid>
+        
+        <category>golf</category>
+        
+        <category>Masters</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>Golf</category>
+        
+        <category>Masters</category>
+        
+      </item>
+    
+      <item>
+        <title>An Analytics Guide to March Madness</title>
+        <description>&lt;p&gt;Year after year, March Madness continues to prove that data science cannot crack every code.   There’s far too much variance among the estimated 120 Billion possible ways to reasonably fill out a bracket.  Just as an AI algorithm can’t predict the result of a coin toss any better than a human being can, algorithms can only do so much when predicting a single elimination basketball tournament of 68 college teams that spread across dozens of leagues.  While analyzing tournament data won’t give you a perfect bracket, it can however slightly increase your chances of winning your bracket pool.  I’ve always believed the fun in March Madness is picking a bracket with your heart, but for the games you can’t make up your mind, maybe some data insights can sway your decision.&lt;/p&gt;
+
+&lt;p&gt;The first set of charts below shows the percent of possible outcomes in the past 35 tournaments in which each given seed has made it to the respective round.  For example, in 35 tournaments, 1-seeds have had 70 opportunities to make it the championship game (Two teams per tournament), in which 35 times (50%) a 1 seed has played in the championship game.  You’ll see that once a one seed makes it to the final four, their chances of winning the tournament begin to increase.  Other notable takeaways are that 9 seeds beat 8 seeds slightly more than 50% of the matchups and all seeds greater than 3 have made it to the Sweet 16 less than half the time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It can also be seen that 10, 11, and 12 seeds make it to the Sweet 16 more often than 8 and 9 seeds, even though they are presumably worse teams.  This is because 8 and 9 seeds have to play 1 seeds if they win their first game.&lt;/p&gt;
+
+&lt;p&gt;The next chart below shows the tournament win percentages by conference in the past 35 seasons, among conferences with at least 20 cumulative tournament wins.  While ACC teams are not as well represented this year compared to years past, the ACC is historically the most successful tournament conference.  The Big 10 Conference, third in all time tournament win percentage, will be the conference to watch this March as they have the most tournament teams at 9, 4 of which are in the top 2 seeds.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using historical March Madness patterns and 2021 season data, I’ve output the percent probabilities of each team to make it to each round.  Gonzaga is the notable favorite with a 50% chance of making the Final 4 and a 22% chance of winning the tournament.  The only other teams with greater than a 5% of winning the tournament are Gonzaga’s fellow 1 seeds, Illinois, Baylor, and Michigan.  However, the chances that a team from the rest of the field wins the tournament is still nearly 50%.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 15 Mar 2021 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/nfl-march_maddness2021/</link>
+        <guid isPermaLink="true">http://localhost:4000/nfl-march_maddness2021/</guid>
+        
+        <category>marchmadness</category>
+        
+        <category>basketball</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>MarchMadness</category>
+        
+        <category>basketball</category>
+        
+        <category>college</category>
+        
+      </item>
+    
+      <item>
+        <title>Why Did the NFL See So Many More Touchdowns in the COVID-19 Season?</title>
+        <description>&lt;p&gt;Like all sports leagues around the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played.  Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive.   Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week.  In attempt to understand how these adjustments may have affected game play, I’ve compared &lt;a href=&quot;http://nflsavant.com/about.php&quot; target=&quot;_blank&quot;&gt;NFL play-by-play&lt;/a&gt; data between the 2020 season and previous seasons.&lt;/p&gt;
+
+&lt;p&gt;Many aspects of the NFL change year over year so it’s important to not attribute the changes we see in this analysis to COVID-19-related adjustments without statistical evidence.  Nonetheless, we will see some dramatic differences in 2020 data compared to previous seasons and seek their explanations.&lt;/p&gt;
+
+&lt;p&gt;First, the home team won a fewer percentage of its games this season compared to any season in recent history.  This plays nicely into the theory that fans contribute to helping the home team win games.  The chart below shows the percentage of games won by the home team in the NFL over the past 5 seasons.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In 2019, the home team won just 53.5% percent of its games, which is an adequately lower percentage than years prior.  What we don’t know is whether 2019 was an outlier year for lack of home field advantage or the trend of home field advantage was shrinking for reasons that we may not be aware of.  If the former is true, then 51% of home wins in 2020 is abnormally low.  If the latter is true, then perhaps the fans make a much smaller impact on the game than perceived and visiting NFL teams are finding better ways to deal with the obstacles that come with playing on the road.  If the NFL can fill stadiums in 2021, then we’ll have better insight into this, but based on year over year trends, my own hypothesis favors the former; that 2019 was an outlier season and the empty stadiums of 2020 did take away much of the home field advantage.&lt;/p&gt;
+
+&lt;p&gt;In addition to the fans, the other aspect that affects home field advantage is the travel of the visiting team.  In the 2020 NFL season, elements of travel such as jet-lag, players not sleeping in their own beds, and the unfamiliar turf, remained a constant.  Having removed one known aspect of home-field advantage, we can estimate that 1.5% of the variance of the outcomes of NFL games can be explained solely by the effects of travel.&lt;/p&gt;
+
+&lt;p&gt;The next two charts below show another obvious change in the 2020 season; the high offensive production across the league.  This season saw an increase in points by 15% compared to the average of the previous 4 seasons.   Does crowd noise favor the defense, was there a change in offensive strategy, or perhaps a combination of both?  We’ll dive deeper into offensive metrics to get a better idea.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the chart below, we can see the driving force behind increase in points scored.  The arrows represent the yard lines in which the average NFL drive began and ended per season.  In 2020, offenses were averaging almost an additional 5 yards per drive.  The second chart below breaks down the average drive by team so that you can see how your team faired in 2020 compared to the league.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image4.PNG&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image5.PNG&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that it’s clear that offensive efficiency rose in 2020, we’ll break down different aspects of the offensive side of the game in order to see what changed this season and what did not.  The chart below breaks down the number of snaps per season by formation.  While there were slightly more overall snaps in the 2020 season than in prior years, the breakdown of snaps by formation remained just about the same.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, the chart below informs us of the percentage of snaps on each down that are pass plays compared to rush plays.  We find no statistical evidence that passing rates have changed this season.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can also break down pass plays by regular passes against play action passes.  From the chart below, we can see that 27 of the 32 teams in the NFL had a higher average yards per play action pass than they do for pass plays in general.  However, the 2020 NFL season saw just 22.7% of all pass plays use play action, a downward trend from 2019 and 2018, which were 26.6% and 27.2% respectively.   The benefit of play action is the element of surprise on the defense, which would be mitigated if overused, but NFL teams certainly should be using play action more than they currently are.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While it’s clear that formations and pass rates are not a factor in increased points this season, we finally can see a change in coaching decisions that do positively impact overall points scored.  In 2020, teams are going for it on fourth down more than they have in recent history.  Regardless of the outcome of a 4th down conversion, it almost always increases the potential for the game to have more points scored.  Either the offense gets to continue their drive on first down, or the defense gets to take over the ball in much better field position than they otherwise would have.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another notable factor that has favored offenses in 2020 compared to prior seasons is the rate of penalties.   From the chart below, we can see that defensive penalties and penalty yards remained relatively constant in 2020, but offensive penalties and penalty yards dropped substantially.   This supports the theory that some offensive penalties such as false starts are a function of crowd noise, typically disadvantaging the visiting team.  Whatever the reasons, in 2020, offenses gained an average net positive 14 yards in penalties per game when they averaged just about 3 net positive yards in penalties per game in the previous 4 seasons.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image10.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For a better idea of when penalties occur, the below table breaks down the number of penalties in 2020 by offensive formation. Note that snaps under center are the only formation in which the offense has negative net penalty yardage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image11.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final piece of this analysis is to look at field goal kicking.  In 2020, the number of field goals taken and the percent of field goals made remained relatively constant with prior seasons.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image12.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the last chart below, we can see the percent of field goals made by increments of 5 yards, comparing the 2020 and 2019 seasons.  Just as the above table shows, there were not any notable change in field goal kicking this season.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-01-25-nfl-covid-season/image13.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Having looked at several aspects of the game, the adjustments that the NFL made with regards to COVID-19 do seem to have affected gameplay in 2020.  To exactly what extent is still unclear, but we found sharp differences in the lack of home field advantage, increased points scored and offensive efficiency, and decreased offensive penalties while maintaining similarities in offensive play calling and field goal kicking.  The 2020 NFL season will always be remembered in a unique manner, but time will tell just how unique the statistical outcomes of the season really were.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Jan 2021 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/nfl-covid-season/</link>
+        <guid isPermaLink="true">http://localhost:4000/nfl-covid-season/</guid>
+        
+        <category>covid</category>
+        
+        <category>covid19</category>
+        
+        <category>NFL</category>
+        
+        <category>football</category>
+        
+        <category>rstats</category>
+        
+        <category>dataviz</category>
+        
+        
+        <category>NFL</category>
+        
+        <category>football</category>
+        
+        <category>covid19</category>
+        
+      </item>
+    
+  </channel>
+</rss>

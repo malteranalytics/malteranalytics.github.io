@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>Paris Olympics Recapped in Data | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Paris Olympics Recapped in Data | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Paris Olympics Recapped in Data" />
+<meta name="author" content="drew" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals. Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more. The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in womens’ sports, and to what extent population and GDP predict a nation’s success." />
+<meta property="og:description" content="The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals. Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more. The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in womens’ sports, and to what extent population and GDP predict a nation’s success." />
+<link rel="canonical" href="http://localhost:4000/olympics/" />
+<meta property="og:url" content="http://localhost:4000/olympics/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2024-08-19-paris-olympics/image18.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-17T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"drew"},"@type":"BlogPosting","description":"The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals. Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more. The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in womens’ sports, and to what extent population and GDP predict a nation’s success.","image":"https://malteranalytics.github.io/assets/images/2024-08-19-paris-olympics/image18.png","headline":"Paris Olympics Recapped in Data","dateModified":"2021-08-17T00:00:00-05:00","datePublished":"2021-08-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/olympics/"},"url":"http://localhost:4000/olympics/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"drew"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Paris%20Olympics%20Recapped%20in%20Data&amp;url=http://localhost:4000/olympics/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/olympics/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/olympics/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Drew</a><a target="_blank" href="https://www.instagram.com/malteranalytics/?hl=en" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Paris Olympics Recapped in Data</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2024-08-19-paris-olympics/image18.png" alt="Paris Olympics Recapped in Data">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals.  Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more.  The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in womens’ sports, and to what extent population and GDP predict a nation’s success.</p>
+
+<p>The first chart below shows the top 12 countries in medals with a break down of each medal.  The United States led the world in gold, silver, and bronze; and with a total of 123 medals, and earned medals in roughly one-third of all events.</p>
+
+<p><img src="/assets/images/2024-08-19-paris-olympics/image1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>The map below represents the number of medals won across the world.  While each continent had podium representation, we’ll later look at specific types of sports that different regions of the world succeed in.</p>
+
+<p><img src="/assets/images/2024-08-19-paris-olympics/image2.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+<p>The plot below explains the effect that a nation’s population has on their success in the Olympics.  Outliers removed, the correlation of the below plot is 0.6 (R<sup>2</sup> = 0.35), which means about one-third of the variance of medal counts can be explained by population, leaving two-thirds up to other possible variables.</p>
+
+<p><img src="/assets/images/2024-08-19-paris-olympics/image3.png" alt="plot of chunk unnamed-chunk-3"></p>
+
+<p>If Olympic success is measured on a per capita basis, the top nations would be Grenada, Dominica, and Saint Lucia.  The below chart shows the ratio of the number of medals per 1 million population of each country.   Among the 13 nations with at least 20 medals, New Zealand has by far the lowest population at about 5 million.</p>
+
+<p><img src="/assets/images/2024-08-19-paris-olympics/image4.png" alt="plot of chunk unnamed-chunk-4"></p>
+
+<p>The next chart below shows that GDP is an even greater predictor of Olympic success than population.  Outliers removed, the correlation of this plot is .8 (R<sup>2</sup> = 0.62), demonstrating a very strong connection between medal count and GDP.   Countries that vastly outperformed their GDP are Kenya, Cuba, and Ukraine, and Uzbekistan.</p>
+
+<p><img src="/assets/images/2024-08-19-paris-olympics/image5.png" alt="plot of chunk unnamed-chunk-5"></p>
+
+<p>The next chart looks at the percent of a country’s medals that were won in women sports, among countries that won at least 7 medals.  While a small sample size of medals for several countries leave us unable to draw a definitive conclusion, these percentages possibly give indication into what counties could be leading the way in encouraging in and or investing in womens’ sports.  Bulgaria won 10 medals, 8 of which in women’s events.  The United States also ranks near the top of the list with 59% of 123 medals going to female athletes.  As expected, most counties fall within a few percentage points up or down from 50%.</p>
+
+<p><img src="/assets/images/2024-08-19-paris-olympics/image6.png" alt="plot of chunk unnamed-chunk-6"></p>
+
+<p>The last series of maps breaks down the medal count across the world among specific Olympic sport categories.  This gives some insight into which geographic regions tend to excel in which types of sports.  The categories that sports are broken into are Artistic Exercise, Boat, Martial Arts and Combat, Endurance and Exercise, Extreme Sports, Horse, Precision Sports, Racket Sports, Speed and Athletics, Strength Sports, Swimming, and Team Sports.  The individual sports that fall into each category are laid out with each chart.</p>
+
+<p><strong>Artistic Exercise:</strong> Gymnastics, Rhythmic Gymnastics, Diving, Trampolining, and Break Dancing
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image7.png" alt="plot of chunk unnamed-chunk-7"></p>
+
+<p><strong>Boat Sports:</strong> Canoe Slalom, Canoe Sprint, Rowing, and Sailing
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image8.png" alt="plot of chunk unnamed-chunk-8"></p>
+
+<p><strong>Martial Arts &amp; Combat Sports:</strong> Fencing, Judo, Karate, Taekwondo, Boxing, Wrestling
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image9.png" alt="plot of chunk unnamed-chunk-9"></p>
+
+<p><strong>Endurance and Exercise Sports:</strong> Track (&gt;= 800 meters), Marathon, Triathlon, Cycling
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image10.png" alt="plot of chunk unnamed-chunk-10"></p>
+
+<p><strong>Extreme Sports:</strong> BMX freestyle, BMX racing, Mountain Biking, Skateboarding, Climbing, Surfing, Wing Surfing
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image11.png" alt="plot of chunk unnamed-chunk-12"></p>
+
+<p><strong>Horse Sports:</strong> Equestrian Dressage, Equestrian Eventing
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image12.png" alt="plot of chunk unnamed-chunk-13"></p>
+
+<p><strong>Precision Sports:</strong> Archery, Shooting, Golf
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image13.png" alt="plot of chunk unnamed-chunk-15"></p>
+
+<p><strong>Racket Sports:</strong> Tennis, Badminton, Table Tennis
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image14.png" alt="plot of chunk unnamed-chunk-16"></p>
+
+<p><strong>Speed and Athletics:</strong> Track (&lt;=400 meters), Decathlon, High Jump, Triple Jump, Long Jump, Pole Vault, Heptathlon 
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image15.png" alt="plot of chunk unnamed-chunk-17"></p>
+
+<p><strong>Strength Sports:</strong> Weightlifting, Discus Throw, Hammer Throw, Shotput, Javelin Throw
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image16.png" alt="plot of chunk unnamed-chunk-18"></p>
+
+<p><strong>Swimming:</strong> All indoor swimming events, open water long distance swimming</p>
+
+<p><img src="/assets/images/2024-08-19-olympics/paris-olympics/image17.png" alt="plot of chunk unnamed-chunk-19"></p>
+
+<p><strong>Team Sports:</strong> Basketball, Field Hockey, Soccer, Volleyball, Beach Volleyball, Rugby Sevens, Handball, Water Polo
+<img src="/assets/images/2024-08-19-olympics/paris-olympics/image18.png" alt="plot of chunk unnamed-chunk-20"></p>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2021-08-17">17 Aug 2021</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Olympics">Olympics</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Paris">Paris</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#dataviz">#dataviz</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#olympics">#olympics</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#rstats">#rstats</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#sports">#sports</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//mlb-openpose/"> « Using AI with MLB Video to Detect Changes in Mechanics</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//special-teams/">Special Teams Edge » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

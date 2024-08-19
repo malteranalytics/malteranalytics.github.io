@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>Bettor and Vegas Bias Towards Gerrit Cole | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Bettor and Vegas Bias Towards Gerrit Cole | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Bettor and Vegas Bias Towards Gerrit Cole" />
+<meta name="author" content="danny" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There’s no doubt that Gerrit Cole is an elite pitcher playing for a great team, the New York Yankees. He finished second in the AL Cy Young award in 2021 with a 3.23 ERA, however, Vegas bettors seemed to think that the Yankees were a better team with Cole on the mound than they really were. According to the Vegas opening moneyline consensus, the Yankees had an average win probability of 65.6% when Cole pitched in 2021 and sometimes a win probability as high as 80%. Seven times throughout the season, our model at Game Wagers found positive edge betting against the Yankees when Cole was on the mound. At first glance, it seems counterintuitive to bet against a name like Cole, so we analyzed our picks and found that our Game Wagers model had positive return against Cole." />
+<meta property="og:description" content="There’s no doubt that Gerrit Cole is an elite pitcher playing for a great team, the New York Yankees. He finished second in the AL Cy Young award in 2021 with a 3.23 ERA, however, Vegas bettors seemed to think that the Yankees were a better team with Cole on the mound than they really were. According to the Vegas opening moneyline consensus, the Yankees had an average win probability of 65.6% when Cole pitched in 2021 and sometimes a win probability as high as 80%. Seven times throughout the season, our model at Game Wagers found positive edge betting against the Yankees when Cole was on the mound. At first glance, it seems counterintuitive to bet against a name like Cole, so we analyzed our picks and found that our Game Wagers model had positive return against Cole." />
+<link rel="canonical" href="http://localhost:4000/mlb-vegas-pitcher-bias/" />
+<meta property="og:url" content="http://localhost:4000/mlb-vegas-pitcher-bias/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-19T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"danny"},"@type":"BlogPosting","description":"There’s no doubt that Gerrit Cole is an elite pitcher playing for a great team, the New York Yankees. He finished second in the AL Cy Young award in 2021 with a 3.23 ERA, however, Vegas bettors seemed to think that the Yankees were a better team with Cole on the mound than they really were. According to the Vegas opening moneyline consensus, the Yankees had an average win probability of 65.6% when Cole pitched in 2021 and sometimes a win probability as high as 80%. Seven times throughout the season, our model at Game Wagers found positive edge betting against the Yankees when Cole was on the mound. At first glance, it seems counterintuitive to bet against a name like Cole, so we analyzed our picks and found that our Game Wagers model had positive return against Cole.","image":"https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png","headline":"Bettor and Vegas Bias Towards Gerrit Cole","dateModified":"2022-04-19T00:00:00-05:00","datePublished":"2022-04-19T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mlb-vegas-pitcher-bias/"},"url":"http://localhost:4000/mlb-vegas-pitcher-bias/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"danny"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Bettor%20and%20Vegas%20Bias%20Towards%20Gerrit%20Cole&amp;url=http://localhost:4000/mlb-vegas-pitcher-bias/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/mlb-vegas-pitcher-bias/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/mlb-vegas-pitcher-bias/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Danny</a><a target="_blank" href="https://twitter.com/danmalter" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Bettor and Vegas Bias Towards Gerrit Cole</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png" alt="Bettor and Vegas Bias Towards Gerrit Cole">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>There’s no doubt that Gerrit Cole is an elite pitcher playing for a great team, the New York Yankees.  He finished second in the AL Cy Young award in 2021 with a 3.23 ERA, however, Vegas bettors seemed to think that the Yankees were a better team with Cole on the mound than they really were.  According to the Vegas opening moneyline consensus, the Yankees had an average win probability of 65.6% when Cole pitched in 2021 and sometimes a win probability as high as 80%.  Seven times throughout the season, our model at <a href="https://www.gamewagers.ai/" target="_blank" rel="noopener noreferrer">Game Wagers</a> found positive edge betting against the Yankees when Cole was on the mound.  At first glance, it seems counterintuitive to bet against a name like Cole, so we analyzed our picks and found that our Game Wagers model had positive return against Cole.</p>
+
+<p>The first thing that stands out is that the Yankees only won 53.3% of the games that Cole started in 2021 even though their opening line win probability hovered around 65%. Although surprising, these numbers alone don’t provide any information about a bettor’s net return, so we looked at the opening line for every game Cole started and calculated the return given you only took the opposing team and separately given you had only taken the Yankees.</p>
+
+<p>Assuming a consistent $100 bet placed on each game, if a bettor took the opposing team facing Cole in all 30 starts, you’d come out ahead +8.5 units.  On the other hand, had a bettor only taken the Yankees during all of Coles 31 starts, you’d have finished -5.2 units.  Your typical sports bettor probably is not taking every single game Cole pitched, but we’d also find it surprising to know that the average sports bettor took as many as 7 games against Cole in a single season like our Game Wagers model did.</p>
+
+<p>To dig deeper into whether this was a one off for an elite pitcher, we also looked into Clayton Kershaw, Max Scherzer and Jacob deGrom for their 2021 starts and found a positive return.  In fact, had you taken every regular season game that these four pitchers started (including Cole), you’d have finished +4.3 units over 97 games for an ROI of 4.46% and had you taken the opposing team in all 97 games you’d have finished -8.9 units. For both Scherzer and deGrom, the evidence shows that the Vegas money was actually undervaluing their starts.</p>
+
+<p>For more information about our MLB betting model, check out <a href="https://www.gamewagers.ai/" target="_blank" rel="noopener noreferrer">Game Wagers</a> or reach out and we’ll answer any questions. With over thousands of lines of code, 100% of our picks are from an automated machine learning model and we continue to show success so far into the 2022 season.  Let us help you find the edge in MLB betting.</p>
+
+<p><img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/cole.png"> <br></p>
+
+<p><img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/kershaw.png"> <br></p>
+
+<p><img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/scherzer.png"> <br></p>
+
+<p><img align="center" src="/assets/images/2022-04-19-mlb-vegas-pitcher-bias/degrom.png"> <br></p>
+
+<p>Bet like a mathematician, <br>
+Game Wagers Team <br>
+<a href="https://www.gamewagers.ai/" target="_blank" rel="noopener noreferrer">www.gamewagers.ai</a></p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2022-04-19">19 Apr 2022</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Baseball">Baseball</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#MLB">MLB</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#MLB">#MLB</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#baseball">#baseball</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#rstats">#rstats</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#sports">#sports</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//nba-playoff-analysis/"> « An Application of Unsupervised Machine Learning: What Each Team Should Focus on Heading into the NBA Playoffs</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//nba-draft2023/">2023 NBA Draft Scouting Report » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

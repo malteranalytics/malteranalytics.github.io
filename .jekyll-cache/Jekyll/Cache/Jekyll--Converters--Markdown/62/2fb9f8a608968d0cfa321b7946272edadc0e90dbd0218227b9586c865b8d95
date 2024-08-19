@@ -1,0 +1,76 @@
+I"�<p>Happy MLB Opening Day!  You may be wondering what your team’s chances are of making the playoffs, but you’re not sure which website’s model to trust.  I’ve created my own set of predictions using calculus and probability theory to derive the chance for each team to win their respective division.  For the math crowd, I’ve detailed my process and formulas below the results.</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image1.PNG" alt="plot of chunk unnamed-chunk-1" /></p>
+
+<p>The steps I used to reach my conclusions are summarized below:</p>
+
+<ol>
+  <li>Averaged out the predicted 2019 win totals from several analytics websites and Vegas books</li>
+  <li>Analyzed 9 previous seasons worth of win total predictions to understand the trends of means and variance of the residuals (How far off predictions were from actual win totals)</li>
+  <li>Based on above steps, for each team I built a unique probability density function (PDF) for the expected wins for 2019</li>
+  <li>Used calculus in Python to derive the probability that each team wins more games than the other 4 teams in their division</li>
+</ol>
+
+<p><strong>Step 1: Average out the 2019 predicted win totals from several analytics websites and Vegas books</strong></p>
+
+<p>Many analytics websites have published the results from their respective models to predict the 2019 season outcome.  While most models have similar results, it’s difficult to tell what went into each model and which models are likely to be the most accurate.  Rather than picking just one or trying to develop my own model, I leveraged and averaged the results from several models as well as Vegas over/under totals as a starting point for my analysis.  The averages are what is displayed in the above tables.</p>
+
+<p><strong>Step 2: Analyze previous seasons of win total predictions to understand the trends of means and variance of the residuals (How far off predictions were from actual win totals)</strong></p>
+
+<p>If I’m going to use these predictions in my analysis, I first need to understand historically how well these same types of models perform.  Thankfully, Fangraphs, one of the website models I leveraged, has already published the results of a 9 year win total prediction analysis compared to actual outcomes.  Relevant to what I’m trying to accomplish, here are a couple key takeaways:</p>
+<ul>
+  <li>Teams with low win total predictions have a better chance of overperforming their prediction than teams with high win total predictions.  The function for predicted wins vs. actual wins can be written as y = 0.81x + 14.97</li>
+  <li>The variance of residuals for low win total predictions is wider than the variance for high win total predictions (teams with high win total predictions are more likely to have actual win totals closer to the predicted win totals)</li>
+  <li>The residuals appear to be normally distributed
+To address the change in residual variance, I downloaded the prediction and actual win total data and calculated the standard deviation of the residuals for high win total predictions, medium win total predictions, and low win total predictions.</li>
+</ul>
+
+<p>s_High = 6.262369</p>
+
+<p>s_Med = 6.41859</p>
+
+<p>s_Low  = 7.30217</p>
+
+<p><strong>Step 3: Build a unique probability density function (PDF) for the expected wins for each team in 2019</strong></p>
+
+<p>In probability theory, a <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> (PDF) is a distribution that describes the probability of events occurring from a continuous random variable.  By only knowing the mean and standard deviation, we can derive each PDF with calculus.  We’ll use the Yankees as an example to demonstrate how this plays out: 
+The Yankees are projected to win 97 games with a standard deviation of 6.26 games.  We’ve previously concluded that the prediction distribution for their win total is very close to normally distributed, so we can draw the distribution in the bell curved fashion:</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image2.png" alt="plot of chunk unnamed-chunk-2" /></p>
+
+<p>where:</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image3.png" alt="plot of chunk unnamed-chunk-3" /></p>
+
+<p>The important takeaway from the above curve is that the values on the x axis are more likely under tall points in the curve and less likely under short parts of the curve.   A nice feature of PDF’s is that by using standard probability theorems we can easily calculate the probability of the Yankees winning at least X games in 2019 or derive a prediction interval for the range of win totals that they are likely to finish between.</p>
+
+<p><strong>Step 4: Use calculus in Python to derive the probability that each team wins more games than the other 4 teams in their division</strong></p>
+
+<p>To predict the probability that each team wins their division, we need to calculate the probability that they finish with a better record than all the other teams in their division. (Disclaimer: I did not consider the possibility of ties and winning the division in game 163) The formula can be expressed as:</p>
+
+<p><strong>P(A wins) = P(A&gt;B) <code class="language-plaintext highlighter-rouge">*</code> P(A&gt;C) <code class="language-plaintext highlighter-rouge">*</code> P(A&gt;D) <code class="language-plaintext highlighter-rouge">*</code> P(A&gt;E)</strong></p>
+
+<p>where the 5 divisional teams are A, B, C, D and E</p>
+
+<p>Thus, the challenge is to derive P(A&gt;B), and the rest will follow suit.</p>
+
+<p>To visualize this, let’s go back into context and use the Yankees and Rays as an example.</p>
+
+<p><em>Mu_Yankees</em> = 97, <em>s_Yankees</em> = 6.262369</p>
+
+<p><em>Mu_Rays</em> = 85, <em>s_Rays</em> = 6.41859</p>
+
+<p>Their overlapping PDF’s would look like the graph below with the Rays in green and the Yankees in blue.</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image4.png" alt="plot of chunk unnamed-chunk-4" /></p>
+
+<p>The probability that the Yankees finish with a greater win total than the Rays is equivalent to the probability that a random point chosen under the blue curve is greater than a random point chosen under the green curve.  In order to do so, we will derive the below formula:</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image5.png" alt="plot of chunk unnamed-chunk-5" /></p>
+
+<p>It’s technically improper that we assumed that the distributions are independent of each other.  Afterall, the Yankees and Rays play each other 18 times per season.  However, to account for the dependence of those games would only complicate the equation and likely not change our results much.<br />
+Now that we understand how to derive P(A&gt;B), the final step was to write some Python code to make all these calculations for me and output the results.  Below is a sample of my code for the AL East.</p>
+
+<p><img src="/assets/images/2019-03-28-mlb-playoff-predictions/image6.png" alt="plot of chunk unnamed-chunk-6" /></p>
+
+:ET

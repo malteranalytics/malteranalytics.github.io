@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>2023 NBA Draft Scouting Report | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>2023 NBA Draft Scouting Report | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="2023 NBA Draft Scouting Report" />
+<meta name="author" content="danny_drew" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The NBA has extremely high expectations for the 2023 draft class, led by French phenom Victor Wembanyama. However, it’s not just the 7’2” generational prospect that fans and coaches are looking forward to this upcoming season. The wide range of talent has plenty of teams excited and optimistic about their future. For the 9 lottery picks that played NCAA men’s basketball, we’ve taken snapshots from our custom advanced analytics scouting report to get a feel for what we might expect out of each player’s rookie season." />
+<meta property="og:description" content="The NBA has extremely high expectations for the 2023 draft class, led by French phenom Victor Wembanyama. However, it’s not just the 7’2” generational prospect that fans and coaches are looking forward to this upcoming season. The wide range of talent has plenty of teams excited and optimistic about their future. For the 9 lottery picks that played NCAA men’s basketball, we’ve taken snapshots from our custom advanced analytics scouting report to get a feel for what we might expect out of each player’s rookie season." />
+<link rel="canonical" href="http://localhost:4000/nba-draft2023/" />
+<meta property="og:url" content="http://localhost:4000/nba-draft2023/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2023-06-26-nba-draft2023/image25.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-26T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"danny_drew"},"@type":"BlogPosting","description":"The NBA has extremely high expectations for the 2023 draft class, led by French phenom Victor Wembanyama. However, it’s not just the 7’2” generational prospect that fans and coaches are looking forward to this upcoming season. The wide range of talent has plenty of teams excited and optimistic about their future. For the 9 lottery picks that played NCAA men’s basketball, we’ve taken snapshots from our custom advanced analytics scouting report to get a feel for what we might expect out of each player’s rookie season.","image":"https://malteranalytics.github.io/assets/images/2023-06-26-nba-draft2023/image25.png","headline":"2023 NBA Draft Scouting Report","dateModified":"2023-06-26T00:00:00-05:00","datePublished":"2023-06-26T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nba-draft2023/"},"url":"http://localhost:4000/nba-draft2023/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"danny_drew"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=2023%20NBA%20Draft%20Scouting%20Report&amp;url=http://localhost:4000/nba-draft2023/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/nba-draft2023/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/nba-draft2023/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny &amp; Drew">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Danny &amp; Drew</a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">2023 NBA Draft Scouting Report</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2023-06-26-nba-draft2023/image25.png" alt="2023 NBA Draft Scouting Report">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>The NBA has extremely high expectations for the 2023 draft class, led by French phenom Victor Wembanyama.  However, it’s not just the 7’2” generational prospect that fans and coaches are looking forward to this upcoming season.   The wide range of talent has plenty of teams excited and optimistic about their future.  For the 9 lottery picks that played NCAA men’s basketball, we’ve taken snapshots from our custom advanced analytics scouting report to get a feel for what we might expect out of each player’s rookie season.</p>
+
+<p><strong><em>Note about the data:</em></strong></p>
+
+<p>This data has been captured from ESPN.com for NCAA Division I Men’s Basketball games.  Therefore, we only have scouting reports available for drafted NCAA players.  Also, about 70% of NCAA men’s basketball games have available shot location data on ESPN.  While some data is missing, these heat map charts serve as close representations for each player for the entire season.</p>
+
+<p><strong><em>Notes about the graphs:</em></strong></p>
+
+<p><strong>Heat Map:</strong></p>
+
+<p>This shows a player’s shooting percentage from each part of the court, where data is available.  Red refers to above NCAA D1 average and blue is below average.  Effective Field Goal Percentage (eFG%) refers to a weighted field goal percentage that gives 3-point shots a 50% heavier weight than 2-point shots.</p>
+
+<p><strong>Full Season Stats:</strong></p>
+
+<p>Averages are provided followed by the players percentile within all NCAA D1 men’s basketball.
+Points Differential Per 40 Minutes: A team’s net point differential standardized per 40 minutes of game time while each player is on or off the court, throughout the season.</p>
+
+<p><strong>Team Time to Shoot:</strong></p>
+
+<p>This chart breaks the 30 second shot clock into 5 second buckets, showing the percentage of shots that are taken within each bucket, for a sense of the team’s pace of play.</p>
+
+<p><strong>Five Minute Buckets:</strong></p>
+
+<p>These charts break the 40 minute games into 5 minute consecutive buckets, showing how a player’s trends throughout the game for each respective statistic.</p>
+
+<p><strong>Shooting After Offensive Rebounds:</strong></p>
+
+<p>Chart on left shows who shoots within 5 seconds after the a team gets an offensive rebound.  Chart on right shows what happens within 5 seconds after the given player gets an offensive rebound.</p>
+
+<p><strong>Top 3 Assists by Player:</strong></p>
+
+<p>This chart shows who a player gets most assists to and from throughout the season.</p>
+
+<p><strong><em>Scouting Reports:</em></strong></p>
+
+<p>For comments and suggestions, please reach out to danmalter@gmail.com and abmalter12@gmail.com</p>
+
+<p><strong><em>Pick 2: Charlotte Hornets select Brandon Miller, Alabama</em></strong></p>
+
+<p>Brandon Miller shined from both wing 3-point locations this season and sits near the top percentile in just about every statistical category.   Above his great individual stats however, is that Alabama had over a 14 point per 40-minute boost with Miller on the court compared to when he was off the court.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image2.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+<p><strong><em>Pick 6: Orlando Magic select Anthony Black, Arkansas</em></strong></p>
+
+<p>Anthony Black doesn’t stand out as a notably great shooter but does it all well.  He is an excellent defender, can get to the rim to score, and is a great passer.  Arkansas was a below average team without him on the court, as he gave his team a near 10-point swing while playing.  As Arkansas’ point guard this season, he also liked to play as a fast pace as about 60% of possessions his team got a shot off in the first 15 seconds of the shot clock.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image3.png" alt="plot of chunk unnamed-chunk-3"> 
+<img src="/assets/images/2023-06-26-nba-draft2023/image4.png" alt="plot of chunk unnamed-chunk-4"> 
+<img src="/assets/images/2023-06-26-nba-draft2023/image5.png" alt="plot of chunk unnamed-chunk-5"></p>
+
+<p><strong><em>Pick 8: Indiana Pacers select Jarace Walker, Houston</em></strong></p>
+
+<p>There are two words to describe Jarace Walker: effective and clutch.  He’s a more conservative shooter than other stars around the NCAA, but his effective field goal percentage matches that of Brandon Miller.  He can score from anywhere on the court and is arguably more valuable on defense.  Amazingly, in the last 5 minutes of games, his 2-point shooting percentage sits over 80%, making him one of the best closers in men’s college basketball this season.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image6.png" alt="plot of chunk unnamed-chunk-6"> 
+<img src="/assets/images/2023-06-26-nba-draft2023/image7.png" alt="plot of chunk unnamed-chunk-7"></p>
+
+<p><strong><em>Pick 9: Utah Jazz select Taylor Hendricks, UCF</em></strong></p>
+
+<p>Playing for a smaller school, we unfortunately are not able to get as much shooting location data on Hendricks, but what we do know is that he is completely dominant with the ball down low.  He also comes away with a ton of blocks and UCF is a completely different team with him on the court vs off the court.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image8.png" alt="plot of chunk unnamed-chunk-8"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image9.png" alt="plot of chunk unnamed-chunk-9"></p>
+
+<p><strong><em>Pick 10: Oklahoma City Thunder select Carson Wallace, Kentucky</em></strong></p>
+
+<p>Looking at Carson Wallace’s 5-minute bucket stats for both points and steals, you can see he comes out of the gates on fire, both to start the game and to start the second half.   He also turns a gear back up in the final 5 minutes of play but has inconstant trends throughout the rest of the game.  He’s among the top in the nation in both assists and steals, and for a guard does an excellent job scoring in the paint.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image10.png" alt="plot of chunk unnamed-chunk-10"> 
+<img src="/assets/images/2023-06-26-nba-draft2023/image11.png" alt="plot of chunk unnamed-chunk-11"> 
+<img src="/assets/images/2023-06-26-nba-draft2023/image12.png" alt="plot of chunk unnamed-chunk-12"></p>
+
+<p><strong><em>Pick 11: Orlando Magic select Jett Howard, Michigan</em></strong></p>
+
+<p>Son of 19-year NBA veteran and Michigan coach Juwan Howard, Jett stands out as an effective scorer, great passer, sharp 3-point shooter, and someone who comes out of the gates hot.  Michigan, however, played better this season with Jett off the court than on.<br>
+<img src="/assets/images/2023-06-26-nba-draft2023/image13.png" alt="plot of chunk unnamed-chunk-13"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image14.png" alt="plot of chunk unnamed-chunk-14"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image15.png" alt="plot of chunk unnamed-chunk-15"></p>
+
+<p><strong><em>Pick 12: Dallas Mavericks select Derrick Lively II, Duke</em></strong></p>
+
+<p>While not much of a scorer for Duke this season, big man Derrick Lively was a force down low in the paint on both sides of the ball.  His almost 2 and a half blocks per game were among the top in men’s college basketball this season, and his ability to rebound and give his team second chance points made him a nightmare for opponents.   He works well with point guards, as Duke’s guards Roach and Proctor fed him assists often and he was able to feed Roach back.  Despite his only 5 points per game and lack of shooting anywhere outside of the rim, Duke had an amazing 17-point positive swing per 40 minutes with Lively on the court, making him one of the most valuable men’s college basketball players in the country.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image16.png" alt="plot of chunk unnamed-chunk-16"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image17.png" alt="plot of chunk unnamed-chunk-17"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image18.png" alt="plot of chunk unnamed-chunk-18"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image19.png" alt="plot of chunk unnamed-chunk-19"></p>
+
+<p><strong><em>Pick 13: Toronto Raptors select Grady Dick, Kansas</em></strong></p>
+
+<p>Sharpshooter Grady Dick gave NCAA’s toughest conference, the Big 12, a lot of problems this year, with an effective field goal percentage of 55%, his shooting ability around the court makes him incredibly difficult to guard.  He stays consistent throughout the game and gave Kansas a major boost while on the court.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image20.png" alt="plot of chunk unnamed-chunk-20"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image21.png" alt="plot of chunk unnamed-chunk-21"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image22.png" alt="plot of chunk unnamed-chunk-22"></p>
+
+<p><strong><em>Pick 14: New Orleans Pelicans select Jordan Hawkins, UConn</em></strong></p>
+
+<p>Another great shooter, Jordan Hawkins was consistent and effective with the ball all season long.  He was deadly from 3, can get to the rim, and his shooting helped lead UConn to a national championship.</p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image23.png" alt="plot of chunk unnamed-chunk-23"></p>
+
+<p><img src="/assets/images/2023-06-26-nba-draft2023/image24.png" alt="plot of chunk unnamed-chunk-24"></p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2023-06-26">26 Jun 2023</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Basketball">Basketball</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#NBA">NBA</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#NBA">#NBA</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#basketball">#basketball</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#dataviz">#dataviz</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#rstats">#rstats</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#sports">#sports</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//mlb-vegas-pitcher-bias/"> « Bettor and Vegas Bias Towards Gerrit Cole</a>
+            
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

@@ -1,0 +1,69 @@
+I"�<p>This post follows through instructions for using <a href="https://pjreddie.com/darknet/yolo/" target="_blank">YOLO</a> (You Only Look Once) with video object detection.  This demonstration was done with a g3.8xlarge Deep Learning AMI (Ubuntu) Version 6.0 (ami-bc09d9c1). The weights for this particular YOLO model were trained on the <a href="http://cocodataset.org/#home" target="_blank">COCO</a> dataset, which consists of 182 different labels.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li>Python 3.5 or 3.6</li>
+  <li>TensorFlow</li>
+  <li>openCV</li>
+</ul>
+
+<h2 id="github-repo">GitHub Repo</h2>
+
+<ul>
+  <li>Download the GitHub repo from <a href="https://github.com/thtrieu/darkflow" target="_blank">https://github.com/thtrieu/darkflow</a>. Further instructions for downloading specific sets of weights can be found on the README file of the repo.</li>
+</ul>
+
+<h2 id="build-the-library">Build the Library</h2>
+<ul>
+  <li>Create a build folder from the location of the repo with the following command</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">cd</span> <span class="n">darkflow</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="err">—</span><span class="n">inplace</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Create a new folder called ‘bin’ within the darkflow directory and place the weights into the bin folder.</li>
+</ul>
+
+<h2 id="processing-a-video">Processing a Video</h2>
+
+<p>The below code assumes a video called video1.mp4 is uploaded in a data folder. You will also need to make sure that you have the proper cfg and weight files in the respective folders. In this case, the model that I am using is yolo.cfg and yolov2.weights.</p>
+
+<p>If using CPU, you can get rid of the GPU flag any the threshold can be changed or removed. For a 1 minute video on a g3.8xlarge machine, it took roughly 10 minutes for the video to fully complile at a rate of 3.04 frames per second.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">python</span> <span class="n">flow</span> <span class="o">--</span><span class="n">model</span> <span class="n">cfg</span><span class="o">/</span><span class="n">yolo</span><span class="o">.</span><span class="n">cfg</span> <span class="o">--</span><span class="n">load</span> <span class="nb">bin</span><span class="o">/</span><span class="n">yolov2</span><span class="o">.</span><span class="n">weights</span> <span class="o">--</span><span class="n">demo</span> <span class="n">data</span><span class="o">/</span><span class="n">video1</span><span class="o">.</span><span class="n">mp4</span> <span class="o">--</span><span class="n">threshold</span> <span class="mf">0.25</span> <span class="o">--</span><span class="n">gpu</span> <span class="mf">1.0</span> <span class="o">--</span><span class="n">saveVideo</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="results">Results</h2>
+
+<p><b>YOLO Example</b></p>
+<video width="520" controls="">
+<source src="/assets/images/2018-04-11-yolo-mlb/dee-gordon.mp4" />
+</video>
+<p>Video from MLB.com.  Full video can be seen <a href="https://drive.google.com/file/d/1z7rqqF2RvmpGXnKt39aoP12JkO1UGDHl/view?usp=sharing" target="_blank">here</a>.</p>
+
+<p><br /></p>
+
+<video width="520" controls="">
+<source src="/assets/images/2018-04-11-yolo-mlb/chicago.mp4" />
+</video>
+<p>Walking down Michigan Avenue in Chicago.</p>
+
+<p><br /></p>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-57468410-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+:ET

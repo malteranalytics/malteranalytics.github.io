@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>What are the Traits of a Successful Golfer at the Masters? | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>What are the Traits of a Successful Golfer at the Masters? | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="What are the Traits of a Successful Golfer at the Masters?" />
+<meta name="author" content="drew" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The 2021 Masters is underway this week and despite all the unpredictability of the tournament, golfer trends from the past several years will show which traits are most often correlated with success. The below table shows the correlation that several variables have with a player’s performance during Master’s Weekend. The data that feeds into this table goes back to 2015 to find golfer’s statistics between the start of each season and the tournament leading up to the Masters, as well as the rank in which the player finished in the respective Masters tournament. Because of the erratic nature of the Masters, no variable is completely reliable but the number of top 10 finishes, the previous year’s Masters rank, the season scoring average, and shots gained off the tee have noteworthy significance. Meanwhile, shots gained on approach, around the green, and putting, have near zero correlation, because the separation of the best from the worst in these areas is less significant." />
+<meta property="og:description" content="The 2021 Masters is underway this week and despite all the unpredictability of the tournament, golfer trends from the past several years will show which traits are most often correlated with success. The below table shows the correlation that several variables have with a player’s performance during Master’s Weekend. The data that feeds into this table goes back to 2015 to find golfer’s statistics between the start of each season and the tournament leading up to the Masters, as well as the rank in which the player finished in the respective Masters tournament. Because of the erratic nature of the Masters, no variable is completely reliable but the number of top 10 finishes, the previous year’s Masters rank, the season scoring average, and shots gained off the tee have noteworthy significance. Meanwhile, shots gained on approach, around the green, and putting, have near zero correlation, because the separation of the best from the worst in these areas is less significant." />
+<link rel="canonical" href="http://localhost:4000/masters/" />
+<meta property="og:url" content="http://localhost:4000/masters/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2021-04-07-masters/image7.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-07T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"drew"},"@type":"BlogPosting","description":"The 2021 Masters is underway this week and despite all the unpredictability of the tournament, golfer trends from the past several years will show which traits are most often correlated with success. The below table shows the correlation that several variables have with a player’s performance during Master’s Weekend. The data that feeds into this table goes back to 2015 to find golfer’s statistics between the start of each season and the tournament leading up to the Masters, as well as the rank in which the player finished in the respective Masters tournament. Because of the erratic nature of the Masters, no variable is completely reliable but the number of top 10 finishes, the previous year’s Masters rank, the season scoring average, and shots gained off the tee have noteworthy significance. Meanwhile, shots gained on approach, around the green, and putting, have near zero correlation, because the separation of the best from the worst in these areas is less significant.","image":"https://malteranalytics.github.io/assets/images/2021-04-07-masters/image7.png","headline":"What are the Traits of a Successful Golfer at the Masters?","dateModified":"2021-04-07T00:00:00-05:00","datePublished":"2021-04-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/masters/"},"url":"http://localhost:4000/masters/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"drew"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=What%20are%20the%20Traits%20of%20a%20Successful%20Golfer%20at%20the%20Masters?&amp;url=http://localhost:4000/masters/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/masters/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/masters/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Drew</a><a target="_blank" href="https://www.instagram.com/malteranalytics/?hl=en" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">What are the Traits of a Successful Golfer at the Masters?</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2021-04-07-masters/image7.png" alt="What are the Traits of a Successful Golfer at the Masters?">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>The 2021 Masters is underway this week and despite all the unpredictability of the tournament, golfer trends from the past several years will show which traits are most often correlated with success.  The below table shows the correlation that several variables have with a player’s performance during Master’s Weekend.  The data that feeds into this table goes back to 2015 to find golfer’s statistics between the start of each season and the tournament leading up to the Masters, as well as the rank in which the player finished in the respective Masters tournament.<br>
+Because of the erratic nature of the Masters, no variable is completely reliable but the number of top 10 finishes, the previous year’s Masters rank, the season scoring average, and shots gained off the tee have noteworthy significance.  Meanwhile, shots gained on approach, around the green, and putting, have near zero correlation, because the separation of the best from the worst in these areas is less significant.</p>
+
+<p><img src="/assets/images/2021-04-07-masters/image1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>The next chart breaks down the average stats among those who finish in the top 10 in the Masters against the rest of the field.  A similar conclusion can be drawn here as in the correlation matrix.  The metrics with the greatest difference between top 10 finishers and the rest of the field imply greater predictability towards Master’s success.</p>
+
+<p><img src="/assets/images/2021-04-07-masters/image2.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>The next chart shows the average rank that a golfer finishes in the Master’s, broken down by the number of top 10 finishes they have leading up to the tournament.  Unsurprisingly, the more top 10 finishes, the better the average rank despite the outlier at 7 top ten finishes.  However, only half of the best golfers with 4-6 top 10 finishes will finish in the top 25 in the Masters.</p>
+
+<p><img src="/assets/images/2021-04-07-masters/image3.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>It’s often theorized that some golfer’s have the ability to bring about their best in the most intense circumstances, while others cannot pull themselves together regardless of how good they are.  The below charts show the pattern of year over year Master’s rankings, indepentant of any other variable.  The rows represent the number golfers who finished within the respective ranked bucket of 10 in a given year while the columns denote the number of golfers who finished within the respective ranked bucket of 10 in the following year.  Hence, among the 25 golfers in the study who finished in the top 10 in a given year, 9 of them finished in the top 10 in the following year.</p>
+
+<p><img src="/assets/images/2021-04-07-masters/image4.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>The same chart as above can be output as percentages, like in the table below.  This table provides insight into an estimate of how many golfers from last tournament’s ranked bucket would be expected to fall into each ranked bucket for this year.  As shown, 48% of previous year top 10 golfers finished in the top 10 in the following year, and 41% of golfers who finished 60+ finished60+ again the following year.</p>
+
+<p><img src="/assets/images/2021-04-07-masters/image5.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>Finally, it’s important to make clear just how unpredicatable the Masters really is, in statistical terms.  The below output is the result of running a Least-Squares Regression Model, using just the most correlated variables to predict a golfer’s Master’s rank.  While there are a lot of metrics in this output, the important one to note is the R-squared at 0.140.  This means that just 14% of the variance in the model can be attributed to (predicted by) the variables in the model.  The other 86% of the model’s variance is just randomness.  As seen in recent years, crazy things happen in the Master’s that nobody (and no statistical model) can possibly predict.  However, if you’re looking for some slight edge in predicting your Master’s pool, the above tables would be the best thing to use.</p>
+
+<p><img src="/assets/images/2021-04-07-masters/image6.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2021-04-07">07 Apr 2021</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Golf">Golf</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#Masters">Masters</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#Masters">#Masters</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#dataviz">#dataviz</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#golf">#golf</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#rstats">#rstats</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//nfl-march_maddness2021/"> « An Analytics Guide to March Madness</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//mlb-openpose/">Using AI with MLB Video to Detect Changes in Mechanics » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

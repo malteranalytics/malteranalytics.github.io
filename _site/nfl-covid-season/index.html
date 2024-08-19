@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>Why Did the NFL See So Many More Touchdowns in the COVID-19 Season? | Malter Analytics</title>
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Why Did the NFL See So Many More Touchdowns in the COVID-19 Season? | Analytics and Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Why Did the NFL See So Many More Touchdowns in the COVID-19 Season?" />
+<meta name="author" content="drew" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Like all sports leagues around the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played. Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive. Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week. In attempt to understand how these adjustments may have affected game play, I’ve compared NFL play-by-play data between the 2020 season and previous seasons." />
+<meta property="og:description" content="Like all sports leagues around the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played. Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive. Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week. In attempt to understand how these adjustments may have affected game play, I’ve compared NFL play-by-play data between the 2020 season and previous seasons." />
+<link rel="canonical" href="http://localhost:4000/nfl-covid-season/" />
+<meta property="og:url" content="http://localhost:4000/nfl-covid-season/" />
+<meta property="og:site_name" content="Analytics and Data Science Blog" />
+<meta property="og:image" content="https://malteranalytics.github.io/assets/images/2021-01-25-nfl-covid-season/image14.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-25T00:00:00-06:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"drew"},"@type":"BlogPosting","description":"Like all sports leagues around the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played. Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive. Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week. In attempt to understand how these adjustments may have affected game play, I’ve compared NFL play-by-play data between the 2020 season and previous seasons.","image":"https://malteranalytics.github.io/assets/images/2021-01-25-nfl-covid-season/image14.png","headline":"Why Did the NFL See So Many More Touchdowns in the COVID-19 Season?","dateModified":"2021-01-25T00:00:00-06:00","datePublished":"2021-01-25T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nfl-covid-season/"},"url":"http://localhost:4000/nfl-covid-season/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"},"name":"drew"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+</ul>
+<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Malter Analytics</h1>
+    <p class="lead">
+        
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share">
+    <p>
+        Share  
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Why%20Did%20the%20NFL%20See%20So%20Many%20More%20Touchdowns%20in%20the%20COVID-19%20Season?&amp;url=http://localhost:4000/nfl-covid-season/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/nfl-covid-season/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/nfl-covid-season/" onclick="window.open(this.href, 'width=550,height=435');return false;" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </p>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Drew</a><a target="_blank" href="https://www.instagram.com/malteranalytics/?hl=en" class="btn follow" rel="noopener noreferrer">Follow</a>
+                        <span class="author-description">Data Scientist</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Why Did the NFL See So Many More Touchdowns in the COVID-19 Season?</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image 
+            
+            
+
+            
+            <img class="featured-image img-fluid" src="https://malteranalytics.github.io/assets/images/2021-01-25-nfl-covid-season/image14.png" alt="Why Did the NFL See So Many More Touchdowns in the COVID-19 Season?">
+            
+
+            
+            End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Like all sports leagues around the world, the NFL made several adjustments to their 2020 season in order to accommodate dealing with COVID-19 while still allowing games to be played.  Teams played in empty stadiums and several players throughout the league missed games and practices due to either testing positive for COVID-19 or being in contact with someone who tested positive.   Additionally, the NFL schedule had to be adjusted multiple times throughout the season; games were pushed back to later weeks or even pushed back from Sunday to sometime in the middle of the week.  In attempt to understand how these adjustments may have affected game play, I’ve compared <a href="http://nflsavant.com/about.php" target="_blank" rel="noopener noreferrer">NFL play-by-play</a> data between the 2020 season and previous seasons.</p>
+
+<p>Many aspects of the NFL change year over year so it’s important to not attribute the changes we see in this analysis to COVID-19-related adjustments without statistical evidence.  Nonetheless, we will see some dramatic differences in 2020 data compared to previous seasons and seek their explanations.</p>
+
+<p>First, the home team won a fewer percentage of its games this season compared to any season in recent history.  This plays nicely into the theory that fans contribute to helping the home team win games.  The chart below shows the percentage of games won by the home team in the NFL over the past 5 seasons.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>In 2019, the home team won just 53.5% percent of its games, which is an adequately lower percentage than years prior.  What we don’t know is whether 2019 was an outlier year for lack of home field advantage or the trend of home field advantage was shrinking for reasons that we may not be aware of.  If the former is true, then 51% of home wins in 2020 is abnormally low.  If the latter is true, then perhaps the fans make a much smaller impact on the game than perceived and visiting NFL teams are finding better ways to deal with the obstacles that come with playing on the road.  If the NFL can fill stadiums in 2021, then we’ll have better insight into this, but based on year over year trends, my own hypothesis favors the former; that 2019 was an outlier season and the empty stadiums of 2020 did take away much of the home field advantage.</p>
+
+<p>In addition to the fans, the other aspect that affects home field advantage is the travel of the visiting team.  In the 2020 NFL season, elements of travel such as jet-lag, players not sleeping in their own beds, and the unfamiliar turf, remained a constant.  Having removed one known aspect of home-field advantage, we can estimate that 1.5% of the variance of the outcomes of NFL games can be explained solely by the effects of travel.</p>
+
+<p>The next two charts below show another obvious change in the 2020 season; the high offensive production across the league.  This season saw an increase in points by 15% compared to the average of the previous 4 seasons.   Does crowd noise favor the defense, was there a change in offensive strategy, or perhaps a combination of both?  We’ll dive deeper into offensive metrics to get a better idea.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image2.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image3.png" alt="plot of chunk unnamed-chunk-3"></p>
+
+<p>From the chart below, we can see the driving force behind increase in points scored.  The arrows represent the yard lines in which the average NFL drive began and ended per season.  In 2020, offenses were averaging almost an additional 5 yards per drive.  The second chart below breaks down the average drive by team so that you can see how your team faired in 2020 compared to the league.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image4.PNG" alt="plot of chunk unnamed-chunk-4"></p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image5.PNG" alt="plot of chunk unnamed-chunk-5"></p>
+
+<p>Now that it’s clear that offensive efficiency rose in 2020, we’ll break down different aspects of the offensive side of the game in order to see what changed this season and what did not.  The chart below breaks down the number of snaps per season by formation.  While there were slightly more overall snaps in the 2020 season than in prior years, the breakdown of snaps by formation remained just about the same.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image6.png" alt="plot of chunk unnamed-chunk-6"></p>
+
+<p>Next, the chart below informs us of the percentage of snaps on each down that are pass plays compared to rush plays.  We find no statistical evidence that passing rates have changed this season.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image7.png" alt="plot of chunk unnamed-chunk-7"></p>
+
+<p>We can also break down pass plays by regular passes against play action passes.  From the chart below, we can see that 27 of the 32 teams in the NFL had a higher average yards per play action pass than they do for pass plays in general.  However, the 2020 NFL season saw just 22.7% of all pass plays use play action, a downward trend from 2019 and 2018, which were 26.6% and 27.2% respectively.   The benefit of play action is the element of surprise on the defense, which would be mitigated if overused, but NFL teams certainly should be using play action more than they currently are.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image8.png" alt="plot of chunk unnamed-chunk-8"></p>
+
+<p>While it’s clear that formations and pass rates are not a factor in increased points this season, we finally can see a change in coaching decisions that do positively impact overall points scored.  In 2020, teams are going for it on fourth down more than they have in recent history.  Regardless of the outcome of a 4th down conversion, it almost always increases the potential for the game to have more points scored.  Either the offense gets to continue their drive on first down, or the defense gets to take over the ball in much better field position than they otherwise would have.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image9.png" alt="plot of chunk unnamed-chunk-9"></p>
+
+<p>Another notable factor that has favored offenses in 2020 compared to prior seasons is the rate of penalties.   From the chart below, we can see that defensive penalties and penalty yards remained relatively constant in 2020, but offensive penalties and penalty yards dropped substantially.   This supports the theory that some offensive penalties such as false starts are a function of crowd noise, typically disadvantaging the visiting team.  Whatever the reasons, in 2020, offenses gained an average net positive 14 yards in penalties per game when they averaged just about 3 net positive yards in penalties per game in the previous 4 seasons.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image10.png" alt="plot of chunk unnamed-chunk-10"></p>
+
+<p>For a better idea of when penalties occur, the below table breaks down the number of penalties in 2020 by offensive formation. Note that snaps under center are the only formation in which the offense has negative net penalty yardage.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image11.png" alt="plot of chunk unnamed-chunk-11"></p>
+
+<p>The final piece of this analysis is to look at field goal kicking.  In 2020, the number of field goals taken and the percent of field goals made remained relatively constant with prior seasons.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image12.png" alt="plot of chunk unnamed-chunk-12"></p>
+
+<p>In the last chart below, we can see the percent of field goals made by increments of 5 yards, comparing the 2020 and 2019 seasons.  Just as the above table shows, there were not any notable change in field goal kicking this season.</p>
+
+<p><img src="/assets/images/2021-01-25-nfl-covid-season/image13.png" alt="plot of chunk unnamed-chunk-13"></p>
+
+<p>Having looked at several aspects of the game, the adjustments that the NFL made with regards to COVID-19 do seem to have affected gameplay in 2020.  To exactly what extent is still unclear, but we found sharp differences in the lack of home field advantage, increased points scored and offensive efficiency, and decreased offensive penalties while maintaining similarities in offensive play calling and field goal kicking.  The 2020 NFL season will always be remembered in a unique manner, but time will tell just how unique the statistical outcomes of the season really were.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2021-01-25">25 Jan 2021</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#NFL">NFL</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#covid19">covid19</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#football">football</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#NFL">#NFL</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#covid">#covid</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#covid19">#covid19</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#dataviz">#dataviz</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#football">#football</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#rstats">#rstats</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//covid_20201027/"> « COVID-19 Data Visuals</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//nfl-march_maddness2021/">An Analytics Guide to March Madness » </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'danmalter'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" target="_blank" rel="noopener noreferrer">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span>Follow me on your preferred social network.</span>  
+        
+        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>  
+        
+        
+        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+        </a>  
+        
+        
+        
+        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        
+	</div>
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
+</h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2024 Malter Analytics
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+            </div>
+        </div>
+    </div>
+
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//danmalter.disqus.com/count.js"></script>
+
+
+</footer>
+</div></body>
+</html>

@@ -1,0 +1,2 @@
+I"Æ<p>This post follows through instructions for using <a href="https://pjreddie.com/darknet/yolo/" target="_blank">YOLO</a> (You Only Look Once) with video object detection.  This demonstration was done with a g3.8xlarge Deep Learning AMI (Ubuntu) Version 6.0 (ami-bc09d9c1). The weights for this particular YOLO model were trained on the <a href="http://cocodataset.org/#home" target="_blank">COCO</a> dataset, which consists of 182 different labels.</p>
+:ET

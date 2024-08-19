@@ -1,0 +1,59 @@
+I"o%<p>In preparation for the highly anticipated UFC title fight between the current Men’s Lightweight champion, Khabib Nurmagomedov, and contender, Justin Gaethje, I’ve analyzed over 8 thousand UFC fights to gain a greater understanding of the sport of MMA and to determine what factors contribute to a fighter’s success.  The UFC judging system is subjective in nature, which often leaves fans confused about the outcome of fights.  By looking at fight data, we can better recognize fight strategy, the impact of fighter attributes, and the match decision made by the judges.  The UFC fight data sets can be found <a href="https://www.kaggle.com/rajeevw/ufcdata" target="_blank">here</a> and <a href="https://www.kaggle.com/calmdownkarm/ufcdataset" target="_blank">here</a>.</p>
+
+<p>In UFC, there are 3 ways in which the winner of a fight can be determined; decision by judges, knock out or technical knockout, or submission.   The below chart shows how often each result type has occurred in the dataset, with about half of all fights going the distance and resulting in decision.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image1.png" alt="plot of chunk unnamed-chunk-1" /></p>
+
+<p>Just about half of all punch attempts are landed, and the chart below shows the rate of punches landed and attempted over the course of the average fight.  UFC fights can either be 3 or 5 rounds with all title fights being 5 rounds (e.g. - Khabib vs Gaethje).  In the third round, fighters attempt more punches on average, but fatigue shows in that they don’t necessarily land more punches than in the previous rounds.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image2.png" alt="plot of chunk unnamed-chunk-2" /></p>
+
+<p>The next plot looks at kicks attempted over the course of the fight.  The winner of the fight on average kicks more in the first few rounds while the loser of the fight starts to kick more than the winner in the later rounds.  Perhaps this is out of desperation of the losing fighter who wants to change their strategy, or perhaps fighters should focus on out kicking their opponent early in the match.   Also, the fighter who goes on to win may generally feel comfortable with his or her lead in the late rounds and be compelled to avoid the higher-risk strike.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image3.png" alt="plot of chunk unnamed-chunk-3" /></p>
+
+<p>Another metric that factors into winning a fight is time in control for each fighter.  The below chart shows the average time in control for the winner and loser of a fight, with the shaded region denoting the 95% internval of time in control. As seen below, the winner of the fight usually spends more time in control. For example, part of Khabib’s fighting strategy is to take his opponent down to the ground and to control him there. It also appears that as the fight goes on and fatigue plays a larger role, there is more neutral time where neither fighter is in control.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image4.png" alt="plot of chunk unnamed-chunk-4" /></p>
+
+<p>The UFC has several weight classes in both the men’s and women’s divisions, and each weight class has its own unique style of fighting.  Generally, heavier weight classes have a slower pace of fighting.  We can see from the below chart that as the weight class increases, there is a downward trend in average significant strikes per fight per fighter.  Additionally, women’s divisions tend to have higher rates of significant strikes when compared to men’s divisions of the same weight.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image5.png" alt="plot of chunk unnamed-chunk-5" /></p>
+
+<p>*** Significant strikes refer to all strikes at distance and power strikes in the clinch and on the ground.</p>
+
+<p>Significant strikes can also be broken down by strikes to the head, body, or leg.  The below chart shows the average number of each type of significant strikes by weight class per fight.  Head strikes account for more than half of all significant strikes, and heavier weight classes have a slightly greater proportion of their strikes to the head compared to lighter weight classes.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image6.png" alt="plot of chunk unnamed-chunk-6" /></p>
+
+<p>In addition to breaking down strikes by head, body, and leg, the following chart slices strikes by clinch (up close), distance, and ground.  There is an approximately even distribution of the three types of strikes across the board.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image7.png" alt="plot of chunk unnamed-chunk-7" /></p>
+
+<p>The subsequent chart shows a similar trend around average kicks per fight by weight class.  A statistically notable difference in kicks per fight occurs when comparing women’s divisions to men’s division, with women applying leg kicks about 33% more frequently than men.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image8.png" alt="plot of chunk unnamed-chunk-8" /></p>
+
+<p>The next focus will be on the percent of strikes that are landed by each weight class.  In general, roughly half of all strikes are considered ‘landed’.  As the weight class increases, the rate of landed strikes rises as well.  Lighter weight fighters may have tendencies to attempt strikes even when there’s a low chance of landing them, whereas heavier fighters could be more cautious about only striking when they feel confident in landing.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image9.png" alt="plot of chunk unnamed-chunk-9" /></p>
+
+<p>Because the UFC does not have an objective scoring system in which judges determine the winner of the fight, it’s difficult to say for certain which fighter is winning while watching.  Hence, I’ve created a multivariate regression model in python that predicts the winner of a fight based on their in-fight statistics using data from previous fights.  The below chart takes the results of that model and outputs the most important features that influence the model’s prediction of which fighter won the fight.  Significant strikes to the head and time in control are the two most important features, perhaps due to their nature of clarity and blatancy to judges.  In the case of the dominant women’s Featherweight and Bantamweight belt holder, Amanda Nunes, she typically wins her fights by controlling her opponents and delivering frequent strikes to inflict damage to her opponent.  However, there are other fighters who strategize around controlling their opponents while limiting their strikes and maintaining a defensive approach.  This leads to debate among MMA fans about whether controlling a fight without inflicting much damage to your opponent is worthy of victory.</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image10.png" alt="plot of chunk unnamed-chunk-10" /></p>
+
+<p>Finally, I created a second model in python using a Random Forest Classifier algorithm to predict which fighter will win a fight based on their overall statistics entering the fight.  Like the previous model, I outputted the feature importance among the several inputs of the model.  Features prefixed with R denote the fighter in the red corner of the ring (the higher ranked fighter) and features prefixed with B denote the fighter in the blue corner (the lower ranked fighter).</p>
+
+<p><img src="/assets/images/2020-10-20-ufc/image11.png" alt="plot of chunk unnamed-chunk-11" /></p>
+
+<p>*** “R” prefixed features indicates Red corner fighter and “B” prefixed features indicates Blue corner fighter</p>
+
+<p>The most important feature to predict fight outcome is the average significant strikes that a fighter allows their opponent to land on them, followed by the percentage of significant strikes that a fighter allows their opponent to land.  The ‘Defense wins Championships’ expression certainly applies to MMA, as Khabib is rarely hurt by his opponents because of his ability to avoid putting himself in a position for his opponent to land significant strikes.  On the other hand, Gaethje, who comes from a strong wrestling background, tends to fight more offensively by throwing many strikes on his opponents without focusing on controlling them.  The two unique fighting styles should lead to an exciting fight.</p>
+
+<p>Some less important features include whether the fighter fights orthodox or southpaw, the weight of the fighter (since opponents are always within proximity of weight with one another), and the number of knock outs.   However, because fighters are of similar weight, it’s not surprising that the height of a fighter plays a somewhat significant role in predicting the fight, as the taller fighter wins just 42% of all fights due to taller fighters likely having less muscle mass than a shorter fighter at the same weight.  Lastly, the above chart indicates that the relative importance of the Red fighter is greater than that of the Blue fighter which implies that the Red fighter’s data is more valuable when predicting the outcome of a fight.</p>
+
+<p>While analytics in sports is often associated with team sports like baseball and basketball, individual sports like MMA can also benefit from data driven analyses.  I expect data to eventually shape UFC fight strategy, judging, and spectators’ perception of mixed martial arts as data becomes more prevalent.</p>
+
+<p>And finally, using the methodology outlined above, I ran the Random Forest Python model with the statistical inputs from both Khabib and Gaethje, and the results give Khabib a 73% chance to win the fight.</p>
+
+:ET

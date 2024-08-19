@@ -1,0 +1,103 @@
+I"^8<p>Nearly six months after the first COVID-19 outbreak in the United States, there is still some confusion and contradicting claims about the impact of the virus and approaches on containment.  To some extent, lingering questions about the virus need more time and research to be answered, however there are several correctable COVID-19 fallacies that have emerged as a result of either data-less claims or misinterpretations of data.  By analyzing coronavirus data, I’ve attempted to paint a comprehensive picture of COVID-19’s impact including where the virus has been most prevalent, where the virus has been most lethal, and the factors that contribute to increased death rates.</p>
+
+<p>The data sources used in the following analyses are linked at the bottom.</p>
+
+<p>We’ll begin by looking at the U.S. COVID-19 cases and deaths per week over time.  To date, the United States has confirmed 6 million positive cases resulting in 183 thousand deaths and leaving an estimated overall mortality rate of 3% of confirmed cases.  The below chart indicates the U.S. has experienced two waves of high-volume positive cases. The second wave in the summer resulted in fewer death totals compared to the spring, despite a higher number of cases.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image1.png" alt="plot of chunk unnamed-chunk-1" /></p>
+
+<p>** We’ll later see that the apparent second wave is not actually a complete second wave, but primarily the first wave in different states.</p>
+
+<p>The below chart shows the improvement in reducing the ratio of deaths per case over time. While partially due to increased testing, most countries are now seeing death rates of around 1-2% compared to above 5% for much of the first few months.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image2.png" alt="plot of chunk unnamed-chunk-2" /></p>
+
+<p>** These are upper-echelon estimates since not everyone infected gets tested, but every COVID-19 death does count as a case.</p>
+
+<p>Next, we’ll look at how the United States COVID-19 metrics compare against the countries of Western Europe. Using total counts by country can be misleading and does not account for population sizes. Therefore, the following charts use population adjusted metrics. The chart below shows the United States has far more coronavirus cases, population adjusted, when compared to its Western European counterparts, however does this mean that the U.S. is truly doing the worst?  This depends on your definition of success and failure.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image3.png" alt="plot of chunk unnamed-chunk-3" /></p>
+
+<p>When highlighting several non-population adjusted metrics and valuing COVID-19 case count metrics with the same or greater importance as death count metrics, the Washington Post made the claim that the <a href="https://www.washingtonpost.com/politics/2020/07/21/metric-after-metric-coronavirus-pandemic-has-been-worse-us-than-nearly-any-other-country/" target="_blank">“pandemic has been worse in the U.S. than nearly any other country.”</a>  Conversely, President Trump has made several statements, notably in <a href="https://www.axios.com/trump-coronavirus-under-control-5f114a16-9952-428c-bc07-3cfa360b0977.html" target="_blank">his interview with Axios</a> that the U.S. has Coronavirus under control and is doing well, citing that our higher number of tests are inflating our number of positive cases relative to other countries.  As it turns out, both claims cherry-pick convenient data to support a predetermined narrative while ignoring or downplaying other countering data, and the reality is that our COVID-19 outlook falls somewhere in between.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image4.png" alt="plot of chunk unnamed-chunk-4" /></p>
+
+<p>There are three distinct ways to define success when it comes to dealing with COVID-19; minimize the timeframe of positive cases, minimize the number of cases, or minimize the number of deaths, and none of which are perfectly correlated as we’ve seen from the above charts.  My assertion is that the correct standard of success should be to minimize the number of deaths.  For example, as seen above, Belgium’s time frame of experiencing high rates of COVID-19 fatalities was relatively short and consistent with neighboring countries, however Belgium also has the highest overall deaths per million (of countries analyzed above).  Portugal, on the other hand, ranks in the top half of Western Europe in cases per million but is near the bottom of deaths per million.</p>
+
+<p>Population adjusted, the United States death rate falls in the upper middle range of several of the Western-European countries, despite having by far the most confirmed cases.  However, the slope for the U.S. is still increasing at a higher rate than other countries, suggesting that the U.S. is further from the coronavirus finish line than Western Europe.</p>
+
+<p>Because the above charts only compare the U.S. to Western Europe, the next two charts use the same measures but compare the U.S. to other noteworthy COVID-19 impacted nations around the world.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image5.png" alt="plot of chunk unnamed-chunk-5" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image6.png" alt="plot of chunk unnamed-chunk-6" /></p>
+
+<p>To better understand how to minimize the number of COVID-19 deaths, it’s important to note that the 183 thousand deaths in the United States are not of equal proportions within age demographics and when considering pre-existing health conditions.  About 1,500 (&lt; 1%) deaths resulted from COVID-19 are of people under the age of 35, a few hundred of which are under the age of 25.  Meanwhile, about 59% of COVID-19 deaths are from ages 75 and over and more than 80% of deaths are from ages 65 and over.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image7.png" alt="plot of chunk unnamed-chunk-7" /></p>
+
+<p>**The CDC Age Group data set accounts for 153 thousand USA deaths out of the 183 thousand total USA deaths</p>
+
+<p>When analyzing how comorbidities play into COVID-19 deaths, the <a href="https://www.cdc.gov/nchs/nvss/vsrr/covid_weekly/index.htm?fbclid=IwAR3-wrg3tTKK5-9tOHPGAHWFVO3DfslkJ0KsDEPQpWmPbKtp6EsoVV2Qs1Q" target="_blank">CDC reported</a> that “for 6% of the deaths, Covid-19 was the only cause mentioned. For deaths with conditions or causes in addition to Covid-19, on average, there were 2.6 additional conditions or causes per death.”  The below charts show the number of deaths tied to each of several common comorbidities in the United States, first by all Americans, and then broken down by each age group.  Perhaps the most threatening comorbidity is diabetes, as 10% of Americans have diabetes but about 27% of COVID-19 deaths were of diabetics.  Furthermore, each comorbidity affects each age group at a different rate.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image8.png" alt="plot of chunk unnamed-chunk-8" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image9.png" alt="plot of chunk unnamed-chunk-9" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image10.png" alt="plot of chunk unnamed-chunk-10" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image11.png" alt="plot of chunk unnamed-chunk-11" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image12.png" alt="plot of chunk unnamed-chunk-12" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image13.png" alt="plot of chunk unnamed-chunk-13" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image14.png" alt="plot of chunk unnamed-chunk-14" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image15.png" alt="plot of chunk unnamed-chunk-15" /></p>
+
+<p>With 94% of COVID-19 deaths involving at least one comorbidity and &lt; 1% of deaths being under the age of 35, the estimated number of American mortalities under age 35 with no comorbidities is approximately 110 people. This is not to downplay the seriousness of the virus responsible for the loss of 840 thousand lives around the world, but to provide insight to the attributes that increase or decrease an individual’s level of risk.</p>
+
+<p>Next, we’ll break down COVID-19 statistics state by state within the United States.  The below plot shows total cases per week among several of the hardest hit states.  As mentioned previously, using total cases and ignoring deaths can be deceiving and distort comparability.  Below is an unadjusted plot similar to those used in <a href="https://www.cnn.com/2020/07/13/health/florida-coronavirus-cases-comparisons/index.html" target="_blank">some reports that have overexaggerated the virus’s impact in Florida</a>.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image16.png" alt="plot of chunk unnamed-chunk-16" /></p>
+
+<p>A more representative graph to depict Florida’s comparability to other states is the total deaths per million.  The below graph shows each state’s deaths per million as opposed to above which strictly represents number of positive cases.  As seen above, Florida surpassed New York in total cases, but as seen below, Florida’s deaths per million is about one-quarter of that of New York and New Jersey.   California and Texas are in similar company to Florida while Massachusetts is comparable to its Northeast neighbors.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image17.png" alt="plot of chunk unnamed-chunk-17" /></p>
+
+<p>Despite New York’s significant number of deaths shown above, the <a href="https://www.nytimes.com/2020/05/20/nyregion/coronavirus-victims-immunity.html" target="_blank">New York Times reported</a> that New York ‘beat the virus’.  In doing so, the standard of success has shifted from minimizing deaths to minimizing the timeframe.  By looking below at new deaths per week (both absolute and population adjusted) for each of these states, the importance of ‘flattening the curve’ becomes apparent.  New York did not flatten their curve resulting in the highest spike of deaths, albeit a shorter window of high death rates.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image18.png" alt="plot of chunk unnamed-chunk-18" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image19.png" alt="plot of chunk unnamed-chunk-19" /></p>
+
+<p>With Florida, Texas, California, and New York all showing comparable waves of COVID-19 cases, there are a few possible theories as to why New York has almost as many deaths as the other 3 states combined.  One theory is that New York City is the most densely populated major city in America.  However, the below chart shows that population density has no correlation to the percentage of a population that will be infected.  Each point in the graph represents a county in the U.S. between the population density between 1000 people per square mile and 10,000 (to remove outliers).  San Francisco, the city with the 2nd highest population density after New York City, has a low number of cases and deaths compared to other major American cities.  <a href="https://chpcny.org/density-and-covid-19/" target="_blank">The Citizens Housing Planning Council of New York City has reported</a> that even within New York City, population density of each borough has no correlation to cases, suggesting that attributing high volume of COVID-19 cases to population density is innacurate.  While it’s more difficult to show with data, other theories surrounding the likely cause of New York’s steep outbreak include <a href="https://www.livescience.com/why-covid19-coronavirus-deaths-high-new-york.html" target="_blank">a high number of introductions to the virus</a> and <a href="https://apnews.com/5ebc0ad45b73a899efa81f098330204c" target="_blank">virus containment strategy</a>.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image20.png" alt="plot of chunk unnamed-chunk-20" /></p>
+
+<p>To assess the relationship that the virus has among cities within a state, the final charts below show a breakdown of a few selective states that have had high quantity of cases and have highly populated cities within their state. Notably, in Ohio, there was little correlation between the timeframe of deaths when comparing the major cities, as many cities experienced their highest death rates at different times.  On the other hand, in Texas and Florida there appears to be more correlation of the death rates from city to city over time and in California, Los Angeles has maintained significantly higher death rates than other cities within the state for the majority of the past 6 months.</p>
+
+<p><img src="/assets/images/2020-09-01-covid/image21.png" alt="plot of chunk unnamed-chunk-21" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image22.png" alt="plot of chunk unnamed-chunk-22" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image23.png" alt="plot of chunk unnamed-chunk-23" /></p>
+
+<p><img src="/assets/images/2020-09-01-covid/image24.png" alt="plot of chunk unnamed-chunk-24" /></p>
+
+<p>Each city, state, country, and continent has been impacted by and dealt with COVID-19 in different ways.  The data that’s been collected is an extremely powerful tool to use when drawing conclusions related to COVID-19 and when making decisions on how to best mitigate the virus moving forward. Misinterpreting data or excluding pivotal information can lead to flawed conclusions or counterproductive decision making.  To make the best use of data, it’s important to absorb all available information and to settle on a consistent standard of success.</p>
+
+<p>Thanks for reading!  Feel free to reach out with any suggestions, feedback, or questions at <a href="mailto:abmalter12@gmail.com">abmalter12@gmail.com</a>.</p>
+
+<p><strong>Data Sources:</strong></p>
+
+<p>COVID-19 Cases and Deaths: <a href="https://data.world/covid-19-data-resource-hub/covid-19-case-counts/workspace/file?filename=COVID-19+Activity.csv" target="_blank">Data.World</a></p>
+
+<p>COVID-19 Age Demographics and Comorbidities: <a href="https://data.cdc.gov/NCHS/Conditions-contributing-to-deaths-involving-corona/hk9y-quqm" target="_blank">Centers for Disease Control and Prevention</a></p>
+
+<p>U.S. Population Data: <a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html" target="_blank">U.S. Census Bureau</a></p>
+
+<p>World Population Data: <a href="https://population.un.org/" target="_blank">United Nations</a></p>
+
+:ET
