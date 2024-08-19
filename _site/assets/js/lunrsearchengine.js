@@ -8,7 +8,7 @@ var documents = [{
     "id": 1,
     "url": "http://localhost:4000/about",
     "title": "About Us",
-    "body": "Danny and Drew are brothers and both data scientists.  Danny lives in Chicago and has worked for Hyatt Hotels, Molson Coors and currently works at Accenture.  Drew lives in Denver and has worked for Slalom Consulting and currently works at Nowsta. Both sports fans, a hobby of ours is pairing sports with data science and writing about our findings. This blog is a collection of some of our work.  Contact Info: Danny Email: danmalter@gmail. com  LinkedIn  Drew  Email: abmalter12@gmail. com  LinkedIn   Follow @MalterAnalytics on Instagram  "
+    "body": "Danny and Drew are brothers and both data scientists.  Danny lives in Chicago and has worked for Hyatt Hotels, Molson Coors, Accenture, and currently is the VP of Data Science and Machine Learning at Intellicheck.  Drew lives in Denver and has worked for Slalom Consulting and currently is a Data Science Manager at Nowsta. Both sports fans, a hobby of ours is pairing sports with data science and writing about our findings. This blog is a collection of some of our work.  Contact Info: Danny Email: danmalter@gmail. com  LinkedIn  Drew  Email: abmalter12@gmail. com  LinkedIn   Follow @MalterAnalytics on Instagram  "
     }, {
     "id": 2,
     "url": "http://localhost:4000/categories",
