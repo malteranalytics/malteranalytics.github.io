@@ -1,0 +1,16 @@
+current directory: /Users/malter/Documents/GitHub/malteranalytics.github.io/vendor/bundle/ruby/2.6.0/gems/racc-1.8.1/ext/racc/cparse
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20240818-27341-1ycmtxh.rb extconf.rb
+creating Makefile
+
+current directory: /Users/malter/Documents/GitHub/malteranalytics.github.io/vendor/bundle/ruby/2.6.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/malter/Documents/GitHub/malteranalytics.github.io/vendor/bundle/ruby/2.6.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: directory not found for option '-L/AppleInternal/Library/BuildRoots/9e200cfa-7d96-11ed-886f-a23c4f261b56/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.2.Internal.sdk/usr/local/lib'
+
+current directory: /Users/malter/Documents/GitHub/malteranalytics.github.io/vendor/bundle/ruby/2.6.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20240818-27341-11cn2hs/racc
