@@ -8,11 +8,11 @@ google_analytics: 'UA-137918066-1'
 disqus: 'danmalter'
 follow-twitter: 'http://www.twitter.com/danmalter'
 follow-instagram: 'http://www.instagram.com/malteranalytics'
-follow-facebook: 'http://www.facebook.com/malteranalytics'
-#follow-linkedin: 'http://www.linkedin.com/in/malteranalytics/'
-follow-github: 'http://github.com/malteranalytics'
+follow-facebook: 'https://www.facebook.com/malteranalytics'
+#follow-linkedin: 'https://www.linkedin.com/in/malteranalytics/'
+follow-github: 'https://github.com/malteranalytics'
 mailchimp-list: 
-url: ""
+url: "https://malteranalytics.github.io/"
 #
 include: ["_pages"]
 permalink: /:title/
@@ -26,14 +26,14 @@ authors:
     gravatar: d8f2524cf47fb8fa03ba52ad8579238f
     #email: email@malteranalytics.com
     web: 
-    twitter: http://twitter.com/danmalter
+    twitter: https://twitter.com/danmalter
     description: "Data Scientist"
   drew:
     name: Andrew Malter
     display_name: Drew
     gravatar: 22bbf73d98a84d2a896c474e26a1a8fe
     web: 
-    #twitter: http://www.instagram.com/malteranalytics/?hl=en
+    #twitter: https://www.instagram.com/malteranalytics/?hl=en
     description: "Data Scientist"
   danny_drew:
     name: Danny Malter & Drew Malter
@@ -41,7 +41,7 @@ authors:
     gravatar: d8f2524cf47fb8fa03ba52ad8579238f
     #email: email@malteranalytics.com
     web: 
-    #twitter: http://twitter.com/danmalter
+    #twitter: https://twitter.com/danmalter
     description: "Data Scientist"
 
 # Plugins
