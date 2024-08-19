@@ -93,6 +93,10 @@
 <lastmod>2023-06-26T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/parisolympics/</loc>
+<lastmod>2024-08-19T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -214,6 +218,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/category/football/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/category/paris/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>

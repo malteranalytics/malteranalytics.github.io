@@ -1,132 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="icon" href="/assets/images/favicon.png">
-
-<title>Home | Malter Analytics</title>
-
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Home | Analytics and Data Science Blog</title>
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Home" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="Analytics and Data Science Blog" />
-<link rel="next" href="http://localhost:4000/page2/" />
-<script type="application/ld+json">
-{"@type":"WebSite","headline":"Home","name":"Analytics and Data Science Blog","url":"http://localhost:4000/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/Malter-Analytics-Logo.png"}},"@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-<link href="/assets/css/screen.css" rel="stylesheet">
-
-<link href="/assets/css/main.css" rel="stylesheet">
-
-<script src="/assets/js/jquery.min.js"></script>
-
-</head>
-
-
-
-
-<body class="layout-default">
-	<!-- defer loading of font and font awesome -->
-	<noscript id="deferred-styles">
-		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	</noscript>
-
-
-<!-- Begin Menu Navigation
-================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-
-    <div class="container pr-0">
-
-    <!-- Begin Logo -->
-    <a class="navbar-brand" href="/">
-    <img src="/assets/images/Malter-Analytics-Logo.png" alt="Malter Analytics">
-    </a>
-    <!-- End Logo -->
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMediumish">
-
-        <!-- Begin Menu -->
-
-            <ul class="navbar-nav ml-auto">
-
-                
-                <li class="nav-item active">
-                
-                <a class="nav-link" href="/index.html">Blog</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-                </li>
-
-                <script src="/assets/js/lunr.js"></script>
-
-
-<style>
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
-</style>
-
-
-</ul>
-<form class="bd-search" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter...">
-</form>
-
-<div id="lunrsearchresults">
-    <ul></ul>
-</div>
-
-<script src="/assets/js/lunrsearchengine.js"></script>
-
-            
-
-        <!-- End Menu -->
-
-    </div>
-
-    </div>
-</nav>
-<!-- End Navigation
-================================================== -->
-
-<div class="site-content">
-
-<div class="container">
-
-<!-- Site Title
-================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">Malter Analytics</h1>
-    <p class="lead">
-        
-    </p>
-</div>
-
-<!-- Content
-================================================== -->
-<div class="main-content">
-    
-
+I"]N
 <!-- Featured
 ================================================== -->
 <section class="featured-posts">
@@ -157,7 +29,7 @@
                     <div class="wrapthumbnail">
                         <a href="/mlb-vegas-pitcher-bias/">
                             
-                            <img class="featured-box-img-cover" src="https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png">
+                            <img class="featured-box-img-cover" src="https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png" />
                             
                         </a>
                     </div>
@@ -179,11 +51,11 @@
                                 
                                 <span class="meta-footer-thumb">
                                 
-                                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny">
+                                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny" />
                                 
                                 </span>
                                 <span class="author-meta">
-                                <span class="post-name"><a target="_blank" href="">Danny</a></span><br>
+                                <span class="post-name"><a target="_blank" href="">Danny</a></span><br />
                                 
                                 <span class="post-date">19 Apr 2022</span>
                                 </span>
@@ -255,7 +127,7 @@
                     <div class="wrapthumbnail">
                         <a href="/nbadraft/">
                             
-                            <img class="featured-box-img-cover" src="https://malteranalytics.github.io/assets/images/2023-06-26-nba-draft2023/image25.png">
+                            <img class="featured-box-img-cover" src="https://malteranalytics.github.io/assets/images/2023-06-26-nba-draft2023/image25.png" />
                             
                         </a>
                     </div>
@@ -277,11 +149,11 @@
                                 
                                 <span class="meta-footer-thumb">
                                 
-                                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny &amp; Drew">
+                                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny &amp; Drew" />
                                 
                                 </span>
                                 <span class="author-meta">
-                                <span class="post-name"><a target="_blank" href="">Danny &amp; Drew</a></span><br>
+                                <span class="post-name"><a target="_blank" href="">Danny &amp; Drew</a></span><br />
                                 
                                 <span class="post-date">10 Sep 2020</span>
                                 </span>
@@ -344,8 +216,6 @@
     </div>
 </section>
 
-
-
 <!-- Posts Index
 ================================================== -->
 <section class="recent-posts">
@@ -371,7 +241,7 @@
                 
 
                     
-                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2024-08-19-paris-olympics/image19.png" alt="Paris Olympics Recapped in Data"> 
+                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2024-08-19-paris-olympics/image19.png" alt="Paris Olympics Recapped in Data" /> 
                     
 
                 
@@ -389,11 +259,11 @@
                 
                 <span class="meta-footer-thumb">
                 
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew" />
                 
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="">Drew</a></span><br>
+                <span class="post-name"><a target="_blank" href="">Drew</a></span><br />
                 
                 <span class="post-date">19 Aug 2024</span>
                 </span>
@@ -417,7 +287,7 @@
                 
 
                     
-                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2023-06-26-nba-draft2023/image25.png" alt="2023 NBA Draft Scouting Report"> 
+                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2023-06-26-nba-draft2023/image25.png" alt="2023 NBA Draft Scouting Report" /> 
                     
 
                 
@@ -435,11 +305,11 @@
                 
                 <span class="meta-footer-thumb">
                 
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny &amp; Drew">
+                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny &amp; Drew" />
                 
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="">Danny &amp; Drew</a></span><br>
+                <span class="post-name"><a target="_blank" href="">Danny &amp; Drew</a></span><br />
                 
                 <span class="post-date">26 Jun 2023</span>
                 </span>
@@ -463,7 +333,7 @@
                 
 
                     
-                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png" alt="Bettor and Vegas Bias Towards Gerrit Cole"> 
+                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-04-19-mlb-vegas-pitcher-bias/gerrit_cole.png" alt="Bettor and Vegas Bias Towards Gerrit Cole" /> 
                     
 
                 
@@ -481,11 +351,11 @@
                 
                 <span class="meta-footer-thumb">
                 
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny">
+                <img class="author-thumb" src="https://www.gravatar.com/avatar/d8f2524cf47fb8fa03ba52ad8579238f?s=250&amp;d=mm&amp;r=x" alt="Danny" />
                 
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="">Danny</a></span><br>
+                <span class="post-name"><a target="_blank" href="">Danny</a></span><br />
                 
                 <span class="post-date">19 Apr 2022</span>
                 </span>
@@ -509,7 +379,7 @@
                 
 
                     
-                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-04-07-nba-playoff-analysis/image29.png" alt="An Application of Unsupervised Machine Learning: What Each Team Should Focus on Heading into the NBA Playoffs"> 
+                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-04-07-nba-playoff-analysis/image29.png" alt="An Application of Unsupervised Machine Learning: What Each Team Should Focus on Heading into the NBA Playoffs" /> 
                     
 
                 
@@ -527,11 +397,11 @@
                 
                 <span class="meta-footer-thumb">
                 
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew" />
                 
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="">Drew</a></span><br>
+                <span class="post-name"><a target="_blank" href="">Drew</a></span><br />
                 
                 <span class="post-date">07 Apr 2022</span>
                 </span>
@@ -555,7 +425,7 @@
                 
 
                     
-                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-02-22-nba-lineups/image16.png" alt="Can NBA Teams Stay Competitive on a Low Budget?"> 
+                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-02-22-nba-lineups/image16.png" alt="Can NBA Teams Stay Competitive on a Low Budget?" /> 
                     
 
                 
@@ -573,11 +443,11 @@
                 
                 <span class="meta-footer-thumb">
                 
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew" />
                 
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="">Drew</a></span><br>
+                <span class="post-name"><a target="_blank" href="">Drew</a></span><br />
                 
                 <span class="post-date">22 Feb 2022</span>
                 </span>
@@ -601,7 +471,7 @@
                 
 
                     
-                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-01-06-special-teams/image10.png" alt="Special Teams Edge"> 
+                        <img class="img-fluid" src="https://malteranalytics.github.io/assets/images/2022-01-06-special-teams/image10.png" alt="Special Teams Edge" /> 
                     
 
                 
@@ -619,11 +489,11 @@
                 
                 <span class="meta-footer-thumb">
                 
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew">
+                <img class="author-thumb" src="https://www.gravatar.com/avatar/22bbf73d98a84d2a896c474e26a1a8fe?s=250&amp;d=mm&amp;r=x" alt="Drew" />
                 
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="">Drew</a></span><br>
+                <span class="post-name"><a target="_blank" href="">Drew</a></span><br />
                 
                 <span class="post-date">06 Jan 2022</span>
                 </span>
@@ -649,7 +519,7 @@
     
 <div class="pagination">
   
-    <span>« Prev</span>
+    <span>&laquo; Prev</span>
   
 
   
@@ -671,174 +541,11 @@
   
 
   
-    <a class="ml-1 mr-1" href="/page2/">Next »</a>
+    <a class="ml-1 mr-1" href="/page2/">Next &raquo;</a>
   
 </div>
 
 </span>
 </div>
 
-
-</div>
-
-<!-- Bottom Alert Bar
-================================================== -->
-<div class="alertbar">
-	<div class="container text-center">
-		<span>Follow me on your preferred social network.</span>  
-        
-        <a target="_blank" href="http://www.instagram.com/malteranalytics" rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i>
-        </a>  
-        
-        
-        <a target="_blank" href="http://www.twitter.com/danmalter" rel="noopener noreferrer">
-            <i class="fab fa-twitter"></i>
-        </a>  
-        
-        
-        <a target="_blank" href="https://www.facebook.com/malteranalytics" rel="noopener noreferrer">
-            <i class="fab fa-facebook-f"></i>
-        </a>  
-        
-        
-        
-        <a target="_blank" href="https://github.com/malteranalytics" rel="noopener noreferrer">
-            <i class="fab fa-github"></i>
-        </a>
-        
-        
-	</div>
-</div>
-    
-</div>
-
-<!-- Categories Jumbotron
-================================================== -->
-<div class="jumbotron fortags">
-	<div class="d-md-flex h-100">
-		<div class="col-md-4 transpdark align-self-center text-center h-100">
-            <div class="d-md-flex align-items-center justify-content-center h-100">
-                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span>
-</h2>
-            </div>
-		</div>
-		<div class="col-md-8 p-5 align-self-center text-center">
-            
-            
-                
-                    <a class="mt-1 mb-1" href="/categories#YOLO">YOLO (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#MLB">MLB (4)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#NBA">NBA (6)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Clustering">Clustering (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Analytics">Analytics (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#R">R (6)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Baseball">Baseball (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Moneyball">Moneyball (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#NFL">NFL (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#football">football (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Sports">Sports (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#NHL">NHL (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#ww2">ww2 (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Allies">Allies (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#D-Day">D-Day (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#AWS">AWS (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#mlb">mlb (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#baseball">baseball (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#dataviz">dataviz (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#covid">covid (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#covid19">covid19 (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#coronavirus">coronavirus (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Basketball">Basketball (4)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#UFC">UFC (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#MMA">MMA (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#python">python (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#MarchMadness">MarchMadness (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#basketball">basketball (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#college">college (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Golf">Golf (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Masters">Masters (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#openpose">openpose (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Olympics">Olympics (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Tokyo">Tokyo (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Football">Football (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Paris">Paris (1)</a>
-                
-            
-            
-		</div>
-	</div>
-</div>
-
-<!-- Begin Footer
-================================================== -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © 2024 Malter Analytics
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-            </div>
-        </div>
-    </div>
-
-<!-- End Footer
-================================================== -->
-
-</div> <!-- /.site-content -->
-
-<!-- Scripts
-================================================== -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-<script src="/assets/js/mediumish.js"></script>
-
-
-
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
-
-
-
-</footer>
-</div></body>
-</html>
+:ET
