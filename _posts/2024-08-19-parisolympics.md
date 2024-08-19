@@ -11,7 +11,7 @@ featured: false
 
 
 
-The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals.  Here, we will use data to recap the games and to analyze the several factors that correlate with Olympic success, such as population, GDP, geography, and more.  We'll also explore insights about which regions of the world succeed in each type of sports and which countries are exceptional in womens' sport.
+The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals.  Here, we will use data to recap the games and to analyze the several factors that correlate with Olympic success, such as population, GDP, geography, and more.  We'll also explore insights about which regions of the world succeed in each type of sports and which countries are exceptional in womens' sports.
 
 The first chart below shows the top 12 countries in medals with a break down of each medal.  The United States led the world in gold, silver, and bronze; and with a total of 123 medals, and earned medals in roughly one-third of all events.
 
