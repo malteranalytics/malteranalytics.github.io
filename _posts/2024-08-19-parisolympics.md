@@ -89,3 +89,4 @@ Finally, the last series of maps breaks down the medal count across the world am
 ![plot of chunk unnamed-chunk-20](/assets/images/2024-08-19-paris-olympics/image18.png) 
 
 
+You can check out the same recap of the 2021 Tokyo Olympics here [here](https://malteranalytics.github.io/olympics/){:target="_blank"}
