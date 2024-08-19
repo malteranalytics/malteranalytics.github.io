@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Aug 2024 22:20:37 -0500</pubDate>
-    <lastBuildDate>Sun, 18 Aug 2024 22:20:37 -0500</lastBuildDate>
+    <pubDate>Sun, 18 Aug 2024 22:28:36 -0500</pubDate>
+    <lastBuildDate>Sun, 18 Aug 2024 22:28:36 -0500</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -514,72 +514,77 @@ Generally, many NBA team’s 5-player lineups add up to somewhere between $50-$8
       </item>
     
       <item>
-        <title>Paris Olympics Recapped in Data</title>
-        <description>&lt;p&gt;The Paris Olympics featured 328 events across 45 disciplines, with 92 different nations bringing home medals.  Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more.  The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in womens’ sports, and to what extent population and GDP predict a nation’s success.&lt;/p&gt;
+        <title>Analyzing Success in the 2021 Olympics</title>
+        <description>&lt;p&gt;The Tokyo Olympics featured 339 events across 50 disciplines, with 93 different nations bringing home medals.  Using data can allow us to dissect the several factors that correlate with Olympic success, such as population, GDP, geography, and more.  The below series of charts show many insights such as which regions of the world succeed in which types of sports, which countries are exceptional in women’s sports, and to what extent population and GDP predict a nation’s success.&lt;/p&gt;
 
-&lt;p&gt;The first chart below shows the top 12 countries in medals with a break down of each medal.  The United States led the world in gold, silver, and bronze; and with a total of 123 medals, and earned medals in roughly one-third of all events.&lt;/p&gt;
+&lt;p&gt;The first chart below shows the top 12 medaling countries with a break down of each medal.  The United States led the world in gold, silver, and bronze; and with a total of 113 medals, medaled in roughly one-third of all events.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-08-17-olympics/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The map below represents the number of medals won across the world.  While each continent had podium representation, we’ll later look at specific types of sports that different regions of the world succeed in.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-08-17-olympics/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The plot below explains the effect that a nation’s population has on their success in the Olympics.  Outliers removed, the correlation of the below plot is 0.6 (R&lt;sup&gt;2&lt;/sup&gt; = 0.35), which means about one-third of the variance of medal counts can be explained by population, leaving two-thirds up to other possible variables.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-08-17-olympics/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If Olympic success is measured on a per capita basis, the top nations would be Grenada, Dominica, and Saint Lucia.  The below chart shows the ratio of the number of medals per 1 million population of each country.   Among the 13 nations with at least 20 medals, New Zealand has by far the lowest population at about 5 million.&lt;/p&gt;
+&lt;p&gt;If Olympic success is measured on a per capita basis, the top nations would be San Marino, Bermuda, and Grenada.  The below chart shows the ratio of the number of medals per 1 million population of each country.   Among the 15 nations with at least 20 medals, New Zealand has by far the lowest population at under 5 million.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-08-17-olympics/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The next chart below shows that GDP is an even greater predictor of Olympic success than population.  Outliers removed, the correlation of this plot is .8 (R&lt;sup&gt;2&lt;/sup&gt; = 0.62), demonstrating a very strong connection between medal count and GDP.   Countries that vastly outperformed their GDP are Kenya, Cuba, and Ukraine, and Uzbekistan.&lt;/p&gt;
+&lt;p&gt;The next chart below shows that GDP is an even greater predictor of Olympic success than population.  Outliers removed, the correlation of this plot is .8 (R&lt;sup&gt;2&lt;/sup&gt; = 0.62), demonstrating a very strong connection between medal count and GDP.   Countries that vastly outperformed their GDP are Kenya, Cuba, and Ukraine.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-08-17-olympics/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The next chart looks at the percent of a country’s medals that were won in women sports, among countries that won at least 7 medals.  While a small sample size of medals for several countries leave us unable to draw a definitive conclusion, these percentages possibly give indication into what counties could be leading the way in encouraging in and or investing in womens’ sports.  Bulgaria won 10 medals, 8 of which in women’s events.  The United States also ranks near the top of the list with 59% of 123 medals going to female athletes.  As expected, most counties fall within a few percentage points up or down from 50%.&lt;/p&gt;
+&lt;p&gt;The next chart looks at the percent of a country’s medals that were won in women sports, among countries that won at least 4 medals.  While a small sample size of medals for several countries leave us unable to draw a definitive conclusion, these percentages potentially give indication into what counties could be leading the way in encouraging in and or investing in women’s sports.  Bulgaria won 6 medals, all in women’s events.  The United States also ranks near the top of the list with 63% of 113 medals going to female athletes.  As expected, most counties fall within a few percentage points up or down from 50%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-paris-olympics/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-08-17-olympics/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The last series of maps breaks down the medal count across the world among specific Olympic sport categories.  This gives some insight into which geographic regions tend to excel in which types of sports.  The categories that sports are broken into are Artistic Exercise, Boat, Martial Arts and Combat, Endurance and Exercise, Extreme Sports, Horse, Precision Sports, Racket Sports, Speed and Athletics, Strength Sports, Swimming, and Team Sports.  The individual sports that fall into each category are laid out with each chart.&lt;/p&gt;
+&lt;p&gt;The last series of maps breaks down the medal count across the world among specific Olympic sport categories.  This gives some insight into which geographic regions tend to excel in which types of sports.  The categories that sports are broken into are Artistic Exercise, Boat, Combat, Endurance, Cycling, Extreme Sports, Horse, Martial Arts, Precision Sports, Racket Sports, Speed and Athletics, Strength Sports, Swimming, and Team Sports.  The individual sports that fall into each category are laid out with each chart.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Artistic Exercise:&lt;/strong&gt; Gymnastics, Rhythmic Gymnastics, Diving, Trampolining, and Break Dancing
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Artistic Exercise:&lt;/strong&gt; Gymnastics, Rhythmic Gymnastics, Diving, and Trampolining
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Boat Sports:&lt;/strong&gt; Canoe Slalom, Canoe Sprint, Rowing, and Sailing
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image8.png&quot; alt=&quot;plot of chunk unnamed-chunk-8&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Martial Arts &amp;amp; Combat Sports:&lt;/strong&gt; Fencing, Judo, Karate, Taekwondo, Boxing, Wrestling
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Combat Sports:&lt;/strong&gt; Boxing, Wrestling
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image9.png&quot; alt=&quot;plot of chunk unnamed-chunk-9&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Endurance and Exercise Sports:&lt;/strong&gt; Track (&amp;gt;= 800 meters), Marathon, Triathlon, Cycling
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image10.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Endurance Sports:&lt;/strong&gt; Track (&amp;gt;= 800 meters), Marathon, Triathlon
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image10.png&quot; alt=&quot;plot of chunk unnamed-chunk-10&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Extreme Sports:&lt;/strong&gt; BMX freestyle, BMX racing, Mountain Biking, Skateboarding, Climbing, Surfing, Wing Surfing
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image11.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cycling:&lt;/strong&gt; Cycling Road, Cycling Track
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image11.png&quot; alt=&quot;plot of chunk unnamed-chunk-11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Extreme Sports:&lt;/strong&gt; BMX freestyle, BMX racing, Mountain Biking, Skateboarding, Climbing, Surfing
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image12.png&quot; alt=&quot;plot of chunk unnamed-chunk-12&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Horse Sports:&lt;/strong&gt; Equestrian Dressage, Equestrian Eventing
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image12.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image13.png&quot; alt=&quot;plot of chunk unnamed-chunk-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Martial Arts:&lt;/strong&gt; Fencing, Judo, Karate, Taekwondo
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image14.png&quot; alt=&quot;plot of chunk unnamed-chunk-14&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Precision Sports:&lt;/strong&gt; Archery, Shooting, Golf
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image13.png&quot; alt=&quot;plot of chunk unnamed-chunk-15&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image15.png&quot; alt=&quot;plot of chunk unnamed-chunk-15&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Racket Sports:&lt;/strong&gt; Tennis, Badminton, Table Tennis
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image14.png&quot; alt=&quot;plot of chunk unnamed-chunk-16&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image16.png&quot; alt=&quot;plot of chunk unnamed-chunk-16&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Speed and Athletics:&lt;/strong&gt; Track (&amp;lt;=400 meters), Decathlon, High Jump, Triple Jump, Long Jump, Pole Vault, Heptathlon 
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image15.png&quot; alt=&quot;plot of chunk unnamed-chunk-17&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image17.png&quot; alt=&quot;plot of chunk unnamed-chunk-17&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Strength Sports:&lt;/strong&gt; Weightlifting, Discus Throw, Hammer Throw, Shotput, Javelin Throw
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image16.png&quot; alt=&quot;plot of chunk unnamed-chunk-18&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image18.png&quot; alt=&quot;plot of chunk unnamed-chunk-18&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Swimming:&lt;/strong&gt; All indoor swimming events, open water long distance swimming&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image17.png&quot; alt=&quot;plot of chunk unnamed-chunk-19&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2021-08-17-olympics/image19.png&quot; alt=&quot;plot of chunk unnamed-chunk-19&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Team Sports:&lt;/strong&gt; Basketball, Field Hockey, Soccer, Volleyball, Beach Volleyball, Rugby Sevens, Handball, Water Polo
-&lt;img src=&quot;/assets/images/2024-08-19-olympics/paris-olympics/image18.png&quot; alt=&quot;plot of chunk unnamed-chunk-20&quot; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;Team Sports:&lt;/strong&gt; Basketball, Field Hockey, Soccer, Volleyball, Beach Volleyball, Softball, Baseball, Rugby Sevens, Handball, Water Polo
+&lt;img src=&quot;/assets/images/2021-08-17-olympics/image20.png&quot; alt=&quot;plot of chunk unnamed-chunk-20&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 17 Aug 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/olympics/</link>
@@ -596,7 +601,7 @@ Generally, many NBA team’s 5-player lineups add up to somewhere between $50-$8
         
         <category>Olympics</category>
         
-        <category>Paris</category>
+        <category>Tokyo</category>
         
       </item>
     
