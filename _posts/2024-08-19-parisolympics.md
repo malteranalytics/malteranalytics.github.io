@@ -3,7 +3,7 @@ layout: post
 title:  "Paris Olympics Recapped in Data"
 author: drew
 categories: [ Olympics, Paris ]
-image: "https://malteranalytics.github.io/assets/images/2024-08-19-paris-olympics/image18.png"
+image: "https://malteranalytics.github.io/assets/images/2024-08-19-paris-olympics/image19.png"
 tags: [olympics, sports, rstats, dataviz]
 featured: false
 ---
