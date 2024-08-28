@@ -5,9 +5,42 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Aug 2024 21:05:14 -0500</pubDate>
-    <lastBuildDate>Tue, 27 Aug 2024 21:05:14 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Aug 2024 10:29:08 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Aug 2024 10:29:08 -0500</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>NFL 2024 Forecast Model</title>
+        <description>&lt;p&gt;Updated Tuesday mornings following the conclusion of each NFL week.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-09-03-nfl-odds-2024/image2.png&quot; alt=&quot;plot 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Probability of each team to finish the season in a given spot in their conference standings.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2024-09-03-nfl-odds-2024/image1.png&quot; alt=&quot;plot 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Methodology - The probabilities are calculated from the results of running 1 million simulations of the 2024 season.  Inputs into the simulation are derived from up-to-date Vegas odds, team schedules, and historical NFL data.  Following each week, the full simulation runs for refreshed odds.&lt;/p&gt;
+
+&lt;p&gt;For questions, comments, or suggestions, please reach out to Drew or Danny.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Aug 2024 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/nfl-odds2024/</link>
+        <guid isPermaLink="true">http://localhost:4000/nfl-odds2024/</guid>
+        
+        <category>nfl</category>
+        
+        <category>sports</category>
+        
+        <category>football</category>
+        
+        <category>odds</category>
+        
+        
+        <category>NFL</category>
+        
+        <category>football</category>
+        
+      </item>
     
       <item>
         <title>Paris Olympics Recapped in Data</title>
@@ -884,54 +917,6 @@ Because of the erratic nature of the Masters, no variable is completely reliable
         <category>Golf</category>
         
         <category>Masters</category>
-        
-      </item>
-    
-      <item>
-        <title>An Analytics Guide to March Madness</title>
-        <description>&lt;p&gt;Year after year, March Madness continues to prove that data science cannot crack every code.   There’s far too much variance among the estimated 120 Billion possible ways to reasonably fill out a bracket.  Just as an AI algorithm can’t predict the result of a coin toss any better than a human being can, algorithms can only do so much when predicting a single elimination basketball tournament of 68 college teams that spread across dozens of leagues.  While analyzing tournament data won’t give you a perfect bracket, it can however slightly increase your chances of winning your bracket pool.  I’ve always believed the fun in March Madness is picking a bracket with your heart, but for the games you can’t make up your mind, maybe some data insights can sway your decision.&lt;/p&gt;
-
-&lt;p&gt;The first set of charts below shows the percent of possible outcomes in the past 35 tournaments in which each given seed has made it to the respective round.  For example, in 35 tournaments, 1-seeds have had 70 opportunities to make it the championship game (Two teams per tournament), in which 35 times (50%) a 1 seed has played in the championship game.  You’ll see that once a one seed makes it to the final four, their chances of winning the tournament begin to increase.  Other notable takeaways are that 9 seeds beat 8 seeds slightly more than 50% of the matchups and all seeds greater than 3 have made it to the Sweet 16 less than half the time.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image2.png&quot; alt=&quot;plot of chunk unnamed-chunk-2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image3.png&quot; alt=&quot;plot of chunk unnamed-chunk-3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image4.png&quot; alt=&quot;plot of chunk unnamed-chunk-4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It can also be seen that 10, 11, and 12 seeds make it to the Sweet 16 more often than 8 and 9 seeds, even though they are presumably worse teams.  This is because 8 and 9 seeds have to play 1 seeds if they win their first game.&lt;/p&gt;
-
-&lt;p&gt;The next chart below shows the tournament win percentages by conference in the past 35 seasons, among conferences with at least 20 cumulative tournament wins.  While ACC teams are not as well represented this year compared to years past, the ACC is historically the most successful tournament conference.  The Big 10 Conference, third in all time tournament win percentage, will be the conference to watch this March as they have the most tournament teams at 9, 4 of which are in the top 2 seeds.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image5.png&quot; alt=&quot;plot of chunk unnamed-chunk-5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Using historical March Madness patterns and 2021 season data, I’ve output the percent probabilities of each team to make it to each round.  Gonzaga is the notable favorite with a 50% chance of making the Final 4 and a 22% chance of winning the tournament.  The only other teams with greater than a 5% of winning the tournament are Gonzaga’s fellow 1 seeds, Illinois, Baylor, and Michigan.  However, the chances that a team from the rest of the field wins the tournament is still nearly 50%.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image6.png&quot; alt=&quot;plot of chunk unnamed-chunk-6&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-03-16-march_madness2021/image7.png&quot; alt=&quot;plot of chunk unnamed-chunk-7&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 15 Mar 2021 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/nfl-march_maddness2021/</link>
-        <guid isPermaLink="true">http://localhost:4000/nfl-march_maddness2021/</guid>
-        
-        <category>marchmadness</category>
-        
-        <category>basketball</category>
-        
-        <category>rstats</category>
-        
-        <category>dataviz</category>
-        
-        
-        <category>MarchMadness</category>
-        
-        <category>basketball</category>
-        
-        <category>college</category>
         
       </item>
     
