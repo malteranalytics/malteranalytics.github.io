@@ -53,7 +53,7 @@ var documents = [{
     "id": 10,
     "url": "http://localhost:4000/nfl-odds2024/",
     "title": "NFL 2024 Forecast Model",
-    "body": "2024/08/28 - Updated Tuesday mornings following the conclusion of each NFL week.  Probability of each team to finish the season in a given spot in their conference standings.  Methodology - The probabilities are calculated from the results of running 1 million simulations of the 2024 season.  Inputs into the simulation are derived from up-to-date Vegas odds, team schedules, and historical NFL data.  Following each week, the full simulation runs for refreshed odds. For questions, comments, suggestions, or access to the data, please reach out to Drew or Danny. "
+    "body": "2024/08/28 - Updated Tuesday mornings following the conclusion of each NFL week. Full Season Forecast Regular Season Forecast Methodology - The probabilities are calculated from the results of running 1 million simulations of the 2024 season.  Inputs into the simulation are derived from up-to-date Vegas odds, team schedules, and historical NFL data.  Following each week, the full simulation runs for refreshed odds. For questions, comments, suggestions, or access to the data, please reach out to Drew or Danny. "
     }, {
     "id": 11,
     "url": "http://localhost:4000/parisolympics/",

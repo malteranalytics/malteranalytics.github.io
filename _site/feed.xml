@@ -5,17 +5,19 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Aug 2024 11:09:31 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Aug 2024 11:09:31 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Aug 2024 11:47:10 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Aug 2024 11:47:10 -0500</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
         <title>NFL 2024 Forecast Model</title>
         <description>&lt;p&gt;Updated Tuesday mornings following the conclusion of each NFL week.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Full Season Forecast&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/images/2024-09-03-nfl-odds-2024/image2.png&quot; alt=&quot;plot 2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Probability of each team to finish the season in a given spot in their conference standings.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Regular Season Forecast&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2024-09-03-nfl-odds-2024/image1.png&quot; alt=&quot;plot 1&quot; /&gt;&lt;/p&gt;
 
