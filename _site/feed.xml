@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Aug 2024 10:29:08 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Aug 2024 10:29:08 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Aug 2024 10:38:37 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Aug 2024 10:38:37 -0500</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -19,9 +19,9 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2024-09-03-nfl-odds-2024/image1.png&quot; alt=&quot;plot 1&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Methodology - The probabilities are calculated from the results of running 1 million simulations of the 2024 season.  Inputs into the simulation are derived from up-to-date Vegas odds, team schedules, and historical NFL data.  Following each week, the full simulation runs for refreshed odds.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Methodology&lt;/strong&gt; - The probabilities are calculated from the results of running 1 million simulations of the 2024 season.  Inputs into the simulation are derived from up-to-date Vegas odds, team schedules, and historical NFL data.  Following each week, the full simulation runs for refreshed odds.&lt;/p&gt;
 
-&lt;p&gt;For questions, comments, or suggestions, please reach out to Drew or Danny.&lt;/p&gt;
+&lt;p&gt;For questions, comments, suggestions, or access to the data, please reach out to Drew or Danny.&lt;/p&gt;
 </description>
         <pubDate>Wed, 28 Aug 2024 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/nfl-odds2024/</link>
