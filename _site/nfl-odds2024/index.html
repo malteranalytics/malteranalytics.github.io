@@ -219,8 +219,7 @@
   <li>The Rams to win their division at +350 has slight edge given their 23% probability to take the NFC West.  All 31 other division winner bets on DraftKings have negative edge.</li>
 </ul>
 
-<p><strong>Methodology</strong> - The probabilities are calculated from the results of running 1 million simulations of the 2024 season.  Inputs into the simulation are derived from up-to-date Vegas odds, team schedules, historical NFL data, and current NFL playoff format.
-Following each week, the full simulation runs for refreshed odds.</p>
+<p><strong>Methodology</strong> - The probabilities are calculated from the results of running 1 million simulations of the 2024 season.  Inputs into the simulation are derived from up-to-date Vegas odds, team schedules, historic and current NFL data, and the NFL playoff format. For each team, our model calculates expectations and a variance factor (the likelihood that they sway up or down from expectations).  We then let the simulation run, and odds are generated as the number of occurrences for each team divided by 1 million (total simulation runs).  We leverage the following Python open source libraries: numpy, scipy.stats, skewnorm, random, nfl_data_py.  Following each week, the full simulation runs for refreshed odds.</p>
 
 <p>For questions, comments, suggestions, or access to the data, please reach out to Drew or Danny.</p>
 
