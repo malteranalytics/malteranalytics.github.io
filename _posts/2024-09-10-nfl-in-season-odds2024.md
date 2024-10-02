@@ -3,12 +3,20 @@ layout: post
 title:  "NFL 2024 Forecast Model"
 author: drew
 categories: [ NFL, football ]
-image: "https://malteranalytics.github.io/assets/images/2024-09-03-nfl-odds-2024/image5.png"
+image: "https://malteranalytics.github.io/assets/images/2024-09-03-nfl-odds-2024/image6.png"
 tags: [nfl, sports, football, odds]
 featured: true
 ---
 
 Updated Tuesday mornings following the conclusion of each NFL week.
+
+
+***Forecast Entering Week 5***
+
+
+![plot 2](/assets/images/2024-09-03-nfl-odds-2024/image6.png) 
+
+
 
 
 ***Forecast Entering Week 4***
