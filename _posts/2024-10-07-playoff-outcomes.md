@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How Chaotic are Playoffs Across Pro Sports Leagues?"
+title:  "Which League's Playoffs are Most Chaotic?"
 author: drew
 categories: [ NFL, MLB, NBA, WNBA, NHL, MLS, NWSL ]
 image: "https://malteranalytics.github.io/assets/images/2024-10-07-playoff-outcomes/image19.png"
