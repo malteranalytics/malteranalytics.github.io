@@ -11,7 +11,7 @@ featured: false
 The MLB playoffs began last week with 3 out of 4 underdogs winning their wildcard series.  And just a year ago, the World Series featured a 5 seeded Texas Rangers beating a 6 seeded Arizona Diamondbacks.  October chaos is nothing new.  Since the MLB expanded playoffs to 8 teams in 1995 (currently 12 teams make it), the higher seed only wins the series 54% of the time. 
 
 
-Hockey fans can relate.  Just since 2012, we've seen teams finish the regular season conference standings in 8th, 6th, and 5th all win the Stanley Cup (Kings 2012, 2014, Blues 2019).
+Hockey fans are also used to watching an unpredictable playoffs.  Just since 2012, we've seen teams finish the regular season conference standings in 8th, 6th, and 5th all win the Stanley Cup (Kings 2012, 2014, Blues 2019).
 
 
 While basketball seems more predictable, even the 2023 NBA finals featured an 8 seeded Miami Heat.  And the 2021 WNBA finals were won by the 6th seeded Chicago Sky.  
