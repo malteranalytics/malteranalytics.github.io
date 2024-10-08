@@ -86,7 +86,7 @@ More often than not we see 2s, 3s and 6s beating 1s, 5s beating 2s, 3s and 7s be
 ![plot 14](/assets/images/2024-10-07-playoff-outcomes/image14.png) 
 
 
-Lastly we look at soccer, starting with the MLS, which had its inaugural season in 1996.  Resembling the patterns of the MLB and NHL playoffs, 3 of the last 4 MLS champions were a 3 or 4 seed, most recently the 2023 Columbus Crew topping another 3 seed, LAFC.  Having expanded from 12 to 16 playoff teams in 2020, the 8 seed is an impressive 3-4 (2-2 vs 1 seeds).  1 seeds are also just 10-13 vs 2 seeds and 30-22 against 4 seeds.  Despite not having won the Cup since 2014, the LA Galaxy have the most championships at 5 (9 appearances).
+Lastly we look at soccer, starting with the MLS, which had its inaugural season in 1996. After the single-match 8 vs 9 wildcard games and the best of three series of round 1, the final 8 teams play a single-elimination tournament. With each round up for grabs in just 90 minutes, 3 of the last 4 MLS champions were a 3 or 4 seed, most recently the 2023 Columbus Crew topping another 3 seed, LAFC.  Having expanded from 12 to 16 playoff teams in 2020, the 8 seed is an impressive 3-4 (2-2 vs 1 seeds).  1 seeds are also just 10-13 vs 2 seeds and 30-22 against 4 seeds.  Despite not having won the Cup since 2014, the LA Galaxy have the most championships at 5 (9 appearances).
 
 
 ![plot 15](/assets/images/2024-10-07-playoff-outcomes/image15.png) 
@@ -94,7 +94,7 @@ Lastly we look at soccer, starting with the MLS, which had its inaugural season 
 ![plot 16](/assets/images/2024-10-07-playoff-outcomes/image16.png) 
 
 
-On to the NWSL, their first season was in 2013 and in 2021 they moved from a 4 team to a 6 team playoff.  With 10 champions thus far (no playoffs in 2020 because of Covid), there have been three 3s, a 4 and most recently, a 6 seed champion (NY/NJ Gotham FC). The NWSL has also had it's last 3 consecutive seasons without the 1 seed making the finals, with a 6 beating a 4, a 2 beating a 5, and a 3 beating a 4.  The Portland Thorns lead the league with 3 championships (in 3 appearances), none of which have been as the playoff 1 seed.  
+On to the NWSL, their first season was in 2013 and in 2021 they moved from a 4 team to a 6 team playoff, also single-elimination.  With 10 champions thus far (no playoffs in 2020 because of Covid), there have been three 3s, a 4 and most recently, a 6 seed champion (NY/NJ Gotham FC). The NWSL has also had it's last 3 consecutive seasons without the 1 seed making the finals, with a 6 beating a 4, a 2 beating a 5, and a 3 beating a 4.  The Portland Thorns lead the league with 3 championships (in 3 appearances), none of which have been as the playoff 1 seed.  
 
 ![plot 17](/assets/images/2024-10-07-playoff-outcomes/image17.png) 
 
