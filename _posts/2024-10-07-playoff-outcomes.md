@@ -56,7 +56,7 @@ Moving on to the NFL, we go back to the 1970-71 season when the the playoffs als
 
 
 
-For the NBA, we start in 1978 when playoffs expanded from from 8 to 12 (currently 16 plus 4 play-in teams).  8 seeds have defeated the 1 seed 6 times (7%).  Those 6 teams have gone on to a second round record of 2-4, and the 2 second round victories went on to 2-0 in the conference finals (both against 2 seeds).  These Cinderella 8 seeds, the 2023 Heat and the 1999 Knicks, advanced the finals only to lose to Western Conference 1 seeds, the Spurs and Nuggets respectively.  
+For the NBA, we start in 1978 when playoffs expanded from from 8 to 12 (currently 16 plus 4 play-in teams).  8 seeds have defeated the 1 seed 6 times (7%).  Those 6 teams have gone on to a second round record of 2-4, and the 2 second round victories went on to 2-0 in the conference finals (both against 2 seeds).  These Cinderella 8 seeds, the 2023 Heat and the 1999 Knicks, advanced to the finals only to lose to Western Conference 1 seeds, the Spurs and Nuggets respectively.  
 
 Also noteworthy is that in the 5 vs 4 match up, the 5 seed has come out on top in 54% of series and of the 8 times a conference finals featured a 4 vs 2, both seeds split 4 series each.  
 
