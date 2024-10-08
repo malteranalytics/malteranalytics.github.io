@@ -67,7 +67,7 @@ Also noteworthy is that in the 5 vs 4 match up, the 5 seed has come out on top i
 
 
 
-The inaugural WNBA season was in 1997, but in 2000 the league first expanded to an 8 team playoff.  Even more so than the NBA, 1 seeds have historically dominated the playoff bracket.  Other than the 2021 Chicago Sky (6 seed) all champions have been either a 1 or 2. It's not uncommon for 3 through 6 seeds to make the finals, however, 19% of conference finals have sent a team lower than a 2 seed to the finals, including the 5 seeded Mercury that lost to the Sky in 2021.  
+The inaugural WNBA season was in 1997, but in 2000 the league first expanded to an 8 team playoff.  Even more so than the NBA, 1 seeds have historically dominated the playoff bracket.  Other than the 2021 Chicago Sky (6 seed) all champions have been either a 1 or 2. It's not uncommon for 3 through 6 seeds to make the finals, however, as 19% of conference finals have sent a team lower than a 2 seed to the finals, including the 5 seeded Mercury that lost to the Sky in 2021.  
 
 The noteworthy common upset here is the 4 vs 2 match up, which we've also seen especially close in other sports. However in this case, the 4 triumphs over the 2 in 57% of series.  
 
