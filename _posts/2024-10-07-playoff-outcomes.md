@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Which League's Playoffs are Most Chaotic?"
+title:  "Which League's Playoffs are Most Unpredictable?"
 author: drew
 categories: [ NFL, MLB, NBA, WNBA, NHL, MLS, NWSL ]
 image: "https://malteranalytics.github.io/assets/images/2024-10-07-playoff-outcomes/image19.png"
