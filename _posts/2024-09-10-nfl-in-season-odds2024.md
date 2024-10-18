@@ -10,6 +10,14 @@ featured: true
 
 Updated Tuesday mornings following the conclusion of each NFL week.
 
+
+
+***Forecast Entering Week 7***
+
+
+![plot 2](/assets/images/2024-09-03-nfl-odds-2024/image8.png) 
+
+
 ***Forecast Entering Week 6***
 
 
