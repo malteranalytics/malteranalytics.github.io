@@ -12,6 +12,14 @@ Updated Tuesday mornings following the conclusion of each NFL week.
 
 
 
+***Forecast Entering Week 8***
+
+
+![plot 2](/assets/images/2024-09-03-nfl-odds-2024/image9.png) 
+
+
+
+
 ***Forecast Entering Week 7***
 
 
