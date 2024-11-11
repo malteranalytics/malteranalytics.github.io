@@ -99,3 +99,7 @@ On to the NWSL, their first season was in 2013 and in 2021 they moved from a 4 t
 ![plot 17](/assets/images/2024-10-07-playoff-outcomes/image17.png) 
 
 ![plot 18](/assets/images/2024-10-07-playoff-outcomes/image18.png) 
+
+
+
+<script type='module' src='https://prod-useast-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script><tableau-viz id='tableau-viz' src='https://prod-useast-a.online.tableau.com/t/nowstaapp/views/NowstaLive_17310223356990/TimecardsMap' width='1352' height='621' hide-tabs toolbar='bottom' ></tableau-viz>
