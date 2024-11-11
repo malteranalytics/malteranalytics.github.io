@@ -8,7 +8,7 @@ tags: [NBA, sports, baseball, rstats, dataviz]
 featured: false
 ---
 
-
+<script type='module' src='https://prod-useast-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script><tableau-viz id='tableau-viz' src='https://prod-useast-a.online.tableau.com/t/nowstaapp/views/NowstaLive_17310223356990/NowstaLiveFeed' width='1502' height='695' hide-tabs toolbar='bottom' ></tableau-viz>
 
 
 With the NBA All-Star weekend now behind us, it's a great time for basketball fans to reflect on the exciting 2021-22 season so far.  Notably, several teams have thus far drastically improved in the standings compared to last season, including the Bulls, Heat, Grizzlies, Cavs, and Timberwolves.   Success for some of these teams is partially due to [increased player payrolls](https://hoopshype.com/salaries/){:target="_blank"}, however other teams are thriving with lower salaried rosters.  The extent to which a team can compete on a low budget depends on many factors, including draft lottery luck, but this season's All Star break standings might prove that budget can't guarantee wins and losses.
