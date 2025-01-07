@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DISCO: DISguised NFL COverages"
-author: drew
+author: danny_drew
 categories: [ NFL]
 image: "../assets/images/2025-01-07-Sunday_Afternoon_Fever/kaggle_bowl.png"
 tags: [ NFL]
