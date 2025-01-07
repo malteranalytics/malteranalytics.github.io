@@ -2,7 +2,7 @@
 layout: post
 title:  "DISCO: DISguised NFL COverages"
 author: danny_drew
-categories: [ NFL]
+categories: [NFL]
 image: ![png](../assets/images/2025-01-07-Sunday_Afternoon_Fever/kaggle_bowl.png)
 tags: [ NFL]
 featured: false
@@ -22,9 +22,9 @@ Game theory and deception are components to almost every single play in football
 #### ***DISCO***: ***DIS***guised ***CO***verage %:
 - The percent of plays a team’s defense transforms to an unlikely pass coverage given their pre-snap alignment and movements
 
-$$
+```math
 \text{DISCO} = \frac{\text{Plays where defense transformed into an unlikely post-snap coverage}}{\text{Total plays}}
-$$
+```
 
 - Unlikely is defined as a coverage that is observed (across NFL) less than 10% of plays given the pre-snap alignment
 
