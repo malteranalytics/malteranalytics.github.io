@@ -22,9 +22,9 @@ Game theory and deception are components to almost every single play in football
 #### ***DISCO***: ***DIS***guised ***CO***verage %:
 - The percent of plays a team’s defense transforms to an unlikely pass coverage given their pre-snap alignment and movements
 
-```math
+$$
 \text{DISCO} = \frac{\text{Plays where defense transformed into an unlikely post-snap coverage}}{\text{Total plays}}
-```
+$$
 
 - Unlikely is defined as a coverage that is observed (across NFL) less than 10% of plays given the pre-snap alignment
 
@@ -290,6 +290,7 @@ There are several takeaways but a few to note are:
 </table>
 
 
+<br>
 
 # Visualizing the Clusters in Action
 
@@ -395,9 +396,9 @@ The 3 teams with the best difference in DISCO vs non-DISCO change in expected po
 
 
     
-![png](../assetes/images/2025-01-07-Sunday_Afternoon_Fever/output_26_0.png)
+![png](../assets/images/2025-01-07-Sunday_Afternoon_Fever/output_26_0.png)
     
-
+<br>
 
 # Conclusion, Limitations, and Future Enhancements
 
