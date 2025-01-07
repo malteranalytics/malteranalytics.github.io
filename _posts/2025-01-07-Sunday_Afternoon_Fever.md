@@ -3,7 +3,7 @@ layout: post
 title:  "DISCO: DISguised NFL COverages"
 author: danny_drew
 categories: [NFL]
-image: ![png](../assets/images/2025-01-07-Sunday_Afternoon_Fever/kaggle_bowl.png)
+image: "https://malteranalytics.github.io/assets/images/2025-01-07-Sunday_Afternoon_Fever/kaggle_bowl.png"
 tags: [ NFL]
 featured: false
 ---
