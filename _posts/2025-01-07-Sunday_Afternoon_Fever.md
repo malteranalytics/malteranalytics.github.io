@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Which League's Playoffs are Most Unpredictable?"
+author: drew
+categories: [ NFL, MLB, NBA, WNBA, NHL, MLS, NWSL ]
+image: "../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/kaggle_bowl.png"
+tags: [ NFL, MLB, NBA, WNBA, NHL, MLS, NWSL ]
+featured: false
+---
+
 # **Sunday Afternoon Fever**
 #### A metric and analysis of **DIS**guised **CO**verages on Defense
 
