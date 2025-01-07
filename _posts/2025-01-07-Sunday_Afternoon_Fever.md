@@ -397,7 +397,7 @@ The 3 teams with the best difference in DISCO vs non-DISCO change in expected po
     
 <br>
 
-# Conclusion, Limitations, and Future Enhancements
+## Conclusion, Limitations, and Future Enhancements
 
 The DISCO metric is not an evaluation of defensive strategy, rather an analysis of defensive strategy.  Being unpredictable sometimes means playing the hand right in front of your opponent’s eyes. Factors such as game situation or player personnel could trump the desire to disguise in certain situations.  One intention for use of DISCO would be as a supplement to scouting, film, and pre-snap offensive decision making.   Another is for common NFL fans to leverage as they watch games, as it can be fun to predict what teams will do on each play.  
 
@@ -409,10 +409,10 @@ For future enhancements to DISCO:
 - Incorporating less common pass coverages or more specific coverages
 - Looking into blitz disguises (and fake blitzes)
 
-# Acknowledgments
+## Acknowledgments
 
 Thank you to the NFL analytics community and the hosts of the Big Data Bowl competition for engaging with fans and data enthusiasts in such a cool way!  Also, thank you to the data engineers and architects who developed Next Gen Stats and other NFL data, providing easily accessible and usable data to the public.  
 
 
-# Appendix
+## Appendix
 All code is available in this [github repo](https://github.com/drewmalter12/nfl_big_data_bowl25).
