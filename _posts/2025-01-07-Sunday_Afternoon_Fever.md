@@ -153,7 +153,7 @@ Note: We are just showing the most common pass coverages, and all types of cover
   </tbody>
 </table>
 
-
+<br>
 
 Now that we have a sense of the frequency defenses operate different pass coverages from each cluster, we can explore how several of our model input metrics average out by Cluster.
 
