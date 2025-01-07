@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DISCO: DISguised NFL COverages"
+title:  "Sunday Afternoon Fever"
 author: danny_drew
 categories: [NFL]
 image: "https://malteranalytics.github.io/assets/images/2025-01-07-Sunday_Afternoon_Fever/kaggle_bowl.png"
@@ -8,7 +8,6 @@ tags: [ NFL]
 featured: false
 ---
 
-# **Sunday Afternoon Fever**
 #### A metric and analysis of **DIS**guised **CO**verages on Defense
 
 Authors: [Drew Malter](https://www.linkedin.com/in/drew-malter-43a5a4b7/), [Danny Malter](https://www.linkedin.com/in/danmalter/)
