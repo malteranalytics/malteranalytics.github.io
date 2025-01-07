@@ -10,9 +10,6 @@ featured: false
 
 #### A metric and analysis of **DIS**guised **CO**verages on Defense
 
-Authors: [Drew Malter](https://www.linkedin.com/in/drew-malter-43a5a4b7/), [Danny Malter](https://www.linkedin.com/in/danmalter/)
-
-Metric Track
 
 # Introduction
 
