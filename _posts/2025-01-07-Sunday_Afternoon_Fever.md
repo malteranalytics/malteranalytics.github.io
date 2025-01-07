@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Which League's Playoffs are Most Unpredictable?"
+title:  "DISCO: DISguised NFL COverages"
 author: drew
-categories: [ NFL, MLB, NBA, WNBA, NHL, MLS, NWSL ]
-image: "../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/kaggle_bowl.png"
-tags: [ NFL, MLB, NBA, WNBA, NHL, MLS, NWSL ]
+categories: [ NFL]
+image: "../assets/images/2025-01-07-Sunday_Afternoon_Fever/kaggle_bowl.png"
+tags: [ NFL]
 featured: false
 ---
 
