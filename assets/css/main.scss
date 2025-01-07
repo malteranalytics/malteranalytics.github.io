@@ -17,3 +17,8 @@
 	"syntax",
     "starsnonscss"
 ;
+
+
+.disqus-sponsored, #disqus_thread [class*="ad"] {
+    display: none !important;
+}
