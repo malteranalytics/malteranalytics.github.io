@@ -304,7 +304,7 @@ Press the play button to watch (time speed is 2x), or watch the play manually by
     scrolling="no"
     width="595px"
     height="520"
-    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_1.html"
+    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_8.html"
     frameborder="0"
     allowfullscreen
 ></iframe>
@@ -319,7 +319,7 @@ Just as a rock song can stand out with a great guitar solo, the solo DB stands o
     scrolling="no"
     width="595px"
     height="520"
-    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_2.html"
+    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_10.html"
     frameborder="0"
     allowfullscreen
 ></iframe>
@@ -334,7 +334,7 @@ This alignment is structured in a methodical way, much like classical music.  Co
     scrolling="no"
     width="595px"
     height="520"
-    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_3.html"
+    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_12.html"
     frameborder="0"
     allowfullscreen
 ></iframe>
@@ -349,7 +349,7 @@ While electronic music is versatile with a variety of tones, beats, and rhythms,
     scrolling="no"
     width="595px"
     height="520"
-    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_4.html"
+    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_14.html"
     frameborder="0"
     allowfullscreen
 ></iframe>
@@ -366,7 +366,7 @@ While the previous examples showed a non-DISCO play for each cluster, the follow
     scrolling="no"
     width="595px"
     height="520"
-    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_5.html"
+    src="../assets/images/2025-01-07-Sunday_Afternoon_Fever/iframe_figures/figure_16.html"
     frameborder="0"
     allowfullscreen
 ></iframe>
