@@ -380,6 +380,317 @@ After identifying plays that qualify as DISCO, we can analyze the frequency of p
 Note: Plays under two minutes in a half, at the goal-line, or during 3-score games in the second half are excluded from eligibility, as we found DISCO plays are extremely uncommon in those situations.
 
 
+<style type="text/css">
+#T_4b3b5 th {
+  text-align: center;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+#T_4b3b5 td {
+  text-align: center;
+}
+#T_4b3b5 th {
+  text-align: center;
+  background-color: #013369;
+  font-weight: bold;
+  color: white;
+}
+#T_4b3b5 td {
+  text-align: center;
+  font-size: 16px;
+}
+#T_4b3b5 tr:nth-child(aeven) {
+  background-color: #f9f9f9;
+}
+#T_4b3b5 tr:nth-child(odd) {
+  background-color: white;
+}
+#T_4b3b5 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+#T_4b3b5_row0_col0, #T_4b3b5_row0_col1, #T_4b3b5_row0_col2, #T_4b3b5_row0_col3, #T_4b3b5_row0_col4, #T_4b3b5_row0_col5, #T_4b3b5_row1_col0, #T_4b3b5_row1_col1, #T_4b3b5_row1_col2, #T_4b3b5_row1_col3, #T_4b3b5_row1_col4, #T_4b3b5_row1_col5, #T_4b3b5_row2_col0, #T_4b3b5_row2_col1, #T_4b3b5_row2_col2, #T_4b3b5_row2_col3, #T_4b3b5_row2_col4, #T_4b3b5_row2_col5, #T_4b3b5_row3_col0, #T_4b3b5_row3_col1, #T_4b3b5_row3_col2, #T_4b3b5_row3_col3, #T_4b3b5_row3_col4, #T_4b3b5_row3_col5, #T_4b3b5_row4_col0, #T_4b3b5_row4_col1, #T_4b3b5_row4_col2, #T_4b3b5_row4_col3, #T_4b3b5_row4_col4, #T_4b3b5_row4_col5, #T_4b3b5_row5_col0, #T_4b3b5_row5_col1, #T_4b3b5_row5_col2, #T_4b3b5_row5_col3, #T_4b3b5_row5_col4, #T_4b3b5_row5_col5, #T_4b3b5_row6_col0, #T_4b3b5_row6_col1, #T_4b3b5_row6_col2, #T_4b3b5_row6_col3, #T_4b3b5_row6_col4, #T_4b3b5_row6_col5, #T_4b3b5_row7_col0, #T_4b3b5_row7_col1, #T_4b3b5_row7_col2, #T_4b3b5_row7_col3, #T_4b3b5_row7_col4, #T_4b3b5_row7_col5, #T_4b3b5_row8_col0, #T_4b3b5_row8_col1, #T_4b3b5_row8_col2, #T_4b3b5_row8_col3, #T_4b3b5_row8_col4, #T_4b3b5_row8_col5, #T_4b3b5_row9_col0, #T_4b3b5_row9_col1, #T_4b3b5_row9_col2, #T_4b3b5_row9_col3, #T_4b3b5_row9_col4, #T_4b3b5_row9_col5, #T_4b3b5_row10_col0, #T_4b3b5_row10_col1, #T_4b3b5_row10_col2, #T_4b3b5_row10_col3, #T_4b3b5_row10_col4, #T_4b3b5_row10_col5, #T_4b3b5_row11_col0, #T_4b3b5_row11_col1, #T_4b3b5_row11_col2, #T_4b3b5_row11_col3, #T_4b3b5_row11_col4, #T_4b3b5_row11_col5, #T_4b3b5_row12_col0, #T_4b3b5_row12_col1, #T_4b3b5_row12_col2, #T_4b3b5_row12_col3, #T_4b3b5_row12_col4, #T_4b3b5_row12_col5, #T_4b3b5_row13_col0, #T_4b3b5_row13_col1, #T_4b3b5_row13_col2, #T_4b3b5_row13_col3, #T_4b3b5_row13_col4, #T_4b3b5_row13_col5, #T_4b3b5_row14_col0, #T_4b3b5_row14_col1, #T_4b3b5_row14_col2, #T_4b3b5_row14_col3, #T_4b3b5_row14_col4, #T_4b3b5_row14_col5, #T_4b3b5_row15_col0, #T_4b3b5_row15_col1, #T_4b3b5_row15_col2, #T_4b3b5_row15_col3, #T_4b3b5_row15_col4, #T_4b3b5_row15_col5, #T_4b3b5_row16_col0, #T_4b3b5_row16_col1, #T_4b3b5_row16_col2, #T_4b3b5_row16_col3, #T_4b3b5_row16_col4, #T_4b3b5_row16_col5, #T_4b3b5_row17_col0, #T_4b3b5_row17_col1, #T_4b3b5_row17_col2, #T_4b3b5_row17_col3, #T_4b3b5_row17_col4, #T_4b3b5_row17_col5, #T_4b3b5_row18_col0, #T_4b3b5_row18_col1, #T_4b3b5_row18_col2, #T_4b3b5_row18_col3, #T_4b3b5_row18_col4, #T_4b3b5_row18_col5, #T_4b3b5_row19_col0, #T_4b3b5_row19_col1, #T_4b3b5_row19_col2, #T_4b3b5_row19_col3, #T_4b3b5_row19_col4, #T_4b3b5_row19_col5, #T_4b3b5_row20_col0, #T_4b3b5_row20_col1, #T_4b3b5_row20_col2, #T_4b3b5_row20_col3, #T_4b3b5_row20_col4, #T_4b3b5_row20_col5, #T_4b3b5_row21_col0, #T_4b3b5_row21_col1, #T_4b3b5_row21_col2, #T_4b3b5_row21_col3, #T_4b3b5_row21_col4, #T_4b3b5_row21_col5, #T_4b3b5_row22_col0, #T_4b3b5_row22_col1, #T_4b3b5_row22_col2, #T_4b3b5_row22_col3, #T_4b3b5_row22_col4, #T_4b3b5_row22_col5, #T_4b3b5_row23_col0, #T_4b3b5_row23_col1, #T_4b3b5_row23_col2, #T_4b3b5_row23_col3, #T_4b3b5_row23_col4, #T_4b3b5_row23_col5, #T_4b3b5_row24_col0, #T_4b3b5_row24_col1, #T_4b3b5_row24_col2, #T_4b3b5_row24_col3, #T_4b3b5_row24_col4, #T_4b3b5_row24_col5, #T_4b3b5_row25_col0, #T_4b3b5_row25_col1, #T_4b3b5_row25_col2, #T_4b3b5_row25_col3, #T_4b3b5_row25_col4, #T_4b3b5_row25_col5, #T_4b3b5_row26_col0, #T_4b3b5_row26_col1, #T_4b3b5_row26_col2, #T_4b3b5_row26_col3, #T_4b3b5_row26_col4, #T_4b3b5_row26_col5, #T_4b3b5_row27_col0, #T_4b3b5_row27_col1, #T_4b3b5_row27_col2, #T_4b3b5_row27_col3, #T_4b3b5_row27_col4, #T_4b3b5_row27_col5, #T_4b3b5_row28_col0, #T_4b3b5_row28_col1, #T_4b3b5_row28_col2, #T_4b3b5_row28_col3, #T_4b3b5_row28_col4, #T_4b3b5_row28_col5, #T_4b3b5_row29_col0, #T_4b3b5_row29_col1, #T_4b3b5_row29_col2, #T_4b3b5_row29_col3, #T_4b3b5_row29_col4, #T_4b3b5_row29_col5, #T_4b3b5_row30_col0, #T_4b3b5_row30_col1, #T_4b3b5_row30_col2, #T_4b3b5_row30_col3, #T_4b3b5_row30_col4, #T_4b3b5_row30_col5, #T_4b3b5_row31_col0, #T_4b3b5_row31_col1, #T_4b3b5_row31_col2, #T_4b3b5_row31_col3, #T_4b3b5_row31_col4, #T_4b3b5_row31_col5 {
+  border: none;
+  padding: 7px;
+}
+</style>
+<table id="T_4b3b5">
+  <caption>Frequency of DISCO Plays by Team</caption>
+  <thead>
+    <tr>
+      <th id="T_4b3b5_level0_col0" class="col_heading level0 col0" >Team</th>
+      <th id="T_4b3b5_level0_col1" class="col_heading level0 col1" >DISCO</th>
+      <th id="T_4b3b5_level0_col2" class="col_heading level0 col2" >DISCO Cluster 1</th>
+      <th id="T_4b3b5_level0_col3" class="col_heading level0 col3" >DISCO Cluster 2</th>
+      <th id="T_4b3b5_level0_col4" class="col_heading level0 col4" >DISCO Cluster 3</th>
+      <th id="T_4b3b5_level0_col5" class="col_heading level0 col5" >DISCO Cluster 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_4b3b5_row0_col0" class="data row0 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/4/48/Minnesota_Vikings_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row0_col1" class="data row0 col1" >25%</td>
+      <td id="T_4b3b5_row0_col2" class="data row0 col2" >40%</td>
+      <td id="T_4b3b5_row0_col3" class="data row0 col3" >22%</td>
+      <td id="T_4b3b5_row0_col4" class="data row0 col4" >4%</td>
+      <td id="T_4b3b5_row0_col5" class="data row0 col5" >2%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row1_col0" class="data row1 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Las_Vegas_Raiders_logo.svg/1280px-Las_Vegas_Raiders_logo.svg.png" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row1_col1" class="data row1 col1" >24%</td>
+      <td id="T_4b3b5_row1_col2" class="data row1 col2" >34%</td>
+      <td id="T_4b3b5_row1_col3" class="data row1 col3" >22%</td>
+      <td id="T_4b3b5_row1_col4" class="data row1 col4" >6%</td>
+      <td id="T_4b3b5_row1_col5" class="data row1 col5" >2%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row2_col0" class="data row2 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/7/71/Detroit_Lions_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row2_col1" class="data row2 col1" >23%</td>
+      <td id="T_4b3b5_row2_col2" class="data row2 col2" >32%</td>
+      <td id="T_4b3b5_row2_col3" class="data row2 col3" >21%</td>
+      <td id="T_4b3b5_row2_col4" class="data row2 col4" >13%</td>
+      <td id="T_4b3b5_row2_col5" class="data row2 col5" >4%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row3_col0" class="data row3 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/3/37/Miami_Dolphins_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row3_col1" class="data row3 col1" >22%</td>
+      <td id="T_4b3b5_row3_col2" class="data row3 col2" >32%</td>
+      <td id="T_4b3b5_row3_col3" class="data row3 col3" >17%</td>
+      <td id="T_4b3b5_row3_col4" class="data row3 col4" >9%</td>
+      <td id="T_4b3b5_row3_col5" class="data row3 col5" >0%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row4_col0" class="data row4 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/c/c5/Atlanta_Falcons_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row4_col1" class="data row4 col1" >21%</td>
+      <td id="T_4b3b5_row4_col2" class="data row4 col2" >27%</td>
+      <td id="T_4b3b5_row4_col3" class="data row4 col3" >18%</td>
+      <td id="T_4b3b5_row4_col4" class="data row4 col4" >7%</td>
+      <td id="T_4b3b5_row4_col5" class="data row4 col5" >9%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row5_col0" class="data row5 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/7/72/Arizona_Cardinals_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row5_col1" class="data row5 col1" >21%</td>
+      <td id="T_4b3b5_row5_col2" class="data row5 col2" >25%</td>
+      <td id="T_4b3b5_row5_col3" class="data row5 col3" >23%</td>
+      <td id="T_4b3b5_row5_col4" class="data row5 col4" >7%</td>
+      <td id="T_4b3b5_row5_col5" class="data row5 col5" >4%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row6_col0" class="data row6 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Chicago_Bears_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row6_col1" class="data row6 col1" >21%</td>
+      <td id="T_4b3b5_row6_col2" class="data row6 col2" >31%</td>
+      <td id="T_4b3b5_row6_col3" class="data row6 col3" >17%</td>
+      <td id="T_4b3b5_row6_col4" class="data row6 col4" >9%</td>
+      <td id="T_4b3b5_row6_col5" class="data row6 col5" >7%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row7_col0" class="data row7 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/New_York_Giants_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row7_col1" class="data row7 col1" >19%</td>
+      <td id="T_4b3b5_row7_col2" class="data row7 col2" >21%</td>
+      <td id="T_4b3b5_row7_col3" class="data row7 col3" >15%</td>
+      <td id="T_4b3b5_row7_col4" class="data row7 col4" >21%</td>
+      <td id="T_4b3b5_row7_col5" class="data row7 col5" >12%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row8_col0" class="data row8 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/a/a2/Tampa_Bay_Buccaneers_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row8_col1" class="data row8 col1" >19%</td>
+      <td id="T_4b3b5_row8_col2" class="data row8 col2" >24%</td>
+      <td id="T_4b3b5_row8_col3" class="data row8 col3" >13%</td>
+      <td id="T_4b3b5_row8_col4" class="data row8 col4" >6%</td>
+      <td id="T_4b3b5_row8_col5" class="data row8 col5" >3%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row9_col0" class="data row9 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Los_Angeles_Chargers_logo.svg/100px-Los_Angeles_Chargers_logo.svg.png" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row9_col1" class="data row9 col1" >18%</td>
+      <td id="T_4b3b5_row9_col2" class="data row9 col2" >26%</td>
+      <td id="T_4b3b5_row9_col3" class="data row9 col3" >33%</td>
+      <td id="T_4b3b5_row9_col4" class="data row9 col4" >0%</td>
+      <td id="T_4b3b5_row9_col5" class="data row9 col5" >2%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row10_col0" class="data row10 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/c/c1/Tennessee_Titans_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row10_col1" class="data row10 col1" >18%</td>
+      <td id="T_4b3b5_row10_col2" class="data row10 col2" >23%</td>
+      <td id="T_4b3b5_row10_col3" class="data row10 col3" >26%</td>
+      <td id="T_4b3b5_row10_col4" class="data row10 col4" >0%</td>
+      <td id="T_4b3b5_row10_col5" class="data row10 col5" >2%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row11_col0" class="data row11 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Kansas_City_Chiefs_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row11_col1" class="data row11 col1" >18%</td>
+      <td id="T_4b3b5_row11_col2" class="data row11 col2" >31%</td>
+      <td id="T_4b3b5_row11_col3" class="data row11 col3" >29%</td>
+      <td id="T_4b3b5_row11_col4" class="data row11 col4" >7%</td>
+      <td id="T_4b3b5_row11_col5" class="data row11 col5" >10%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row12_col0" class="data row12 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Denver_Broncos_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row12_col1" class="data row12 col1" >17%</td>
+      <td id="T_4b3b5_row12_col2" class="data row12 col2" >26%</td>
+      <td id="T_4b3b5_row12_col3" class="data row12 col3" >11%</td>
+      <td id="T_4b3b5_row12_col4" class="data row12 col4" >4%</td>
+      <td id="T_4b3b5_row12_col5" class="data row12 col5" >2%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row13_col0" class="data row13 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/1/16/Baltimore_Ravens_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row13_col1" class="data row13 col1" >17%</td>
+      <td id="T_4b3b5_row13_col2" class="data row13 col2" >25%</td>
+      <td id="T_4b3b5_row13_col3" class="data row13 col3" >24%</td>
+      <td id="T_4b3b5_row13_col4" class="data row13 col4" >6%</td>
+      <td id="T_4b3b5_row13_col5" class="data row13 col5" >2%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row14_col0" class="data row14 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Pittsburgh_Steelers_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row14_col1" class="data row14 col1" >16%</td>
+      <td id="T_4b3b5_row14_col2" class="data row14 col2" >27%</td>
+      <td id="T_4b3b5_row14_col3" class="data row14 col3" >18%</td>
+      <td id="T_4b3b5_row14_col4" class="data row14 col4" >2%</td>
+      <td id="T_4b3b5_row14_col5" class="data row14 col5" >5%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row15_col0" class="data row15 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Los_Angeles_Rams_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row15_col1" class="data row15 col1" >15%</td>
+      <td id="T_4b3b5_row15_col2" class="data row15 col2" >19%</td>
+      <td id="T_4b3b5_row15_col3" class="data row15 col3" >20%</td>
+      <td id="T_4b3b5_row15_col4" class="data row15 col4" >4%</td>
+      <td id="T_4b3b5_row15_col5" class="data row15 col5" >3%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row16_col0" class="data row16 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Washington_Commanders_logo.svg/2560px-Washington_Commanders_logo.svg.png" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row16_col1" class="data row16 col1" >15%</td>
+      <td id="T_4b3b5_row16_col2" class="data row16 col2" >20%</td>
+      <td id="T_4b3b5_row16_col3" class="data row16 col3" >12%</td>
+      <td id="T_4b3b5_row16_col4" class="data row16 col4" >11%</td>
+      <td id="T_4b3b5_row16_col5" class="data row16 col5" >4%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row17_col0" class="data row17 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Carolina_Panthers_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row17_col1" class="data row17 col1" >14%</td>
+      <td id="T_4b3b5_row17_col2" class="data row17 col2" >14%</td>
+      <td id="T_4b3b5_row17_col3" class="data row17 col3" >19%</td>
+      <td id="T_4b3b5_row17_col4" class="data row17 col4" >9%</td>
+      <td id="T_4b3b5_row17_col5" class="data row17 col5" >0%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row18_col0" class="data row18 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/7/74/Jacksonville_Jaguars_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row18_col1" class="data row18 col1" >14%</td>
+      <td id="T_4b3b5_row18_col2" class="data row18 col2" >13%</td>
+      <td id="T_4b3b5_row18_col3" class="data row18 col3" >32%</td>
+      <td id="T_4b3b5_row18_col4" class="data row18 col4" >4%</td>
+      <td id="T_4b3b5_row18_col5" class="data row18 col5" >1%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row19_col0" class="data row19 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/d/d9/Cleveland_Browns_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row19_col1" class="data row19 col1" >13%</td>
+      <td id="T_4b3b5_row19_col2" class="data row19 col2" >15%</td>
+      <td id="T_4b3b5_row19_col3" class="data row19 col3" >23%</td>
+      <td id="T_4b3b5_row19_col4" class="data row19 col4" >4%</td>
+      <td id="T_4b3b5_row19_col5" class="data row19 col5" >5%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row20_col0" class="data row20 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/b/b9/New_England_Patriots_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row20_col1" class="data row20 col1" >13%</td>
+      <td id="T_4b3b5_row20_col2" class="data row20 col2" >17%</td>
+      <td id="T_4b3b5_row20_col3" class="data row20 col3" >12%</td>
+      <td id="T_4b3b5_row20_col4" class="data row20 col4" >0%</td>
+      <td id="T_4b3b5_row20_col5" class="data row20 col5" >3%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row21_col0" class="data row21 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Cincinnati_Bengals_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row21_col1" class="data row21 col1" >13%</td>
+      <td id="T_4b3b5_row21_col2" class="data row21 col2" >19%</td>
+      <td id="T_4b3b5_row21_col3" class="data row21 col3" >13%</td>
+      <td id="T_4b3b5_row21_col4" class="data row21 col4" >0%</td>
+      <td id="T_4b3b5_row21_col5" class="data row21 col5" >5%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row22_col0" class="data row22 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/2/28/Houston_Texans_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row22_col1" class="data row22 col1" >12%</td>
+      <td id="T_4b3b5_row22_col2" class="data row22 col2" >15%</td>
+      <td id="T_4b3b5_row22_col3" class="data row22 col3" >23%</td>
+      <td id="T_4b3b5_row22_col4" class="data row22 col4" >0%</td>
+      <td id="T_4b3b5_row22_col5" class="data row22 col5" >0%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row23_col0" class="data row23 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Philadelphia_Eagles_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row23_col1" class="data row23 col1" >12%</td>
+      <td id="T_4b3b5_row23_col2" class="data row23 col2" >15%</td>
+      <td id="T_4b3b5_row23_col3" class="data row23 col3" >27%</td>
+      <td id="T_4b3b5_row23_col4" class="data row23 col4" >0%</td>
+      <td id="T_4b3b5_row23_col5" class="data row23 col5" >5%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row24_col0" class="data row24 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/San_Francisco_49ers_logo.svg/2560px-San_Francisco_49ers_logo.svg.png" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row24_col1" class="data row24 col1" >12%</td>
+      <td id="T_4b3b5_row24_col2" class="data row24 col2" >16%</td>
+      <td id="T_4b3b5_row24_col3" class="data row24 col3" >12%</td>
+      <td id="T_4b3b5_row24_col4" class="data row24 col4" >3%</td>
+      <td id="T_4b3b5_row24_col5" class="data row24 col5" >0%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row25_col0" class="data row25 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Green_Bay_Packers_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row25_col1" class="data row25 col1" >12%</td>
+      <td id="T_4b3b5_row25_col2" class="data row25 col2" >15%</td>
+      <td id="T_4b3b5_row25_col3" class="data row25 col3" >14%</td>
+      <td id="T_4b3b5_row25_col4" class="data row25 col4" >4%</td>
+      <td id="T_4b3b5_row25_col5" class="data row25 col5" >5%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row26_col0" class="data row26 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Seattle_Seahawks_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row26_col1" class="data row26 col1" >11%</td>
+      <td id="T_4b3b5_row26_col2" class="data row26 col2" >24%</td>
+      <td id="T_4b3b5_row26_col3" class="data row26 col3" >3%</td>
+      <td id="T_4b3b5_row26_col4" class="data row26 col4" >1%</td>
+      <td id="T_4b3b5_row26_col5" class="data row26 col5" >5%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row27_col0" class="data row27 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Dallas_Cowboys.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row27_col1" class="data row27 col1" >11%</td>
+      <td id="T_4b3b5_row27_col2" class="data row27 col2" >13%</td>
+      <td id="T_4b3b5_row27_col3" class="data row27 col3" >18%</td>
+      <td id="T_4b3b5_row27_col4" class="data row27 col4" >2%</td>
+      <td id="T_4b3b5_row27_col5" class="data row27 col5" >0%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row28_col0" class="data row28 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/New_Orleans_Saints_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row28_col1" class="data row28 col1" >11%</td>
+      <td id="T_4b3b5_row28_col2" class="data row28 col2" >15%</td>
+      <td id="T_4b3b5_row28_col3" class="data row28 col3" >17%</td>
+      <td id="T_4b3b5_row28_col4" class="data row28 col4" >1%</td>
+      <td id="T_4b3b5_row28_col5" class="data row28 col5" >5%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row29_col0" class="data row29 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/7/77/Buffalo_Bills_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row29_col1" class="data row29 col1" >10%</td>
+      <td id="T_4b3b5_row29_col2" class="data row29 col2" >16%</td>
+      <td id="T_4b3b5_row29_col3" class="data row29 col3" >29%</td>
+      <td id="T_4b3b5_row29_col4" class="data row29 col4" >4%</td>
+      <td id="T_4b3b5_row29_col5" class="data row29 col5" >0%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row30_col0" class="data row30 col0" ><img src="https://upload.wikimedia.org/wikipedia/en/6/6b/New_York_Jets_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row30_col1" class="data row30 col1" >10%</td>
+      <td id="T_4b3b5_row30_col2" class="data row30 col2" >15%</td>
+      <td id="T_4b3b5_row30_col3" class="data row30 col3" >15%</td>
+      <td id="T_4b3b5_row30_col4" class="data row30 col4" >1%</td>
+      <td id="T_4b3b5_row30_col5" class="data row30 col5" >7%</td>
+    </tr>
+    <tr>
+      <td id="T_4b3b5_row31_col0" class="data row31 col0" ><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Indianapolis_Colts_logo.svg" style="height:30px; padding-right: 10px;"></td>
+      <td id="T_4b3b5_row31_col1" class="data row31 col1" >6%</td>
+      <td id="T_4b3b5_row31_col2" class="data row31 col2" >5%</td>
+      <td id="T_4b3b5_row31_col3" class="data row31 col3" >11%</td>
+      <td id="T_4b3b5_row31_col4" class="data row31 col4" >4%</td>
+      <td id="T_4b3b5_row31_col5" class="data row31 col5" >2%</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
 Lastly, in order to get a sense of how DISCO affects the game, we can plot the average change in expected points on each play, for each cluster.  We are making the assumption that a successful defensive play has a negative change in expected points (although there are situational cases where that might not be the case).
 
 We find that for Cluster 1 and 2, DISCO plays have a notable negative edge vs non-DISCO plays.  For Clusters 3 and 4, there are less than 100 samples for each, nonetheless, those defensive plays underperformed non-DISCO, perhaps because many of those plays are Cover 0.
