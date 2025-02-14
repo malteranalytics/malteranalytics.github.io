@@ -10,7 +10,6 @@ featured: false
 
 #### Tracking Logo Exposure Time in Sports Events for Negotiations and Marketing Deals
 
-<br>
 
 In the world of sports, sponsorship and advertising are integral to a team or league's revenue. Companies invest millions of dollars to place their logos in key spots—for example along the boards of the ice during an NHL game or rotating sideboards of MLB, NBA and Premier League soccer games. But what is the actual return on that investment? It’s well known that depending on the sport earlier or later in the game might have more viewership, but we can get even more specific in quantify a sponsor's exposure and value by tracking the time their logo is shown during the duration of an event. By combining viewership data, we can use a new metric in sports advertising, which we’ll call Total Viewership per Second of Exposure.
 
@@ -20,7 +19,7 @@ That’s exactly what we’ve done here using Google AI logo detection. For the 
 
 <br>
 
-![logo-detection](../assets/images/2025-02-14-Logo_Detection/output_labels.mp4)
+[logo-detection](../assets/images/2025-02-14-Logo_Detection/output_labels.mp4)
 
 <br>
 
