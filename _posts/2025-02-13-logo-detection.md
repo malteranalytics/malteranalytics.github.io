@@ -17,7 +17,7 @@ That’s exactly what we’ve done here using Google AI logo detection. For the 
 
 <br>
 
-<video width="640" controls>
+<video width="540" controls>
 <source src="../assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
 </video>  
 
