@@ -15,19 +15,13 @@ In the world of sports, sponsorship and advertising are integral to a team or le
 
 That’s exactly what we’ve done here using Google AI logo detection. For the purposes of this demonstration, we’ve stuck with the generic model that Google has built, but this or similar models can be retrained to learn better about identifying certain logos. 
 
-<br>
-
 <div style="text-align: center;">
   <video width="640" controls>
     <source src="/assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
   </video>
 </div>
 
-<br>
-
 Using Python, we used a video clip from the first period of a game between the Chicago Blackhawks and St. Louis Blues. Hockey is a quick moving sport with lots of moving players, so it’s unlikely that a logo will be 100% visible for more than a few seconds at a time. To solve for this problem, we’ve written an algorithm that uses the Google model to first identify if a logo is in the frame. We continue to track that logo over the next two frames, as it’s possible a player quickly crossed the path between the camera and logo. If the same logo is detected two frames later, we count it as one continuous logo detection. We ran a highlight video from the first quarter of the game and below is the total amount of seconds that each logo was shown over a 93 second video. 
-
-<br>
 
 <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
   <thead>
