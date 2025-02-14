@@ -13,14 +13,12 @@ featured: false
 
 In the world of sports, sponsorship and advertising are integral to a team or league's revenue. Companies invest millions of dollars to place their logos in key spots—for example along the boards of the ice during an NHL game or rotating sideboards of MLB, NBA and Premier League soccer games. But what is the actual return on that investment? It’s well known that depending on the sport earlier or later in the game might have more viewership, but we can get even more specific in quantify a sponsor's exposure and value by tracking the time their logo is shown during the duration of an event. By combining viewership data, we can use a new metric in sports advertising, which we’ll call Total Viewership per Second of Exposure.
 
-<source src="../assets/images/2018-04-11-yolo-mlb/chicago.mp4">
-
 That’s exactly what we’ve done here using Google AI logo detection. For the purposes of this demonstration, we’ve stuck with the generic model that Google has built, but this or similar models can be retrained to learn better about identifying certain logos. 
 
 <br>
 
 <video width="540" controls>
-<source src="../assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
+<source src="/assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
 </video>  
 
 <br>
