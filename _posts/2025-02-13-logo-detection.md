@@ -17,9 +17,11 @@ That’s exactly what we’ve done here using Google AI logo detection. For the 
 
 <br>
 
-<video width="520" controls>
-<source src="/assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
-</video>  
+<div style="text-align: center;">
+  <video width="640" controls>
+    <source src="/assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
+  </video>
+</div>
 
 <br>
 
