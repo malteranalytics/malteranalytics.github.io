@@ -30,7 +30,77 @@ Using Python, we used a video clip from the first period of a game between the C
 <br>
 
 
-<img src="../assets/images/2025-02-14-Logo_Detection/output_table.png" alt="image">
+---
+title: "Logo Table Example"
+output: html_document
+---
+
+# Logo Table
+
+Below is the table showing the logo names, total time, and percent.
+
+<table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid black; text-align: center; padding: 8px; font-weight: bold;">Logo Name</th>
+      <th style="border: 1px solid black; text-align: center; padding: 8px; font-weight: bold;">Total Time (seconds)</th>
+      <th style="border: 1px solid black; text-align: center; padding: 8px; font-weight: bold;">Percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">FanDuel</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">44.74</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">48.11%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">Purina PetCare Company</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">22.72</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">24.43%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">Enterprise Rent-A-Car</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">12.31</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">13.24%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">PNC Financial Services</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">11.81</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">12.70%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">World Wide Technology</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">10.51</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">11.30%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">Schnucks</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">5.91</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">6.35%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">BJC HealthCare</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">4.6</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">4.95%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">National Hockey League</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">4.4</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">4.73%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">Bauer Hockey</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">2.5</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">2.69%</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">Stifel</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">1.6</td>
+      <td style="border: 1px solid black; text-align: center; padding: 8px;">1.72%</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <br>
 
