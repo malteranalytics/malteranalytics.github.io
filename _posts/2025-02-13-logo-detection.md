@@ -20,7 +20,7 @@ That’s exactly what we’ve done here using Google AI logo detection. For the 
 
 <br>
 
-[logo-detection](../assets/images/output_labels.mp4)
+![logo-detection](../assets/images/2025-02-14-Logo_Detection/output_labels.mp4)
 
 <br>
 
@@ -29,7 +29,7 @@ Using Python, we used a video clip from the first period of a game between the C
 <br>
 
 
-![png](../assets/images/2025-02-14-Logo_Detection/output_table_.png)
+![png](../assets/images/2025-02-14-Logo_Detection/output_table.png)
 
 <br>
 
