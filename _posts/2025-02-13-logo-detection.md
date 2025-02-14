@@ -18,7 +18,7 @@ That’s exactly what we’ve done here using Google AI logo detection. For the 
 <br>
 
 <video width="520" controls>
-<source src="/assets/images/2021-06-08-mlb-openpose/buehler_side_output.mp4">
+<source src="/assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
 </video>  
 
 <br>
