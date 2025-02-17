@@ -3,7 +3,7 @@ layout: post
 title:  "Corporate Logo Detection in Sports"
 author: danny
 categories: [NHL]
-image: "https://malteranalytics.github.io/assets/images/2025-02-14-Logo_Detection/logo-screenshot.png"
+image: "https://malteranalytics.github.io/assets/images/2025-02-17-Logo_Detection/logo-screenshot.png"
 tags: [NHL]
 featured: false
 ---
@@ -15,7 +15,7 @@ In the world of sports, sponsorship and advertising are integral to a team or le
 
 <div style="text-align: center;">
   <video width="640" controls>
-    <source src="/assets/images/2025-02-14-Logo_Detection/output_labels.mp4">
+    <source src="/assets/images/2025-02-17-Logo_Detection/output_labels.mp4">
   </video>
 </div>
 
